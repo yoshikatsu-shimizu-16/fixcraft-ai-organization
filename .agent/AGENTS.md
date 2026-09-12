@@ -47,13 +47,13 @@ AIのdecisionは `recommend_approve`, `recommend_reject`, `needs_more_evidence`,
 
 `fixcraft-orchestrator` が `.agent/state/lead-state-machine.yaml` に従って遷移させる。Skillは自分の責任外のstatusへ勝手に進めない。
 
-morning-salesでは、対象市場を `knowledge/sales/market-sources.yaml` から読み、同一案件をdedupeした後、`sales-scout -> competitive-intelligence -> lead-qualifier -> sales-director -> bid-strategist -> Gate 1` の順で処理する。
+morning-salesでは、対象市場を `knowledge/sales/market-sources.yaml` から読み、同一案件をdedupeした後、`sales-scout -> competitive-intelligence -> lead-qualifier -> bid-strategist -> sales-director -> Gate 1` の順で処理する。Sales DirectorはBid Strategyを含む全営業入力を統合した最終AI推奨を作る。
 
 build-proposalではGate 1承認をEvidenceで確認し、`solution-architect -> 必要時 prototype-engineer -> domain reviewer -> technical-quality-lead -> Gate 2 -> 必要時 refactor-engineer -> proposal-writer -> sales-director -> Gate 3` とする。WordPress案件はWordPress Security Reviewer、HP/LP案件はWeb Design Directorを必須とする。
 
 apply-approvedではGate 3承認を確認し、`application-manager` が応募記録を作る。実際の送信がツール/権限/規約上できない場合は送信済みにせず、`ready_for_manual_submit` で停止する。
 
-client-followupでは `client-closing-manager -> outcome-recorder` を使い、返信・交渉・結果をStateへ反映する。
+client-followupでは `client-closing-manager -> outcome-recorder` を使い、返信・交渉・結果をStateへ反映する。`no_response` 後に遅延返信が観測された場合は、State Machineの許可に従い `client_replied` へ再開する。
 
 evening-pdcaでは `outcome-recorder -> competitive-intelligence -> improvement-lead` を使い、KPI、仮説、改善実験、Knowledge候補を作る。
 

@@ -43,7 +43,7 @@ FixCraft AI OrganizationのOperations Director。各Skillを順番に呼ぶだ�
 6. 完了した処理だけState更新候補として記録する。
 7. run summaryに未解決、失敗市場、次アクションを残す。
 
-`morning-sales`: `sales-scout -> competitive-intelligence -> lead-qualifier -> sales-director -> bid-strategist -> Gate 1`
+`morning-sales`: `sales-scout -> competitive-intelligence -> lead-qualifier -> bid-strategist -> sales-director -> Gate 1`
 
 `build-proposal`: Gate 1 approvedを確認 -> `solution-architect -> 必要時 prototype-engineer -> domain reviewer -> technical-quality-lead -> Gate 2 -> 必要時 refactor-engineer -> proposal-writer -> sales-director -> Gate 3`
 
@@ -59,6 +59,7 @@ FixCraft AI OrganizationのOperations Director。各Skillを順番に呼ぶだ�
 - PrototypeはBid Strategy上のProof価値があり、Gate 1承認済みの場合だけ実行する。
 - 1市場が取得不能でも他のenabled市場は継続する。
 - state machineにない遷移要求は`blocked`とする。
+- terminal stateは通常停止する。ただしState Machineで`reopenable: true`の状態は、許可された遷移Evidenceがある場合に再開できる。
 
 # Output Contract
 共通Envelopeの`result`に `mode`, `processed_leads`, `state_updates`, `pending_human_gates`, `blocked_items`, `failed_sources`, `next_run_recommendation` を返す。
@@ -67,4 +68,4 @@ FixCraft AI OrganizationのOperations Director。各Skillを順番に呼ぶだ�
 Human Gateに達した場合は、承認対象artifact、AI推奨、主要Evidence、主要Riskを人間へ渡す。通常完了時は次modeを明示する。
 
 # Stop Conditions
-Human Gate到達、必須Evidence欠落、不正な状態遷移、必須SkillのBlocker、または対象Leadがterminal stateの場合は停止する。
+Human Gate到達、必須Evidence欠落、不正な状態遷移、必須SkillのBlocker、または再開条件のないterminal stateの場合は停止する。

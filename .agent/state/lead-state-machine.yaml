@@ -1,4 +1,4 @@
-version: "1.0"
+version: "1.1"
 dedupe:
   primary: "platform + source_job_id"
   fallback: "platform + normalized_source_url"
@@ -24,23 +24,24 @@ states:
   negotiating: {owner: client-closing-manager}
   won: {owner: outcome-recorder, terminal: true}
   lost: {owner: outcome-recorder, terminal: true}
-  no_response: {owner: outcome-recorder, terminal: true}
+  no_response: {owner: outcome-recorder, terminal: false, reopenable: true}
   withdrawn: {terminal: true}
   expired: {terminal: true}
 transitions:
   discovered: [enriched, expired, withdrawn]
   enriched: [qualified, expired, withdrawn]
-  qualified: [gate1_pending, withdrawn]
-  gate1_pending: [gate1_approved, gate1_rejected]
-  gate1_approved: [solutioning]
-  solutioning: [gate2_pending]
-  gate2_pending: [gate2_approved, gate2_revision]
-  gate2_revision: [gate2_pending]
-  gate2_approved: [proposal_ready]
-  proposal_ready: [gate3_pending]
-  gate3_pending: [approved_to_apply, gate3_rejected]
-  approved_to_apply: [ready_for_manual_submit, applied]
+  qualified: [gate1_pending, expired, withdrawn]
+  gate1_pending: [gate1_approved, gate1_rejected, expired, withdrawn]
+  gate1_approved: [solutioning, expired, withdrawn]
+  solutioning: [gate2_pending, expired, withdrawn]
+  gate2_pending: [gate2_approved, gate2_revision, expired, withdrawn]
+  gate2_revision: [gate2_pending, expired, withdrawn]
+  gate2_approved: [proposal_ready, expired, withdrawn]
+  proposal_ready: [gate3_pending, expired, withdrawn]
+  gate3_pending: [approved_to_apply, gate3_rejected, expired, withdrawn]
+  approved_to_apply: [ready_for_manual_submit, applied, expired, withdrawn]
   ready_for_manual_submit: [applied, withdrawn, expired]
   applied: [client_replied, won, lost, no_response, withdrawn]
   client_replied: [negotiating, won, lost, withdrawn]
   negotiating: [won, lost, withdrawn]
+  no_response: [client_replied, lost, withdrawn]

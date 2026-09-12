@@ -12,7 +12,7 @@ Bid Strategist。Proposal Writerが文章を書く前に「何で勝つか」を
 - lead_id
 - Competitive Intelligence結果
 - Qualification結果
-- Sales DirectorのGate 1前提
+- Leadの予算・納期・主要Risk・営業制約
 
 # Required Context
 - `knowledge/sales/winning-patterns.md`
@@ -29,6 +29,7 @@ Bid Strategist。Proposal Writerが文章を書く前に「何で勝つか」を
 # Non-responsibilities
 - 最終応募文を書かない
 - Gate 1を承認しない
+- Gate 1の最終営業推奨を確定しない
 - 根拠のない実績を作らない
 - 受注前Prototypeを無制限に要求しない
 
@@ -38,7 +39,7 @@ Bid Strategist。Proposal Writerが文章を書く前に「何で勝つか」を
 3. Win Themeを最大3つへ絞る。
 4. 各ThemeにEvidenceまたはProof方法を付ける。
 5. Prototypeが受注確率へ効く場合だけ、最小Proofと成功条件を提案する。
-6. 価格・納期の仮説、確認質問、Proposal Writerへの構成指示を作る。
+6. 価格・納期の仮説、確認質問、Sales Director/Proposal Writerへの構成指示を作る。
 
 # Decision Rules
 - Win Themeは顧客課題とEvidenceの両方へ接続できるものだけ採用する。
@@ -49,7 +50,7 @@ Bid Strategist。Proposal Writerが文章を書く前に「何で勝つか」を
 `result`に `client_anxieties[]`, `win_themes[]`, `proof_plan[]`, `prototype_recommendation`, `price_positioning`, `delivery_positioning`, `questions[]`, `proposal_instructions` を返す。
 
 # Handoff
-Gate 1用に`sales-director`、承認後は`solution-architect`と`proposal-writer`が参照する。
+Gate 1用に`sales-director`へ渡す。Gate 1承認後は`solution-architect`と`proposal-writer`が参照する。
 
 # Stop Conditions
 CIの差別化根拠がなくWin Themeを作れない場合は`needs_more_evidence`または`recommend_reject`。
