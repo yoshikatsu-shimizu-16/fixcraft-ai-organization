@@ -1,0 +1,31 @@
+version: "1.0"
+objective: "在宅副業向けの技術案件を複数市場から継続探索し、市場依存を避ける"
+sources:
+  crowdworks:
+    name: CrowdWorks
+    enabled: true
+    priority: 1
+    base_url: "https://crowdworks.jp/"
+    discovery_method: "public web search or authenticated browser when available"
+    application_method: "human Gate 3 approval required; do not claim submission without evidence"
+  lancers:
+    name: Lancers
+    enabled: true
+    priority: 2
+    base_url: "https://www.lancers.jp/"
+    discovery_method: "public web search or authenticated browser when available"
+    application_method: "human Gate 3 approval required; do not claim submission without evidence"
+  coconala:
+    name: Coconala
+    enabled: false
+    priority: 3
+    base_url: "https://coconala.com/"
+    discovery_method: "enable only after defining matching/search policy for service-purchase style listings"
+rules:
+  enabled_sources_each_morning: "all"
+  dedupe_key_priority:
+    - "platform + source_job_id"
+    - "platform + normalized canonical job URL"
+  no_result_behavior: "record searched source, query, timestamp and zero-result evidence; do not invent leads"
+  access_failure_behavior: "mark source blocked and continue other enabled sources"
+  terms_and_permissions: "respect platform terms, authentication boundaries and tool permissions"

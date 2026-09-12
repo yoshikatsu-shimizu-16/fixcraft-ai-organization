@@ -1,0 +1,25 @@
+period:
+  start: ""
+  end: ""
+counts:
+  discovered: 0
+  competitive_analyzed: 0
+  gate1_approved: 0
+  applied: 0
+  replied: 0
+  negotiating: 0
+  won: 0
+  lost: 0
+  no_response: 0
+revenue_jpy: 0
+hours:
+  sales: 0
+  prototype: 0
+rates:
+  gate1_pass_rate: null
+  reply_rate: null
+  win_rate_per_application: null
+  win_rate_after_reply: null
+efficiency:
+  revenue_per_application_jpy: null
+  revenue_per_sales_hour_jpy: null
