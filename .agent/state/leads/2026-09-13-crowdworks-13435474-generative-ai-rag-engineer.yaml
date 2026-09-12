@@ -1,0 +1,34 @@
+lead_id: "cw-13435474"
+platform: "crowdworks"
+source_job_id: "13435474"
+dedupe_key: "crowdworks:13435474"
+title: "副業/フルリモート可 Python・生成AI（LLM API）・RAG構築エンジニア"
+source_url: "https://crowdworks.jp/public/jobs/13435474"
+status: "gate1_pending"
+first_seen_at: "2026-09-13T07:58:00+09:00"
+last_seen_at: "2026-09-13T07:58:00+09:00"
+last_updated_at: "2026-09-13T07:58:00+09:00"
+deadline: "2026-09-21"
+budget:
+  type: "hourly"
+  min_jpy: 4000
+  max_jpy: 5000
+  hours_per_week: 30
+score: 65
+decision: "needs_more_evidence"
+evidence:
+  - source: "CrowdWorks public listing"
+    observed_at: "2026-09-13T07:58:00+09:00"
+    fact: "Python・生成AI（LLM API）・RAGを既存システムや業務フローへ本番実装するエンジニア募集。副業/フルリモート可、時給4,000〜5,000円、週30時間、期間1週間〜1ヶ月。"
+  - source: "CrowdWorks public listing"
+    observed_at: "2026-09-13T07:58:00+09:00"
+    fact: "応募20人、契約0人、募集5人。応募期限2026-09-21。契約後のWeb会議・顔出しが条件。"
+risks:
+  - "週30時間要件は平日夜・土日中心の副業稼働と衝突する可能性が高い"
+  - "Python/RAGの本番実装経験を示すEvidenceが不足すると競争力が弱い"
+  - "公開情報だけでは競合受注者は未確定"
+recommendations:
+  - "週30時間が必須か、週あたり最低稼働の相談余地を確認できる場合のみ追う"
+  - "RAG/ベクターストア、API統合、AWS運用の具体的な設計・障害切り分けをWin Theme候補にする"
+next_action: "Human Gate 1ではhold。稼働時間の柔軟性を確認できれば再採点。"
+artifacts: []
