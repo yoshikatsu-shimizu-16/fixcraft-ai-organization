@@ -1,0 +1,33 @@
+lead_id: "cw-13423932"
+platform: "crowdworks"
+source_job_id: "13423932"
+dedupe_key: "crowdworks:13423932"
+title: "既設である弊社ホームページの編集、修正、ページ追加等の業務依頼"
+source_url: "https://crowdworks.jp/public/jobs/13423932"
+status: "gate1_pending"
+first_seen_at: "2026-09-13T07:58:00+09:00"
+last_seen_at: "2026-09-13T07:58:00+09:00"
+last_updated_at: "2026-09-13T07:58:00+09:00"
+deadline: "2026-09-16"
+budget:
+  type: "fixed"
+  amount_jpy: 5500
+  client_estimated_hours: 2.5
+score: 67
+decision: "recommend_reject"
+evidence:
+  - source: "CrowdWorks public listing"
+    observed_at: "2026-09-13T07:58:00+09:00"
+    fact: "WordPress既設サイトの1〜2ページ編集・見映え改善。素材・テーマあり。予算約5,000円、想定2.5時間、継続可能性あり。Web会議可能かつAI利用者を希望。"
+  - source: "CrowdWorks public listing"
+    observed_at: "2026-09-13T07:58:00+09:00"
+    fact: "応募145人、契約1人、募集1人。応募期限2026-09-16。"
+risks:
+  - "応募145人で競争密度が非常に高い"
+  - "見映え改善の要求範囲が曖昧で、5,500円では修正往復が発生すると採算悪化"
+  - "公開情報だけでは実際の受注者プロフィールを特定できず、競合差別化のConfidenceは低い"
+recommendations:
+  - "通常応募は見送り。継続性を重視して追う場合のみ、2.5時間以内・修正回数上限を明示する"
+  - "応募するならWordPress障害復旧/修正の切り分け経験と、変更前バックアップ・差分確認をWin Themeにする"
+next_action: "Human Gate 1でreject推奨。例外的に継続案件獲得を優先する場合のみ条件付きapproveを検討。"
+artifacts: []
