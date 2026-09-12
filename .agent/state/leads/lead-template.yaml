@@ -1,0 +1,11 @@
+lead_id: "LEAD-YYYYMMDD-001"
+title: ""
+source_url: ""
+status: discovered
+score: null
+decision: needs_more_evidence
+evidence: []
+risks: []
+recommendations: []
+next_action: ""
+artifacts: []

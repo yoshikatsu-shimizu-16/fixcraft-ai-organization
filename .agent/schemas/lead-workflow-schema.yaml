@@ -1,0 +1,12 @@
+schema: fixcraft-lead-workflow
+version: "1.0"
+required: [lead_id, decision, score, evidence, risks, recommendations, next_action, artifacts]
+properties:
+  lead_id: {type: string}
+  decision: {type: string, enum: [pursue, hold, reject, needs_human_approval, needs_more_evidence]}
+  score: {type: number, minimum: 0, maximum: 100}
+  evidence: {type: array}
+  risks: {type: array}
+  recommendations: {type: array}
+  next_action: {type: string}
+  artifacts: {type: array}

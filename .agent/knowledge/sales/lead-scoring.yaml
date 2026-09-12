@@ -1,0 +1,11 @@
+version: "1.0"
+scale: 100
+criteria:
+  fit: {max: 20}
+  win_path: {max: 20}
+  price: {max: 15}
+  urgency: {max: 10}
+  client_quality: {max: 10}
+  risk: {max: 15}
+  competition: {max: 10}
+thresholds: {pursue: 75, hold: 60}
