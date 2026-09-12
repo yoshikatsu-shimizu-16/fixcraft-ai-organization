@@ -1,0 +1,46 @@
+version: "1.0"
+dedupe:
+  primary: "platform + source_job_id"
+  fallback: "platform + normalized_source_url"
+  rule: "同じdedupe_keyのLeadを新規作成せずlast_seen_atを更新する"
+states:
+  discovered: {owner: sales-scout}
+  enriched: {owner: competitive-intelligence}
+  qualified: {owner: lead-qualifier}
+  gate1_pending: {owner: sales-director, human_gate: 1}
+  gate1_rejected: {terminal: true}
+  gate1_approved: {human_only: true}
+  solutioning: {owner: solution-architect}
+  gate2_pending: {owner: technical-quality-lead, human_gate: 2}
+  gate2_revision: {owner: refactor-engineer}
+  gate2_approved: {human_only: true}
+  proposal_ready: {owner: proposal-writer}
+  gate3_pending: {owner: sales-director, human_gate: 3}
+  gate3_rejected: {terminal: true}
+  approved_to_apply: {human_only: true}
+  ready_for_manual_submit: {owner: application-manager}
+  applied: {owner: application-manager}
+  client_replied: {owner: client-closing-manager}
+  negotiating: {owner: client-closing-manager}
+  won: {owner: outcome-recorder, terminal: true}
+  lost: {owner: outcome-recorder, terminal: true}
+  no_response: {owner: outcome-recorder, terminal: true}
+  withdrawn: {terminal: true}
+  expired: {terminal: true}
+transitions:
+  discovered: [enriched, expired, withdrawn]
+  enriched: [qualified, expired, withdrawn]
+  qualified: [gate1_pending, withdrawn]
+  gate1_pending: [gate1_approved, gate1_rejected]
+  gate1_approved: [solutioning]
+  solutioning: [gate2_pending]
+  gate2_pending: [gate2_approved, gate2_revision]
+  gate2_revision: [gate2_pending]
+  gate2_approved: [proposal_ready]
+  proposal_ready: [gate3_pending]
+  gate3_pending: [approved_to_apply, gate3_rejected]
+  approved_to_apply: [ready_for_manual_submit, applied]
+  ready_for_manual_submit: [applied, withdrawn, expired]
+  applied: [client_replied, won, lost, no_response, withdrawn]
+  client_replied: [negotiating, won, lost, withdrawn]
+  negotiating: [won, lost, withdrawn]

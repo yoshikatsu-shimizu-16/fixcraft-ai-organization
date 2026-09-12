@@ -1,0 +1,29 @@
+schema: fixcraft-skill-output-envelope
+version: "2.0"
+required: [run_id, skill, status, evidence, risks, next_action, artifacts, result]
+properties:
+  run_id: {type: string, description: "RUN-YYYYMMDD-HHMM-<mode> など実行を一意に識別するID"}
+  skill: {type: string}
+  status:
+    type: string
+    enum: [completed, blocked, needs_human_approval, needs_more_evidence, revision_required, failed]
+  lead_id: {type: [string, "null"]}
+  decision:
+    type: [string, "null"]
+    enum: [recommend_approve, recommend_reject, hold, needs_more_evidence, revision_required, null]
+  confidence:
+    type: string
+    enum: [high, medium, low, unknown]
+  evidence:
+    type: array
+    items:
+      required: [claim, source]
+      properties:
+        claim: {type: string}
+        source: {type: string}
+        observed_at: {type: [string, "null"]}
+  risks: {type: array}
+  recommendations: {type: array}
+  next_action: {type: string}
+  artifacts: {type: array}
+  result: {type: object, description: "Skill固有payload。各SKILL.mdのOutput Contractに従う"}

@@ -1,10 +1,26 @@
 schema: fixcraft-lead-workflow
-version: "1.0"
-required: [lead_id, decision, score, evidence, risks, recommendations, next_action, artifacts]
+version: "2.0"
+required: [lead_id, platform, title, source_url, status, first_seen_at, last_updated_at, evidence, risks, next_action]
 properties:
   lead_id: {type: string}
-  decision: {type: string, enum: [pursue, hold, reject, needs_human_approval, needs_more_evidence]}
-  score: {type: number, minimum: 0, maximum: 100}
+  platform: {type: string}
+  source_job_id: {type: [string, "null"]}
+  dedupe_key: {type: string}
+  title: {type: string}
+  source_url: {type: string}
+  status:
+    type: string
+    enum: [discovered, enriched, qualified, gate1_pending, gate1_rejected, gate1_approved, solutioning, gate2_pending, gate2_revision, gate2_approved, proposal_ready, gate3_pending, gate3_rejected, approved_to_apply, ready_for_manual_submit, applied, client_replied, negotiating, won, lost, no_response, withdrawn, expired]
+  score: {type: [number, "null"], minimum: 0, maximum: 100}
+  decision: {type: [string, "null"]}
+  first_seen_at: {type: string}
+  last_seen_at: {type: [string, "null"]}
+  last_updated_at: {type: string}
+  deadline: {type: [string, "null"]}
+  budget: {type: [object, "null"]}
+  gate1: {type: object}
+  gate2: {type: object}
+  gate3: {type: object}
   evidence: {type: array}
   risks: {type: array}
   recommendations: {type: array}

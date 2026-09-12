@@ -1,0 +1,18 @@
+version: "1.0"
+commercial:
+  minimum_effective_hourly_rate_jpy: null
+  missing_rate_behavior: "Sales Director must show economics as unknown and request human input instead of inventing a threshold"
+prototype:
+  default_timebox_minutes: 30
+  budget_tiers:
+    - {max_budget_jpy: 9999, max_minutes: 15}
+    - {max_budget_jpy: 29999, max_minutes: 30}
+    - {max_budget_jpy: 99999, max_minutes: 60}
+    - {max_budget_jpy: null, max_minutes: 90}
+  extension_rule: "Any extension beyond the selected tier requires explicit human approval"
+outcome:
+  no_response_after_days: 7
+  rule: "Use no_response only when at least this many days have elapsed since the latest outbound message and there is no client reply"
+analysis:
+  preferred_competitor_sample_size: 3
+  small_sample_warning_below: 3

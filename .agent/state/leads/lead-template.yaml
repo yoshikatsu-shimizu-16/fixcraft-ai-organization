@@ -1,9 +1,20 @@
 lead_id: "LEAD-YYYYMMDD-001"
+platform: ""
+source_job_id: null
+dedupe_key: ""
 title: ""
 source_url: ""
 status: discovered
+first_seen_at: ""
+last_seen_at: null
+last_updated_at: ""
+deadline: null
+budget: null
 score: null
 decision: needs_more_evidence
+gate1: {status: not_requested, approved_by: null, approved_at: null, artifact: null}
+gate2: {status: not_requested, approved_by: null, approved_at: null, artifact: null}
+gate3: {status: not_requested, approved_by: null, approved_at: null, artifact: null}
 evidence: []
 risks: []
 recommendations: []

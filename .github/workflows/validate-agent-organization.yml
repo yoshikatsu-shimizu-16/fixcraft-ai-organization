@@ -1,0 +1,24 @@
+name: Validate FixCraft Agent Organization
+
+on:
+  push:
+    paths:
+      - "AGENTS.md"
+      - ".agent/**"
+      - ".github/workflows/validate-agent-organization.yml"
+  pull_request:
+    paths:
+      - "AGENTS.md"
+      - ".agent/**"
+      - ".github/workflows/validate-agent-organization.yml"
+
+jobs:
+  validate-agent-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate skill contracts
+        run: python .agent/scripts/validate-agent-organization.py
