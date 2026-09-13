@@ -1,0 +1,33 @@
+lead_id: "cw-13431927"
+platform: "crowdworks"
+source_job_id: "13431927"
+dedupe_key: "crowdworks:13431927"
+title: "Claude Codeでビジネスイベント企画書作成業務をAI Agent化するPoC開発"
+source_url: "https://crowdworks.jp/public/jobs/13431927"
+status: "gate1_pending"
+first_seen_at: "2026-09-14T07:57:45+09:00"
+last_seen_at: "2026-09-14T07:57:45+09:00"
+last_updated_at: "2026-09-14T07:57:45+09:00"
+deadline: "2026-09-20"
+budget:
+  type: "negotiable"
+score: 55
+decision: "needs_more_evidence"
+evidence:
+  - source: "CrowdWorks public listing"
+    observed_at: "2026-09-14T07:57:45+09:00"
+    fact: "Claude / Claude Code等を用い、ビジネスイベントの企画書作成業務をAI Agent化するPoC。予算は相談、応募期限2026-09-20。"
+  - source: "CrowdWorks public listing"
+    observed_at: "2026-09-14T07:57:45+09:00"
+    fact: "応募65人、契約0人、募集1人で競争密度が高い。発注者レビュー0件、本人確認未提出。"
+risks:
+  - "65人/1枠で競争が非常に強い"
+  - "予算が公開されておらず採算評価ができない"
+  - "発注者の取引Evidenceが弱い"
+  - "Claude Code固有のPoC実績を明示できない場合、専門応募者との差別化が弱い"
+recommendations:
+  - "AI Agent/Agent Skill/オーケストレーション設計を具体的な成果物で示せる場合だけ再評価する"
+  - "PoCの入力資料、期待する出力形式、評価指標、外部サービス連携、予算上限を確認する"
+  - "無料PoCを先行実装せず、設計図または最小モックまでにProofを制限する"
+next_action: "Human Gate 1では原則hold/reject寄り。予算と評価基準が確認でき、Agent設計Proofで差別化できる場合のみ再採点。"
+artifacts: []
