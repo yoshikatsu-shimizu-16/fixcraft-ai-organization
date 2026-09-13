@@ -1,0 +1,37 @@
+lead_id: "cw-13430593"
+platform: "crowdworks"
+source_job_id: "13430593"
+dedupe_key: "crowdworks:13430593"
+title: "AIスキルをSNS運用で活用するAI活用パートナー募集"
+source_url: "https://crowdworks.jp/public/jobs/13430593"
+status: "gate1_pending"
+first_seen_at: "2026-09-14T07:57:45+09:00"
+last_seen_at: "2026-09-14T07:57:45+09:00"
+last_updated_at: "2026-09-14T07:57:45+09:00"
+deadline: "2026-09-19"
+budget:
+  type: "fixed"
+  min_jpy: 30000
+  max_jpy: 50000
+score: 75
+decision: "recommend_approve"
+evidence:
+  - source: "CrowdWorks public listing"
+    observed_at: "2026-09-14T07:57:45+09:00"
+    fact: "AIツールを使ったSNS投稿ネタ企画、競合アカウント分析、データ解析を行うSNS運用パートナー募集。固定報酬3万〜5万円、応募期限2026-09-19。"
+  - source: "CrowdWorks public listing"
+    observed_at: "2026-09-14T07:57:45+09:00"
+    fact: "応募18人、契約0人、募集8人。1枠案件より競争密度は低い。"
+  - source: "Comparable CrowdWorks SNS listings"
+    observed_at: "2026-09-14T07:57:45+09:00"
+    fact: "過去のSNS運用案件では応募10〜28人程度から1〜3人が契約した例を確認。企画・分析まで含む案件では単純投稿作業より差別化余地がある。"
+risks:
+  - "発注者プロフィール・本人確認等の信頼性情報を公開検索から十分確認できていない"
+  - "具体的な投稿本数、稼働時間、KPI、利用ツール、契約後の責任範囲が公開情報では不足"
+  - "AI/SNSをうたう類似募集が複数あり、実業務内容の確認が必要"
+recommendations:
+  - "AIで投稿を量産するだけでなく、競合調査→ネタ選定→予約投稿→KPI分析→改善までを一気通貫で設計できる点をWin Themeにする"
+  - "GitHub Actions等を用いたSNS運用自動化の設計経験をProofとして提示し、手作業中心の応募者との差別化を図る"
+  - "応募前に週あたり稼働、投稿チャネル、KPI、素材提供範囲、AI生成物のレビュー責任を確認する"
+next_action: "Human Gate 1で追跡可否を判断。AI×SNS自動化の実運用Proofを前面に出せるため、本日候補の最優先。"
+artifacts: []
