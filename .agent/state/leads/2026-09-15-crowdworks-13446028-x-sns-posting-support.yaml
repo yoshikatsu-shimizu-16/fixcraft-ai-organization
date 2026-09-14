@@ -1,0 +1,35 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "crowdworks-13446028"
+platform: "crowdworks"
+source_job_id: "13446028"
+dedupe_key: "crowdworks:13446028"
+title: "X投稿コンテンツ作成・運用サポート"
+source_url: "https://crowdworks.jp/public/jobs/13446028"
+status: "gate1_pending"
+first_seen_at: "2026-09-15T08:02:24+09:00"
+last_seen_at: "2026-09-15T08:02:24+09:00"
+last_updated_at: "2026-09-15T08:02:24+09:00"
+deadline: "2026-09-25T23:59:59+09:00"
+budget:
+  type: "monthly_fixed"
+  jpy: 30000
+score: 70
+decision: "recommend_approve"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13446028"
+    observed_at: "2026-09-15T08:02:24+09:00"
+    fact: "月額30,000円、1日5投稿、作業時間約1時間、在宅、応募13人、募集5人。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13446028"
+    observed_at: "2026-09-15T08:02:24+09:00"
+    fact: "投稿文作成、X投稿、定型DM確認、簡単な数値確認が主業務。"
+risks:
+  - "クライアントはレビュー0・本人確認未提出。"
+  - "毎日約1時間の継続拘束があり、短時間スポット案件より自由度は低い。"
+recommendations:
+  - "Gate 1では作業時刻が固定か、夜間・任意時刻で処理可能かを最重要確認事項にする。"
+  - "SNS自動化・予約投稿・KPI分析の実績を差別化Proofに使うが、契約前に無償実装はしない。"
+next_action: "Human Gate 1で日次作業時刻の拘束有無を確認して応募判断。"
+artifacts: []
