@@ -1,0 +1,37 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "lancers-5601654"
+platform: "lancers"
+source_job_id: "5601654"
+dedupe_key: "lancers:5601654"
+title: "ComfyUIワークフロー構築・検証"
+source_url: "https://www.lancers.jp/work/detail/5601654"
+status: "gate1_pending"
+first_seen_at: "2026-09-15T08:02:24+09:00"
+last_seen_at: "2026-09-15T08:02:24+09:00"
+last_updated_at: "2026-09-15T08:02:24+09:00"
+deadline: "2026-10-04T11:14:00+09:00"
+budget:
+  type: "fixed"
+  initial_test_jpy: 20000
+  production_fee_jpy: 18000
+  runpod_allowance_jpy: 2000
+score: 72
+decision: "needs_more_evidence"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/work/detail/5601654"
+    observed_at: "2026-09-15T08:02:24+09:00"
+    fact: "初回テスト20,000円、実働目安2〜8時間、着手から3日以内が希望。20提案、募集5人。"
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/work/detail/5601654"
+    observed_at: "2026-09-15T08:02:24+09:00"
+    fact: "応募時に普段使っているComfyUI作業画面のスクリーンショットが必須。"
+risks:
+  - "ComfyUIの実作業経験と必須スクリーンショットを現時点でEvidence確認できない。"
+  - "初回は習熟度により6〜8時間程度となる可能性がある。"
+recommendations:
+  - "ComfyUI制作例を既に保有している場合のみGate 1を再評価する。新規に無償制作して応募要件を満たすことはしない。"
+  - "月20,000円KPIには単発1件で到達可能なため、適合Evidenceがあれば優先度を上げる。"
+next_action: "Human Gate 1でComfyUI実績Evidenceの有無を確認し、なければreject。"
+artifacts: []
