@@ -1,0 +1,42 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "crowdworks-13446964"
+platform: "crowdworks"
+source_job_id: "13446964"
+dedupe_key: "crowdworks:13446964"
+title: "AIツール活用・SNS企画分析パートナー"
+source_url: "https://crowdworks.jp/public/jobs/13446964"
+status: "gate1_pending"
+first_seen_at: "2026-09-17T08:01:05+09:00"
+last_seen_at: "2026-09-17T08:01:05+09:00"
+last_updated_at: "2026-09-17T08:01:05+09:00"
+deadline: "2026-09-25T23:59:59+09:00"
+budget:
+  type: "fixed_range"
+  min_jpy: 10000
+  max_jpy: 30000
+score: 72
+decision: "needs_more_evidence"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13446964"
+    observed_at: "2026-09-17T08:01:05+09:00"
+    fact: "固定報酬10,000〜30,000円、応募10人、募集8人、契約0人、応募期限2026-09-25。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13446964"
+    observed_at: "2026-09-17T08:01:05+09:00"
+    fact: "AIツールのプロンプト設計・リサーチ力をSNS投稿ネタ企画やアカウント分析へ活用する内容。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13446964"
+    observed_at: "2026-09-17T08:01:05+09:00"
+    fact: "クライアントはレビュー0、本人確認未提出、発注ルールチェック未回答。"
+risks:
+  - "具体的な作業量・週あたり稼働時間・作業時刻の拘束条件を公開情報から確認できない。"
+  - "クライアント実績と本人確認がなく、契約条件の信頼性評価が弱い。"
+  - "技術開発そのものよりSNS企画・分析寄りで、WordPress/GASのスポット修正ほど短時間完了を見込みやすくない。"
+recommendations:
+  - "Gate 1では週あたり作業時間、平日日中拘束の有無、成果物単位か継続運用かを確認する。"
+  - "AIによるSNS運用・投稿企画・分析の実運用をProofとして提示し、無償の事前制作はしない。"
+  - "月20,000円KPIに対し1件で到達可能な報酬帯だが、拘束時間が大きければ見送る。"
+next_action: "Human Gate 1で稼働条件とクライアント条件を確認し、短時間副業として成立する場合のみ応募候補へ進める。"
+artifacts: []
