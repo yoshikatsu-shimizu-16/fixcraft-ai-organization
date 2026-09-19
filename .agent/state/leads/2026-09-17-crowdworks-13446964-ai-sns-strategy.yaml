@@ -8,14 +8,14 @@ title: "AIツール活用・SNS企画分析パートナー"
 source_url: "https://crowdworks.jp/public/jobs/13446964"
 status: "gate1_pending"
 first_seen_at: "2026-09-17T08:01:05+09:00"
-last_seen_at: "2026-09-18T08:00:00+09:00"
-last_updated_at: "2026-09-18T08:00:00+09:00"
+last_seen_at: "2026-09-20T08:01:29+09:00"
+last_updated_at: "2026-09-20T08:01:29+09:00"
 deadline: "2026-09-25T23:59:59+09:00"
 budget:
   type: "fixed_range"
   min_jpy: 10000
   max_jpy: 30000
-score: 72
+score: 68
 decision: "needs_more_evidence"
 evidence:
   - confidence: "Confirmed"
@@ -32,15 +32,21 @@ evidence:
     fact: "クライアントはレビュー0、本人確認未提出、発注ルールチェック未回答。"
   - confidence: "Confirmed"
     source: "https://crowdworks.jp/public/jobs/13446964"
-    observed_at: "2026-09-18T08:00:00+09:00"
-    fact: "2026-09-18朝の再確認でも募集ページは公開中。検索取得情報では固定報酬10,000〜30,000円、応募10人、募集8人、契約0人のまま。"
+    observed_at: "2026-09-20T08:01:29+09:00"
+    fact: "募集ページは公開中。固定報酬10,000〜30,000円、応募16人、募集8人、契約0人。応募者は初回観測10人から16人へ増加。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13446964"
+    observed_at: "2026-09-20T08:01:29+09:00"
+    fact: "公開仕事内容はSNS投稿ネタのリサーチ、キーワード選定、プロンプト設計による投稿文案・キャプション作成補助。具体的な週稼働時間や作業時刻は記載されていない。"
 risks:
   - "具体的な作業量・週あたり稼働時間・作業時刻の拘束条件を公開情報から確認できない。"
   - "クライアント実績と本人確認がなく、契約条件の信頼性評価が弱い。"
+  - "応募者が10人から16人へ増え、初回観測時より競争条件が悪化した。"
   - "技術開発そのものよりSNS企画・分析寄りで、WordPress/GASのスポット修正ほど短時間完了を見込みやすくない。"
 recommendations:
   - "Gate 1では週あたり作業時間、平日日中拘束の有無、成果物単位か継続運用かを確認する。"
   - "AIによるSNS運用・投稿企画・分析の実運用をProofとして提示し、無償の事前制作はしない。"
   - "月20,000円KPIに対し1件で到達可能な報酬帯だが、拘束時間が大きければ見送る。"
+  - "競争増加を反映しscoreを72から68へ下方修正する。"
 next_action: "Human Gate 1で稼働条件とクライアント条件を確認し、短時間副業として成立する場合のみ応募候補へ進める。"
 artifacts: []
