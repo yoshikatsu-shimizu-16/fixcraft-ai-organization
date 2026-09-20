@@ -1,0 +1,44 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "crowdworks-13466025"
+platform: "crowdworks"
+source_job_id: "13466025"
+dedupe_key: "crowdworks:13466025"
+title: "GAS実務経験者・既存スプレッドシート自動化・Gmail連携"
+source_url: "https://crowdworks.jp/public/jobs/13466025"
+status: "gate1_pending"
+first_seen_at: "2026-09-21T07:58:44+09:00"
+last_seen_at: "2026-09-21T07:58:44+09:00"
+last_updated_at: "2026-09-21T07:58:44+09:00"
+deadline: "2026-09-27T23:59:59+09:00"
+budget:
+  type: "negotiable"
+  min_jpy: null
+  max_jpy: null
+score: 74
+decision: "recommend_approve"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13466025"
+    observed_at: "2026-09-21T07:58:44+09:00"
+    fact: "2026-09-20掲載、応募期限2026-09-27。固定報酬はワーカーと相談。応募15人、契約0人、募集1人。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13466025"
+    observed_at: "2026-09-21T07:58:44+09:00"
+    fact: "既存Googleスプレッドシート運用を維持しながら、GASでスケジュール管理表・回送台帳への転記とドライバー向けメール作成等を自動化する依頼。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13466025"
+    observed_at: "2026-09-21T07:58:44+09:00"
+    fact: "クライアントはレビュー0、本人確認未提出、発注ルールチェック未回答。"
+risks:
+  - "報酬額が未確定で、入力表の列数・分岐・メールテンプレート数など実装規模が公開情報だけでは確定しない。"
+  - "応募15人/1枠で競争は軽くない。"
+  - "新規クライアントで本人確認未提出のため、契約前に要件・検収条件・データ取扱いを明文化する必要がある。"
+recommendations:
+  - "Gate 1で優先的に追う。ユーザーのGAS/業務自動化経験と高い適合性がある。"
+  - "Win Themeは『既存運用を壊さず、二重三重入力だけを段階的に削減する安全なGAS自動化』とする。"
+  - "応募前Proofは完成品を無償制作せず、入力→台帳転記→Gmail下書き生成の処理フロー図または疑似コード程度に留める。"
+  - "見積前に対象シート数、列構造、転記ルール、メール送信か下書き生成か、エラー時の扱い、保守範囲を確認する。"
+  - "小粒案件戦略に合わせ、要件が限定的なら5,000〜15,000円程度の初期フェーズ/部分自動化として切り出せるか提案する。"
+next_action: "Human Gate 1で追跡可否を判断。承認後に要件確認と部分自動化案を設計する。"
+artifacts: []
