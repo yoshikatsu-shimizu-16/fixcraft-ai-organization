@@ -1,0 +1,49 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "crowdworks-13469793"
+platform: "crowdworks"
+source_job_id: "13469793"
+dedupe_key: "crowdworks:13469793"
+title: "ランニング・マラソン系SNS発信者リサーチ"
+source_url: "https://crowdworks.jp/public/jobs/13469793"
+status: "gate1_pending"
+first_seen_at: "2026-09-22T10:43:00+09:00"
+last_seen_at: "2026-09-22T10:43:00+09:00"
+last_updated_at: "2026-09-22T10:43:00+09:00"
+deadline: "2026-09-26T23:59:59+09:00"
+budget:
+  type: "fixed"
+  amount_jpy: 1000
+score: 72
+decision: "recommend_approve"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13469793"
+    observed_at: "2026-09-22T10:43:00+09:00"
+    fact: "2026-09-22掲載。応募7人、募集3人、契約0人、締切2026-09-26。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13469793"
+    observed_at: "2026-09-22T10:43:00+09:00"
+    fact: "ランニング・マラソン系SNSアカウント20件を調査し、提供フォーマットのGoogleスプレッドシートへ入力する。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13469793"
+    observed_at: "2026-09-22T10:43:00+09:00"
+    fact: "報酬1,000円、納期は依頼から7日以内。平日夜・週末稼働可。マニュアルあり、継続依頼・条件アップの可能性あり。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13469793"
+    observed_at: "2026-09-22T10:43:00+09:00"
+    fact: "クライアント評価4.8、レビュー34件、発注ルールチェック済み。本人確認は未提出。"
+risks:
+  - "報酬は1,000円と小さく、月20,000円への寄与は限定的。"
+  - "20件の調査条件の細かさによっては時給換算が低くなる。"
+  - "募集文は20〜30代会社員をおすすめ対象としており、選考上の相性は不明。"
+recommendations:
+  - "現金化と小規模受注実績を優先する現在の方針ではGate 1候補に含める。"
+  - "応募前に1件あたり3分程度で処理可能な条件かを募集内容から再確認し、総作業60〜90分程度を上限目安にする。"
+  - "継続条件アップは未確定なので、初回1,000円だけで採算判断する。"
+bid_strategy:
+  win_theme: "情報収集とスプレッドシート整理を正確に行い、平日夜・週末に納期内対応できる点を簡潔に示す。"
+  pricing: "募集指定の1,000円。"
+  proof: "事前成果物は作らず、過去のデータ収集・自動化経験を簡潔に説明する。"
+next_action: "Human Gate 1で応募候補として判断する。AIは承認・応募送信しない。"
+artifacts: []
