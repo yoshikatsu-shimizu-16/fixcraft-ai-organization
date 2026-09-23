@@ -1,0 +1,52 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "lancers-5605624"
+platform: "lancers"
+source_job_id: "5605624"
+dedupe_key: "lancers:5605624"
+title: "eBay商品出品作業・商品リサーチ"
+source_url: "https://www.lancers.jp/work/detail/5605624"
+status: "gate1_pending"
+first_seen_at: "2026-09-23T14:00:00+09:00"
+last_seen_at: "2026-09-23T14:00:00+09:00"
+last_updated_at: "2026-09-23T14:00:00+09:00"
+deadline: "2026-09-25T21:35:00+09:00"
+budget:
+  type: "trial_then_unit_price"
+  amount_jpy: null
+score: 76
+decision: "recommend_approve"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/work/detail/5605624"
+    observed_at: "2026-09-23T14:00:00+09:00"
+    fact: "2026-09-22募集開始。提案10件、当選2件、募集3人。締切2026-09-25。"
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/work/detail/5605624"
+    observed_at: "2026-09-23T14:00:00+09:00"
+    fact: "専用ツールを使ったeBay商品出品が中心で、慣れた後に商品リサーチへ拡大。基本PC操作とWeb検索ができれば未経験応募可。"
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/work/detail/5605624"
+    observed_at: "2026-09-23T14:00:00+09:00"
+    fact: "最初は少量の有償トライアル。大量作業を先に要求せず、双方確認後に継続する方式。"
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/work/detail/5605624"
+    observed_at: "2026-09-23T14:00:00+09:00"
+    fact: "eBayアクセスは公式Team Accessを利用し、発注者のID・パスワード共有はしない。"
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/work/detail/5605624"
+    observed_at: "2026-09-23T14:00:00+09:00"
+    fact: "実際の当選者2名が公開され、うち1名は海外ECせどり・データ入力・商品リサーチ経験を明示、もう1名は迅速丁寧なデータ業務系プロフィール。"
+risks:
+  - "公開ページから有償トライアル金額・継続後の1件単価を確認できず、時給換算はUnknown。"
+  - "長期継続を想定する案件なので、トライアル後の作業量を無制限に引き受けない。"
+  - "既に10提案・2当選で、残り募集枠は小さい。"
+recommendations:
+  - "現金化優先の初期フェーズではGate 1候補として推奨。まず有償トライアル金額と件数を確認し、少量だけ受けて実測時給を取る。"
+  - "継続はトライアル実測で判断し、単価が極端に低い場合はトライアルのみで終了する。"
+bid_strategy:
+  win_theme: "PC/Web検索に慣れており、手順遵守・正確な入力・不明点の確認を徹底できることを簡潔に示す。SE実績を前面に出しすぎず、作業品質と継続的な連絡を訴求する。"
+  pricing: "公開情報ではトライアル金額がUnknown。募集側指定を確認してから提示する。"
+  proof: "無償Proofは作らず、有償トライアルを能力確認と実測時給の取得に使う。"
+next_action: "Human Gate 1で応募候補として判断する。AIは承認・応募送信しない。"
+artifacts: []
