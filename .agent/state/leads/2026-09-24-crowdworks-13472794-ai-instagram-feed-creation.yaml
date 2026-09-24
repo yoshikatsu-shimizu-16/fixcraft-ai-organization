@@ -1,0 +1,42 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "crowdworks-13472794"
+platform: "crowdworks"
+source_job_id: "13472794"
+dedupe_key: "crowdworks:13472794"
+title: "AIを活用したInstagramフィード投稿作成"
+source_url: "https://crowdworks.jp/public/jobs/13472794"
+status: "gate1_pending"
+first_seen_at: "2026-09-24T14:00:00+09:00"
+last_seen_at: "2026-09-24T14:00:00+09:00"
+last_updated_at: "2026-09-24T14:00:00+09:00"
+deadline: "2026-09-26T23:59:59+09:00"
+budget:
+  type: "upper_bound"
+  min_jpy: null
+  max_jpy: 5000
+score: 75
+decision: "recommend_approve"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13472794"
+    observed_at: "2026-09-24T14:00:00+09:00"
+    fact: "2026-09-24掲載、固定報酬5,000円以下、応募4人、契約0人、募集10人、応募期限2026-09-26。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13472794"
+    observed_at: "2026-09-24T14:00:00+09:00"
+    fact: "AIを活用してInstagramのフィード投稿画像を作成する未経験者向け業務で、仕事説明時にオンラインレクチャーあり。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13472794"
+    observed_at: "2026-09-24T14:00:00+09:00"
+    fact: "発注者は本人確認済み・発注ルールチェック未回答、公開レビューは0件。"
+risks:
+  - "公開検索結果では具体的な納品枚数・1投稿あたりの作業量・正確な報酬額を確認できず、実時給はUnknown。"
+  - "オンラインレクチャーの所要時間と実施時間帯がUnknown。"
+  - "発注者の公開レビュー0件で支払・継続実績のEvidenceが弱い。"
+recommendations:
+  - "Gate 1候補として追跡を推奨。4応募/10枠で入口が広く、小粒現金化の実験として受注確率を取りにいく価値がある。"
+  - "Gate 1承認後、応募前に納品枚数、想定作業時間、報酬額、オンライン説明の時間帯を確認し、時給換算が極端に悪ければ撤退する。"
+  - "Win Themeは『AIツールを日常的に扱い、指示に沿って短時間で正確に制作・修正できる』。過剰なSEアピールは不要。"
+next_action: "Human Gate 1で追跡可否を判断する。承認までは試作・応募を行わない。"
+artifacts: []
