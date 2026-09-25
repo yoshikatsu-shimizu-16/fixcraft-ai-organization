@@ -1,0 +1,66 @@
+lead_id: "lancers-5606677"
+platform: "lancers"
+source_job_id: "5606677"
+dedupe_key: "lancers:5606677"
+status: "submitted_user_reported"
+submitted_at: "2026-09-25"
+submitted_at_precision: "date_only"
+proposal_artifact: ".agent/state/proposals/lancers-5606677-submitted-2026-09-25.md"
+proposal_source: "ChatGPT conversation 6aa517b8-0364-83e8-864b-478e6be59a2b; user pasted the text they actually used on 2026-09-25"
+price:
+  amount_jpy: 20000
+  tax_treatment: "Unknown"
+  kind: "proposed"
+earliest_start_date: "2026-09-26"
+delivery: null
+gate3_approval_evidence: "Unknown; retrospective user report of completed manual submission, with no separate prior Gate 3 approval record"
+submission_method: "manual_by_user"
+submission_evidence:
+  type: "user_attestation"
+  source: "ChatGPT conversation 6aa517b8-0364-83e8-864b-478e6be59a2b; user message on 2026-09-25"
+  observed_at: "2026-09-25"
+  detail: "実際に送った提案文をユーザーが共有。Lancersの送信完了画面と正確な時刻は未取得。"
+proposal_features:
+  character_count: 1727
+  line_count: 62
+  technical_procedure_section_characters: 604
+  requested_sections_covered: 5
+  price_band_jpy: "10000-29999"
+  technical_explanation_topics:
+    - "WordPressファイルとデータベースのバックアップ・調査"
+    - "プラグイン・テーマ・管理者アカウント・サーバー設定の確認"
+    - "CodexとClaude Codeによる解析支援"
+    - "公開脆弱性情報と使用バージョンの照合"
+    - "不正変更の除去・復旧・再発防止・動作確認"
+  scope_boundary_stated: true
+  comparable_variables: [character_count, technical_procedure_section_characters, price.amount_jpy, reply_status, outcome]
+selling_points:
+  - "WordPressの403障害と不審PHP・.htaccessへの過去の対応経験を具体的に説明"
+  - "表示文面だけでなく、ファイル・DB・アカウント・サーバー設定まで影響範囲を調査"
+  - "バックアップ、調査、修正、テスト、本番反映、動作確認の手順を提示"
+  - "AI支援ツールと公開脆弱性情報の照合を調査手法として提示"
+  - "WAF・認証情報・更新運用まで再発防止を提案"
+  - "別サイトやサーバー全体へ範囲が広がる場合の追加費用協議を明記"
+hypotheses:
+  - confidence: "Possible"
+    statement: "具体的な原因仮説、類似対応経験、調査・復旧手順を冒頭から示すと、競合提案が多い案件でも発注者の不安が減り、返信率が上がる可能性がある。"
+    validation: "同種の応募で提案文の長さ、価格、技術説明量と返信率・受注率を比較する。単一案件では有効性を確定しない。"
+reply_status: "Unknown"
+client_response_at: null
+outcome: "pending"
+outcome_decided_at: null
+contract_amount_jpy: null
+actual_work_hours: null
+actual_revenue_jpy: null
+client_comments: null
+learnings: null
+tracking:
+  reply_received: null
+  reply_at: null
+  outcome: "pending"
+  outcome_at: null
+  contract_amount_jpy: null
+  actual_work_hours: null
+  actual_revenue_jpy: null
+  client_comments: null
+  learnings: null
