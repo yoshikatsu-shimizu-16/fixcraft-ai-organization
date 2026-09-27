@@ -1,0 +1,137 @@
+run_id: "RUN-20260927-evening-pdca"
+skill: "fixcraft-orchestrator(evening-pdca)"
+period:
+  start: "2026-09-13"
+  end: "2026-09-27"
+  note: "state/leadsに記録が存在する全期間（初回evening-pdca集計）。"
+counts:
+  discovered: 15
+  gate1_pending_current: 13
+  gate1_approved_recorded: 0
+  expired: 1
+  withdrawn: 0
+  applied: 1
+  replied: 0
+  negotiating: 0
+  won: 0
+  lost: 1
+  no_response: 0
+counts_confidence: "Confirmed（state/leads配下15ファイルのdedupe_key基準集計。lancers:5606677は2ファイルに分裂していたため本runで1案件1ファイルへ統合した）"
+revenue_jpy: 0
+revenue_evidence: "Confirmed (.agent/state/applications/lancers-5606677-2026-09-25.yaml: actual_revenue_jpy: 0)"
+hours:
+  sales: "Unknown（営業/試作工数の記録項目がstateに存在しないため計測不能）"
+  prototype: "Unknown"
+rates:
+  gate1_pass_rate: "Unknown（Gate1承認Evidenceを記録したleadが0件のため算出不能。唯一の応募もGate1/2/3の事前承認記録なしでユーザーが手動応募）"
+  reply_rate: "0/1 = 0%（母数1件、方向性判断不可）"
+  win_rate_per_application: "0/1 = 0%（母数1件、方向性判断不可）"
+  win_rate_after_reply: "Unknown（返信自体が0件）"
+efficiency:
+  revenue_per_application_jpy: 0
+  revenue_per_sales_hour_jpy: "Unknown（工数記録なし）"
+segment_metrics:
+  - segment: "WordPress障害復旧・保守"
+    leads: ["cw-13423932", "cw-13435160", "lancers-5606677"]
+    applied: 1
+    lost: 1
+    note: "唯一の応募・唯一の確定結果がこのセグメント。母数1件のためセグメント傾向としての断定はできない。"
+  - segment: "AI/SNS運用・企画"
+    leads: ["cw-13430593", "cw-13446028", "cw-13446964", "cw-13469793", "cw-13472794"]
+    applied: 0
+    note: "5件がGate1_pending。cw-13446028は応募13→18人、cw-13446964は応募10→16人へ競争が増加したことをConfirmed観測。応募実行前のためGate1判断待ち。"
+  - segment: "生成AI/LLM/RAG/Agent開発"
+    leads: ["cw-13435474", "cw-13431927", "cw-13481213"]
+    applied: 0
+    note: "いずれも稼働時間・予算Unknownまたは競争が強く、AI推奨はneeds_more_evidence/rejectが中心。"
+  - segment: "現金化目的の小粒データ作業"
+    leads: ["lancers-5601654", "lancers-5605579", "lancers-5605624"]
+    applied: 0
+    note: "lancers-5605579は提案0→38件（うち4件当選済み）へ急増、lancers-5605624は10提案・2当選まで進行。応募判断が遅れると枠が埋まる傾向をConfirmedで観測。"
+confirmed_findings:
+  - confidence: "Confirmed"
+    statement: "今期間の応募は lancers-5606677（WordPress復旧、20,000円提示）の1件のみで、結果はlost。受注者wood0214は公開実績19件・満足率100%だった。"
+    evidence: [".agent/state/leads/2026-09-24-lancers-5606677-wordpress-malware-recovery.yaml", ".agent/state/applications/lancers-5606677-2026-09-25.yaml"]
+  - confidence: "Confirmed"
+    statement: "再観測を行った案件のほぼ全て（cw-13446028, cw-13446964, lancers-5605579, lancers-5606677）で、初回観測から応募者数が増加していた。"
+    evidence: ["各lead fileのevidence配列（複数observed_at時点の応募者数）"]
+  - confidence: "Confirmed"
+    statement: "記録上、Gate 1が人間により承認済みとしてEvidence付きで確定したleadは0件。唯一の応募（lancers-5606677）もGate 3の事前承認記録なしにユーザーが手動応募した事後報告のみで成立している。"
+    evidence: [".agent/state/leads/2026-09-24-lancers-5606677-wordpress-malware-recovery.yaml#state_reconciliation"]
+hypotheses:
+  - confidence: "Possible"
+    statement: "1727文字・AI支援ツール名を明示した長い技術説明よりも、公開実績数・満足率など短時間で比較できる信頼材料の方が、至急性の高いWordPress復旧案件では選定に強く影響した可能性がある。"
+    validation: "次回の同種案件で、冒頭に実績要約（何件・平均対応時間など）を先出しし、返信率・受注可否を比較する。"
+  - confidence: "Possible"
+    statement: "応募者数が短期間で急増する案件（AI/SNS系・現金化小粒作業系）では、観測からGate1承認〜応募までのリードタイムが長いほど、実質的な当選確率が下がっている可能性がある。"
+    validation: "Gate1承認から応募までの経過時間を今後記録し、リードタイムと当選結果（当選枠残数の変化）の関係を追跡する。"
+  - confidence: "Possible"
+    statement: "Gate 1/2/3の承認Evidenceが記録されないまま応募が実行されると、Improvement Leadが『どの推奨が実際に効果があったか』を後から検証できなくなる。"
+    validation: "次回以降、Gate承認（またはユーザーによる独自応募の事前申告）を応募前にstateへ記録できているかをrunごとに確認する。"
+experiments:
+  - name: "実績先出し型の提案文フォーマット"
+    segment: "WordPress障害復旧"
+    change: "提案文冒頭に、対応実績件数・平均着手時間・再発防止策の3行要約を置き、AI支援ツール名など副次情報は末尾へ移動する。"
+    expected_kpi: "reply_rate、win_rate_per_applicationの改善（母数を今後2〜3件蓄積してから判定）"
+    stop_condition: "3件試して改善が見られない場合は元の詳細説明型へ戻す。"
+  - name: "早期応募リードタイム短縮"
+    segment: "AI/SNS運用・企画、現金化小粒データ作業"
+    change: "Gate1承認が得られた場合、発見から24時間以内の応募を優先する運用ルールを試験導入する。"
+    expected_kpi: "応募時点での残り募集枠比率の改善"
+    stop_condition: "運用負荷が過大、または当選率に有意差が出ない場合は通常運用へ戻す。"
+  - name: "Gate/応募Evidenceの記録徹底"
+    segment: "全案件共通（プロセス改善）"
+    change: "ユーザーが手動応募した場合も、応募前後でGate承認有無・応募日時・提示額を必ずapplications/配下へ即時記録する。"
+    expected_kpi: "Gate1承認記録率、応募Evidence完全性"
+    stop_condition: "該当なし（プロセス順守の確認のみ）"
+playbook_candidates: []
+playbook_candidates_note: "同種のSE指摘・失注パターンが2回以上蓄積していないため、今回は候補化しない（Improvement Governance: 2回以上でPlaybook候補）。"
+standard_rule_candidates: []
+standard_rule_candidates_note: "母数1件の失注のみのため、標準ルール昇格の条件（3回以上かつKPI改善確認）を満たさない。"
+knowledge_change_proposals: []
+knowledge_change_proposals_note: "winning-patterns.md/losing-patterns.mdへの追記は母数不足のため見送り。上記hypothesesとして保持し、次回以降の同種事例と合わせて再評価する。"
+pending_human_gates:
+  - lead_id: "cw-13423932"
+    decision: "recommend_reject"
+    reason: "応募145人、予算5,500円で採算・競争ともに不利。"
+  - lead_id: "cw-13435160"
+    decision: "needs_more_evidence"
+    reason: "週30時間必須で副業稼働と衝突の可能性。稼働時間交渉余地を確認要。"
+  - lead_id: "cw-13435474"
+    decision: "needs_more_evidence"
+    reason: "週30時間要件と本番実装実績Evidence不足。"
+  - lead_id: "cw-13430593"
+    decision: "recommend_approve"
+    reason: "固定報酬3〜5万円、応募18人/募集8人でAI×SNS自動化のWin Theme提示余地あり。"
+  - lead_id: "cw-13431927"
+    decision: "needs_more_evidence"
+    reason: "予算非公開、応募65人/1枠で競争過多。"
+  - lead_id: "crowdworks-13446028"
+    decision: "needs_more_evidence"
+    reason: "月額3万円だが毎日約1時間の拘束。作業時刻の柔軟性確認要。"
+  - lead_id: "lancers-5601654"
+    decision: "needs_more_evidence"
+    reason: "ComfyUI実績スクリーンショット必須。既存実績Evidenceの有無次第。"
+  - lead_id: "crowdworks-13446964"
+    decision: "needs_more_evidence"
+    reason: "応募10→16人へ増加。週稼働時間・拘束時刻がUnknown。"
+  - lead_id: "crowdworks-13469793"
+    decision: "recommend_approve"
+    reason: "報酬1,000円と小さいが現金化・実績作りに低リスクで適合。"
+  - lead_id: "lancers-5605579"
+    decision: "recommend_approve"
+    reason: "有償トライアル300円で実測時給を取得可能。ただし提案38件へ急増し残り枠僅少。"
+  - lead_id: "lancers-5605624"
+    decision: "recommend_approve"
+    reason: "有償トライアルで実測可能。ただし10提案・2当選済みで残り枠僅少。"
+  - lead_id: "crowdworks-13472794"
+    decision: "recommend_approve"
+    reason: "応募4人/募集10人と入口が広く、小粒現金化の実験候補。"
+  - lead_id: "cw-13481213"
+    decision: "recommend_reject"
+    reason: "Rubric合計60点（pursue基準75未満）。勝ち筋が実質なく再現性も低い。"
+blocked_items: []
+failed_sources: []
+data_quality_actions_this_run:
+  - "lancers:5606677のリード状態が2026-09-24付/2026-09-26付の2ファイルに分裂していたため、1案件1ファイルの原則に沿って統合し、旧ファイルを削除した（内容の欠落なし、historyフィールドへ経緯を保持）。"
+next_run_recommendation: "母数が小さいため、次回evening-pdcaまでに最低1〜2件の応募Evidenceを追加してからKnowledge/Playbook候補の再評価を行う。Gate1承認の記録徹底を優先する。"
