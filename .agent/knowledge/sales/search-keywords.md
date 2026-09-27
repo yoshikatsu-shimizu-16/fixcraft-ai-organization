@@ -24,6 +24,14 @@ WordPress / WP / プラグイン / テーマ / 保守 / セキュリティ / バ
 
 React / TypeScript / Node.js / Next.js / NestJS / Java / Spring Boot / AWS / Lambda / API開発 / 管理画面 / Webアプリ / SaaS / バックエンド / フロントエンド / Firebase / Supabase
 
+### 6. General Bug Fix / Ops / Infra Investigation
+
+不具合修正 / エラー調査 / 動作確認 / 保守 / 運用保守 / サーバー調査 / DNS設定 / SSL設定 / Cloudflare設定 / AWS設定 / Terraform / Docker / Jenkins / CI/CD構築 / Excel VBA / マクロ開発 / スプレッドシート自動化 / Playwright / Selenium / スクレイピング / テスト自動化 / E2Eテスト / データ収集 / データ整形
+
+### 7. Technical Evaluation / PoC / Tool Feedback
+
+ツール評価 / 使用感レビュー / 利用体験 / モニター調査 / 技術検証 / PoC / 実証実験 / ベータテスト / フィードバック / アンケート回答（技術系） / コードレビュー / 静的解析 / コード分析 / UXフィードバック / 動作検証
+
 ## Problem Words
 
 修正 / 改善 / 復旧 / エラー / 不具合 / 自動化 / 効率化 / 移行 / 連携 / 保守 / 調査 / 急募 / スポット / 継続 / 導入 / 構築 / 代行 / 運用 / 改修 / 最適化 / 分析
@@ -50,6 +58,14 @@ React / TypeScript / Node.js / Next.js / NestJS / Java / Spring Boot / AWS / Lam
 - `WordPress 修正`
 - `WordPress 復旧`
 - `React 改修`
+- `Excel VBA マクロ`
+- `Playwright テスト自動化`
+- `スプレッドシート 自動化`
+- `AWS Terraform 構築`
+- `サーバー DNS SSL 調査`
+- `ツール評価 モニター`
+- `技術検証 PoC フィードバック`
+- `静的解析 コードレビュー`
 
 ## Mandatory Coverage Rule
 
@@ -60,6 +76,8 @@ React / TypeScript / Node.js / Next.js / NestJS / Java / Spring Boot / AWS / Lam
 3. Business Automation / Integration
 4. WordPress / Web Repair
 5. Web / App Development
+6. General Bug Fix / Ops / Infra Investigation
+7. Technical Evaluation / PoC / Tool Feedback
 
 各カテゴリで原則2つ以上のQueryを試す。市場側の検索仕様で不可能な場合は、その理由をEvidenceとして記録する。
 
