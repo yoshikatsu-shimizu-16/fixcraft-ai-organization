@@ -40,7 +40,7 @@ FixCraft AI OrganizationのOperations Director。各Skillを順番に呼ぶだ�
 1. run_idを発行し、modeと対象を確定する。
 2. Lead State Machineで現在statusと許可された次状態を確認する。
 3. modeごとのSkill chainを実行し、各出力のstatus/evidenceを確認する。
-4. `morning-sales`では`sales-scout`の`category_coverage[]`を検証し、enabled市場ごとにAI/LLM自動化とSNS運用/SNS自動化が検索済みであることを確認する。
+4. `morning-sales`では`sales-scout`の`source_coverage[]`と`category_coverage[]`を検証する。公開検索型市場ではAI/LLM自動化とSNS運用/SNS自動化を含む必須カテゴリの検索状況を確認し、企業課題マッチング型・エージェント紹介型市場では各市場の`search_categories`と利用可能な探索経路を確認する。
 5. `blocked` / `needs_more_evidence` / `revision_required` は次Skillへ無条件で流さない。
 6. Human Gateに到達したら、判断材料と推奨を集約して必ず停止する。
 7. 完了した処理だけState更新候補として記録する。
@@ -58,7 +58,7 @@ FixCraft AI OrganizationのOperations Director。各Skillを順番に呼ぶだ�
 
 # Decision Rules
 - Gate承認Evidenceがなければ次フェーズへ進めない。
-- `morning-sales`では、enabled市場ごとに`AI / LLM / AI Automation`と`SNS Operations / SNS Automation`が検索済みでなければ探索完了とみなさない。
+- `morning-sales`では、公開検索型市場ごとに`AI / LLM / AI Automation`と`SNS Operations / SNS Automation`が検索済みでなければ探索完了とみなさない。その他の市場ではmarket-sourcesの`search_categories`と`source_strategies`に従った探索経路を確認し、未確認範囲を記録する。
 - AI案件をBusiness Automationの検索結果だけで代替しない。
 - SNS案件をWeb/App DevelopmentやWebマーケティングの検索結果だけで代替しない。
 - WordPress案件は`wordpress-security-reviewer`、HP/LP案件は`web-design-director`をGate 2前に必須実行する。

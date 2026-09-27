@@ -5,24 +5,110 @@ sources:
     name: CrowdWorks
     enabled: true
     priority: 1
+    source_type: "open_crowdsourcing_marketplace"
     base_url: "https://crowdworks.jp/"
     discovery_method: "public web search or authenticated browser when available"
+    search_categories: "all"
     application_method: "human Gate 3 approval required; do not claim submission without evidence"
   lancers:
     name: Lancers
     enabled: true
     priority: 2
+    source_type: "open_crowdsourcing_marketplace"
     base_url: "https://www.lancers.jp/"
     discovery_method: "public web search or authenticated browser when available"
+    search_categories: "all"
     application_method: "human Gate 3 approval required; do not claim submission without evidence"
+  sankaku:
+    name: "サンカク（ふるさと副業）"
+    enabled: true
+    priority: 3
+    source_type: "project_matching_platform"
+    base_url: "https://sankak.jp/"
+    discovery_method: "public project listings and IT/tech, PM/engineering, DX tags; inspect project problem, expected role, location, and application format"
+    search_categories: ["AI / LLM / AI Automation", "Business Automation / Integration", "WordPress / Web Repair", "Web / App Development", "General Bug Fix / Ops / Infra Investigation", "SNS Operations / SNS Automation"]
+    application_method: "application/selection is a human decision; Human Gate 3 required"
+  remogu:
+    name: "Remogu（リモグ）"
+    enabled: true
+    priority: 4
+    source_type: "curated_freelance_agent"
+    base_url: "https://remogu.jp/"
+    discovery_method: "public listings plus authenticated member recommendations; evaluate weekly hours, start date, contract, and required skills"
+    search_categories: ["AI / LLM / AI Automation", "Business Automation / Integration", "Web / App Development", "General Bug Fix / Ops / Infra Investigation", "Technical Evaluation / PoC / Tool Feedback"]
+    application_method: "reply or profile submission shares professional history; Human Gate 3 required before any reply or application"
+  shuumatsu_worker:
+    name: "シューマツワーカー"
+    enabled: true
+    priority: 5
+    source_type: "curated_sidework_agent"
+    base_url: "https://shuuumatu-worker.jp/"
+    discovery_method: "public project listings and authenticated recommendations; filter for part-time hours, remote work, and verified skill requirements"
+    search_categories: ["AI / LLM / AI Automation", "SNS Operations / SNS Automation", "Business Automation / Integration", "Web / App Development", "Technical Evaluation / PoC / Tool Feedback"]
+    application_method: "human Gate 3 approval required; do not claim submission without evidence"
+  lotsful:
+    name: lotsful
+    enabled: true
+    priority: 6
+    source_type: "curated_sidework_platform"
+    base_url: "https://lotsful.jp/"
+    discovery_method: "authenticated member recommendations and public listings; screen by job role, required experience, workload, and remote/location conditions"
+    search_categories: ["AI / LLM / AI Automation", "Business Automation / Integration", "Web / App Development", "General Bug Fix / Ops / Infra Investigation", "SNS Operations / SNS Automation"]
+    application_method: "human Gate 3 approval required; do not claim submission without evidence"
+  anycrew:
+    name: Anycrew
+    enabled: true
+    priority: 7
+    source_type: "open_sidework_marketplace"
+    base_url: "https://app.any-crew.com/offers"
+    discovery_method: "public active listings plus authenticated skill-match emails; search skills and check active status, weekly hours, work location, and deadline"
+    search_categories: ["AI / LLM / AI Automation", "SNS Operations / SNS Automation", "Business Automation / Integration", "Web / App Development", "General Bug Fix / Ops / Infra Investigation", "Technical Evaluation / PoC / Tool Feedback"]
+    application_method: "human Gate 3 approval required; do not claim submission without evidence"
+  itpro_partners:
+    name: "ITプロパートナーズ"
+    enabled: true
+    priority: 8
+    source_type: "curated_freelance_agent"
+    base_url: "https://itpropartners.com/job"
+    discovery_method: "public listings and authenticated agent recommendations; prioritize weekly workload and remote-compatible projects"
+    search_categories: ["AI / LLM / AI Automation", "Business Automation / Integration", "Web / App Development", "General Bug Fix / Ops / Infra Investigation"]
+    application_method: "agent contact or profile submission requires human Gate 3 approval"
   coconala:
     name: Coconala
     enabled: false
-    priority: 3
+    priority: 9
     base_url: "https://coconala.com/"
+    source_type: "service_purchase_marketplace"
     discovery_method: "enable only after defining matching/search policy for service-purchase style listings"
+    search_categories: "all"
+
+  flexy:
+    name: FLEXY
+    enabled: false
+    priority: 10
+    source_type: "curated_freelance_agent"
+    base_url: "https://flxy.jp/media/"
+    discovery_method: "enable after confirming active job recommendation access; public listings are limited"
+    search_categories: ["AI / LLM / AI Automation", "Web / App Development", "General Bug Fix / Ops / Infra Investigation"]
+    application_method: "human Gate 3 approval required"
+
+  paiza_freelance:
+    name: "paiza（フリーランス案件案内）"
+    enabled: false
+    priority: 11
+    source_type: "career_and_freelance_platform"
+    base_url: "https://paiza.jp/"
+    discovery_method: "enable after confirming freelance/sidework preference; exclude standard full-time recruiting alerts"
+    search_categories: ["AI / LLM / AI Automation", "Web / App Development"]
 rules:
   enabled_sources_each_morning: "all"
+  source_strategies:
+    open_crowdsourcing_marketplace: "search all mandatory categories using multiple issue-plus-skill queries"
+    project_matching_platform: "search active projects by applicable skill tags and inspect project-level role/effort; newsletter selections alone do not prove full coverage"
+    curated_sidework_agent: "review new-project alerts and active role listings; match against verified profile evidence and available workload"
+    curated_freelance_agent: "review public listings and account-specific recommendations; include agent-mediated/private leads as private notification evidence"
+    open_sidework_marketplace: "search active listings by engineering, AI, automation, and applicable category tags; reject expired/closed listings"
+    career_and_freelance_platform: "only include freelance/part-time roles when explicitly selected; exclude full-time employment listings"
   dedupe_key_priority:
     - "platform + source_job_id"
     - "platform + normalized canonical job URL"
