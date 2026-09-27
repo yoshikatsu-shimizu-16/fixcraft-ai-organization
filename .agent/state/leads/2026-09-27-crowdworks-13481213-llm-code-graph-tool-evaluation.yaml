@@ -1,0 +1,37 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "crowdworks-13481213"
+platform: "crowdworks"
+source_job_id: "13481213"
+dedupe_key: "crowdworks:13481213"
+title: "静的解析とLLMを融合したコードグラフ自動生成ツール（HCG）の利用評価実験"
+source_url: "https://crowdworks.jp/public/jobs/13481213"
+status: "gate1_pending"
+first_seen_at: "2026-09-27T08:30:00+09:00"
+last_seen_at: "2026-09-27T08:30:00+09:00"
+last_updated_at: "2026-09-27T08:30:00+09:00"
+deadline: "2026-10-10T23:59:59+09:00"
+budget:
+  type: "fixed"
+  min_jpy: 5000
+  max_jpy: 10000
+score: 60
+decision: "recommend_reject"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13481213"
+    observed_at: "2026-09-27T08:30:00+09:00"
+    fact: "2026-09-26掲載。静的解析ツールHCGをPCへインストールし、Java/Python/JavaScriptのコードでCFG/AST/PDG生成、グラフ表示、コード補完、LLM活用の言語分析を評価したうえで、Googleフォーム15問（所要約2時間）に回答する固定報酬5,000〜10,000円の実験参加業務。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13481213"
+    observed_at: "2026-09-27T08:30:00+09:00"
+    fact: "応募期限2026-10-10、募集10人に対し応募15人・契約0人。発注者(zhounan515130436)は本人確認済み、評価5.0（12件）。発注ルールチェックは未回答。"
+risks:
+  - "特定の未経験ツール(HCG)のインストール可否・所要時間がUnknownで、環境依存の追加作業が発生し得る。"
+  - "選定方式(先着/審査等)がUnknownで、応募15人・募集10人でも当選するとは限らない。"
+  - "実験参加・アンケート回答型の単発業務であり、差別化できる勝ち筋がほぼなく、継続案件やPlaybook化の再現性が低い。"
+recommendations:
+  - "固定報酬・低リスクだが、Win Themeが実質存在せず、Rubric合計スコア60(hold下限、pursue基準75未満)のためAIとしてはrecommend_rejectとする。"
+  - "人間が追う判断をする場合は、ツールインストール可否と所要時間を先に確認し、時給換算が悪化するなら早期撤退する前提で臨む。"
+next_action: "Human Gate 1で追跡可否を判断する。AI推奨はrecommend_rejectだが、承認・却下は人間が行う。"
+artifacts: []
