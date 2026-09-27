@@ -22,7 +22,7 @@ sources:
   sankaku:
     name: "サンカク（ふるさと副業）"
     enabled: true
-    priority: 3
+    priority: 4
     source_type: "project_matching_platform"
     base_url: "https://sankak.jp/"
     discovery_method: "public project listings and IT/tech, PM/engineering, DX tags; inspect project problem, expected role, location, and application format"
@@ -31,7 +31,7 @@ sources:
   remogu:
     name: "Remogu（リモグ）"
     enabled: true
-    priority: 4
+    priority: 5
     source_type: "curated_freelance_agent"
     base_url: "https://remogu.jp/"
     discovery_method: "public listings plus authenticated member recommendations; evaluate weekly hours, start date, contract, and required skills"
@@ -40,7 +40,7 @@ sources:
   shuumatsu_worker:
     name: "シューマツワーカー"
     enabled: true
-    priority: 5
+    priority: 3
     source_type: "curated_sidework_agent"
     base_url: "https://shuuumatu-worker.jp/"
     discovery_method: "public project listings and authenticated recommendations; filter for part-time hours, remote work, and verified skill requirements"
