@@ -1,0 +1,36 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "lancers-onsite-10897"
+platform: "lancers"
+source_job_id: "onsite-10897"
+dedupe_key: "lancers:onsite-10897"
+title: "AI活用支援（特にClaude）"
+source_url: "https://www.lancers.jp/onsite/job/10897"
+status: "gate1_pending"
+first_seen_at: "2026-09-27T15:00:00+09:00"
+last_seen_at: "2026-09-27T15:00:00+09:00"
+last_updated_at: "2026-09-27T15:00:00+09:00"
+deadline: null
+budget:
+  type: "negotiable"
+score: 55
+decision: "needs_more_evidence"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/onsite/job/10897"
+    observed_at: "2026-09-27T15:00:00+09:00"
+    fact: "Claude等の生成AI導入・活用支援業務。業務フロー自動化、AIチャットボット設計、社内向けAIアシスタント構築、RAG構築支援など幅広いAI活用支援を行うWebエンジニアの業務委託。ステータス「募集中」、予算は「後で決める」（応募期限の表示なし、継続募集型）。"
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/onsite/job/10897"
+    observed_at: "2026-09-27T15:00:00+09:00"
+    fact: "発注者は有限会社ミューファ。本人確認済み・機密保持確認済み・電話確認済み。満足5件／残念0件（発注率83%）の良好な取引実績。"
+risks:
+  - "予算が「後で決める」で公開されておらず、採算評価ができない。"
+  - "具体的な成果物範囲・稼働時間・契約期間（単発/継続）がUnknownで、工数見積りができない。"
+  - "業務範囲が業務自動化・チャットボット設計・社内AIアシスタント・RAG構築と広く、実際の優先課題が絞れていない。"
+recommendations:
+  - "RAG構築・AIチャットボット・業務自動化はFixCraftの主要技術領域と直接一致し、Win Theme候補になり得る。"
+  - "発注者の取引実績は良好（発注率83%、満足5／残念0）であり、他候補より信頼性は高い。"
+  - "Gate 1判断の前に、想定予算感・優先課題・稼働時間・契約形態を確認する追加質問を推奨する。"
+next_action: "Human Gate 1判断の前に予算・優先課題・稼働条件の確認質問を推奨する。AI推奨はneeds_more_evidence。"
+artifacts: []

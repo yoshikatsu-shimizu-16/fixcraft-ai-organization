@@ -1,0 +1,35 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "lancers-onsite-10551"
+platform: "lancers"
+source_job_id: "onsite-10551"
+dedupe_key: "lancers:onsite-10551"
+title: "【フルリモート】出版社のSNS運用代行・広告用コンテンツ制作"
+source_url: "https://www.lancers.jp/onsite/job/10551"
+status: "gate1_pending"
+first_seen_at: "2026-09-27T15:00:00+09:00"
+last_seen_at: "2026-09-27T15:00:00+09:00"
+last_updated_at: "2026-09-27T15:00:00+09:00"
+deadline: null
+budget:
+  type: "negotiable"
+score: 35
+decision: "recommend_reject"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/onsite/job/10551"
+    observed_at: "2026-09-27T15:00:00+09:00"
+    fact: "成人向け出版事業の拡大に伴い、公式SNS（主にX）の運用と広告用コンテンツ制作を担当するフリーランスを募集。X運用経験、画像生成AI利用経験、成人向けコンテンツへの理解を必須条件として明記。予算は「後で決める」、観測時点で応募0件、ステータス「募集中」。"
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/onsite/job/10551"
+    observed_at: "2026-09-27T15:00:00+09:00"
+    fact: "発注者は「あんと＠発注専用」（個人）。本人確認・機密保持・電話確認済み。実績12件、成功率80%、リピーター2名。"
+risks:
+  - "案件内容が成人向けコンテンツ領域であり、FixCraftとして請け負う対象領域・コンプライアンス方針が組織として未定義。"
+  - "予算が「後で決める」で公開されておらず、採算評価ができない。"
+  - "SNS運用単体で、自動化・AI連携等の技術的差別化を示す余地が乏しい。"
+recommendations:
+  - "成人向け領域案件を対象とするか否かは営業方針として人間が明示的に決定すべき事項であり、AIとして単独では方針判断をしない。"
+  - "経済性・差別化の観点でもRubric合計スコア35（reject閾値60未満）であり、AIとしてはrecommend_rejectとする。"
+next_action: "Human Gate 1で、成人向けコンテンツ領域を対象とするかという方針判断も含めて可否を決定する。AI推奨はrecommend_reject。"
+artifacts: []

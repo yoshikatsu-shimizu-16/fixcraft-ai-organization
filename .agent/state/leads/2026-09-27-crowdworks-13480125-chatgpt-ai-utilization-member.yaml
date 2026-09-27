@@ -1,0 +1,37 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "crowdworks-13480125"
+platform: "crowdworks"
+source_job_id: "13480125"
+dedupe_key: "crowdworks:13480125"
+title: "ChatGPTを「使ったことがある」から、仕事で使えるへ｜AI活用メンバー募集"
+source_url: "https://crowdworks.jp/public/jobs/13480125"
+status: "gate1_pending"
+first_seen_at: "2026-09-27T14:30:00+09:00"
+last_seen_at: "2026-09-27T14:30:00+09:00"
+last_updated_at: "2026-09-27T14:30:00+09:00"
+deadline: "2026-10-09T23:59:59+09:00"
+budget:
+  type: "fixed"
+  min_jpy: 10000
+  max_jpy: 30000
+score: 35
+decision: "recommend_reject"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13480125"
+    observed_at: "2026-09-27T14:30:00+09:00"
+    fact: "2026-09-26掲載。ChatGPTを活用したリサーチ、SNS投稿文の作成、企画立案、プロンプト調整を担当するコンテンツ制作メンバー募集。プログラミング経験不要。固定報酬制5,000円ではなく10,000〜30,000円、募集10人、応募期限2026-10-09。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13480125"
+    observed_at: "2026-09-27T14:30:00+09:00"
+    fact: "応募29人・契約0人・募集10人。発注者(ribonchan11)は評価0.0（0件）、本人確認未提出、コンプライアンスチェック未回答の低信頼発注者。"
+risks:
+  - "非技術のコンテンツ制作案件で、FixCraftのAI/LLM実装・自動化・Web開発といった技術的差別化を活かせない。"
+  - "発注者の本人確認・取引実績が皆無で、支払い・コミュニケーションの信頼性が未検証。"
+  - "固定報酬10,000〜30,000円・募集10人に対し応募29人と応募超過で、単価・採用可能性ともに低い。"
+recommendations:
+  - "Rubric合計スコア35（reject閾値60未満）のため、AIとしてはrecommend_rejectとする。"
+  - "技術系の差別化ができない非エンジニアリング案件であり、限られた営業時間の優先対象にしない。"
+next_action: "Human Gate 1で追跡可否を判断する。AI推奨はrecommend_rejectだが、承認・却下は人間が行う。"
+artifacts: []

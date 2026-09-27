@@ -1,0 +1,35 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "lancers-onsite-10805"
+platform: "lancers"
+source_job_id: "onsite-10805"
+dedupe_key: "lancers:onsite-10805"
+title: "【長期歓迎】AI活用×Webアプリ開発エンジニア募集"
+source_url: "https://www.lancers.jp/onsite/job/10805"
+status: "gate1_pending"
+first_seen_at: "2026-09-27T15:00:00+09:00"
+last_seen_at: "2026-09-27T15:00:00+09:00"
+last_updated_at: "2026-09-27T15:00:00+09:00"
+deadline: null
+budget:
+  type: "negotiable"
+score: 57
+decision: "needs_more_evidence"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/onsite/job/10805"
+    observed_at: "2026-09-27T15:00:00+09:00"
+    fact: "Webメディアをアプリケーション化するプロジェクトの開発メンバー募集。フロントエンド・バックエンド・DB設計を含む開発業務全般に従事し、Claude CodeやCursor等のAIコーディングエージェントを積極活用しながら実装を進める体制と明記。長期歓迎、予算は「後で決める」、ステータス「募集中」。"
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/onsite/job/10805"
+    observed_at: "2026-09-27T15:00:00+09:00"
+    fact: "発注者はshutaaa（ss-user）。本人確認済み・機密保持確認済み・電話確認済み。発注実績3件（満足/残念の内訳はUnknown）。"
+risks:
+  - "予算・稼働時間・契約期間が「後で決める」でUnknownのため採算評価ができない。"
+  - "具体的な使用技術スタック（フロントエンド/バックエンド/DB設計の詳細）が明記されておらず、fit評価が確定できない。"
+  - "発注者評価の詳細（満足/残念内訳）がUnknownで、client_qualityの確信度が中程度に留まる。"
+recommendations:
+  - "Claude Code/Cursor等のAIコーディングエージェント活用開発はFixCraftの強みと親和性が高く、Win Theme候補になり得る。"
+  - "Gate 1判断前に、具体的技術スタック・想定予算・週稼働時間・契約形態を確認する質問を推奨する。"
+next_action: "Human Gate 1判断の前に技術スタックと予算・稼働条件の確認質問を推奨する。AI推奨はneeds_more_evidence。"
+artifacts: []
