@@ -1,0 +1,41 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "lancers-5608455"
+platform: "lancers"
+source_job_id: "5608455"
+dedupe_key: "lancers:5608455"
+title: "【60分・5,000円】AIと仕事についてのオンラインインタビュー（職種不問・音声通話）"
+source_url: "https://www.lancers.jp/work/detail/5608455"
+status: "gate1_pending"
+first_seen_at: "2026-09-29T08:02:00+09:00"
+last_seen_at: "2026-09-29T08:02:00+09:00"
+last_updated_at: "2026-09-29T08:02:00+09:00"
+deadline: "2026-09-30T17:06:00+09:00"
+budget:
+  type: "fixed"
+  amount_jpy: 5000
+score: 86
+decision: "recommend_approve"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/work/detail/5608455"
+    observed_at: "2026-09-29T08:02:00+09:00"
+    fact: "60分程度のZoomまたはGoogle Meet音声通話で、報酬5,000円（税込）。カメラOFF可。募集1名。"
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/work/detail/5608455"
+    observed_at: "2026-09-29T08:02:00+09:00"
+    fact: "対象はAIの普及で仕事が減る可能性を感じた社会人で職種不問。ソフトウェアエンジニアは特に歓迎と明記。"
+  - confidence: "Confirmed"
+    source: "https://www.lancers.jp/work/detail/5608455"
+    observed_at: "2026-09-29T08:02:00+09:00"
+    fact: "2026-09-29朝の確認時点で提案8件、当選0件、募集1名。実施候補日は9/29〜10/1。"
+risks:
+  - "通話内容は録音される。依頼文では企画検討のみに使用し外部公開しないと明記されている。"
+  - "募集1名に対して提案8件のため競争はある。"
+  - "応募条件の『仕事が減りそう・なくなりそうと感じた具体的な出来事』を、虚偽なく本人の実体験として説明できる必要がある。"
+recommendations:
+  - "現フェーズの『現金化＋受注実績』に非常に合う。60分で5,000円、技術納品リスクなし、SE歓迎のためGate 1最優先候補。"
+  - "Bid Strategyは技術自慢ではなく、SEとして生成AIを日常業務・開発で使っている視点と、AIで仕事の進め方が変わった具体例を短く提示する。"
+  - "日程は9/29〜10/1のうち対応可能枠を複数提示し、選考摩擦を下げる。"
+next_action: "Human Gate 1で応募候補として追うか判断する。AI推奨はrecommend_approve。承認後のみbuild-proposalへ進む。"
+artifacts: []
