@@ -1,0 +1,167 @@
+run_id: "RUN-20260928-evening-pdca"
+skill: "fixcraft-orchestrator(evening-pdca)"
+period:
+  start: "2026-09-13"
+  end: "2026-09-28"
+  note: "state/leads配下の全期間を再集計。前回run(RUN-20260927-evening-pdca)以降の差分は、2026-09-27付sales-scout探索で追加された6件のLead(discovered)のみ。新規Application/Communication/Outcomeの記録はなし。"
+counts:
+  discovered: 21
+  gate1_pending_current: 19
+  gate1_approved_recorded: 0
+  expired: 1
+  withdrawn: 0
+  applied: 1
+  replied: 0
+  negotiating: 0
+  won: 0
+  lost: 1
+  no_response: 0
+counts_confidence: "Confirmed（state/leads配下21ファイルのdedupe_key基準集計。前回runからの純増は2026-09-27追加分の6件: crowdworks-13480125, lancers-onsite-10551/10805/10897/7244/9782）。"
+revenue_jpy: 0
+revenue_evidence: "Confirmed (.agent/state/applications/lancers-5606677-2026-09-25.yaml: actual_revenue_jpy: 0, 変更なし)"
+hours:
+  sales: "Unknown（営業/試作工数の記録項目がstateに存在しないため計測不能。前回runから変化なし）"
+  prototype: "Unknown"
+rates:
+  gate1_pass_rate: "Unknown（Gate1承認Evidenceを記録したleadが依然0件のため算出不能）"
+  reply_rate: "0/1 = 0%（母数1件、方向性判断不可、前回runから変化なし）"
+  win_rate_per_application: "0/1 = 0%（母数1件、方向性判断不可、前回runから変化なし）"
+  win_rate_after_reply: "Unknown（返信自体が0件）"
+efficiency:
+  revenue_per_application_jpy: 0
+  revenue_per_sales_hour_jpy: "Unknown（工数記録なし）"
+gate1_pending_breakdown:
+  recommend_approve:
+    - {lead_id: "cw-13430593", score: 75, deadline: "2026-09-19", deadline_status: "passed(9 days)"}
+    - {lead_id: "crowdworks-13469793", score: 72, deadline: "2026-09-26T23:59:59+09:00", deadline_status: "passed(2 days)"}
+    - {lead_id: "crowdworks-13472794", score: 75, deadline: "2026-09-26T23:59:59+09:00", deadline_status: "passed(2 days)"}
+    - {lead_id: "lancers-5605624", score: 76, deadline: "2026-09-25T21:35:00+09:00", deadline_status: "passed(3 days)"}
+    - {lead_id: "lancers-5605579", score: 67, deadline: "2026-09-29T15:16:00+09:00", deadline_status: "still_open(1 day)"}
+  recommend_reject:
+    - {lead_id: "crowdworks-13480125", score: 35}
+    - {lead_id: "cw-13423932", score: 67}
+    - {lead_id: "crowdworks-13481213", score: 60}
+    - {lead_id: "lancers-onsite-7244", score: 40}
+    - {lead_id: "lancers-onsite-10551", score: 35}
+    - {lead_id: "lancers-onsite-9782", score: 45}
+  needs_more_evidence:
+    - {lead_id: "lancers-onsite-10805", score: 57}
+    - {lead_id: "cw-13435160", score: 68}
+    - {lead_id: "crowdworks-13446028", score: 68}
+    - {lead_id: "cw-13431927", score: 55}
+    - {lead_id: "cw-13435474", score: 65}
+    - {lead_id: "lancers-5601654", score: 72}
+    - {lead_id: "crowdworks-13446964", score: 68}
+    - {lead_id: "lancers-onsite-10897", score: 55}
+confirmed_findings:
+  - confidence: "Confirmed"
+    statement: "今期間の応募は前回runと変わらずlancers-5606677（WordPress復旧、20,000円提示）の1件のみで、結果はlost。新規Application/Outcomeの記録はこの期間ゼロ。"
+    evidence: [".agent/state/leads/2026-09-24-lancers-5606677-wordpress-malware-recovery.yaml", ".agent/state/applications/lancers-5606677-2026-09-25.yaml"]
+  - confidence: "Confirmed"
+    statement: "Human Gate 1で承認Evidenceが記録されたleadは、発見から現在まで累計0件。現在gate1_pendingの19件のうち5件がAI推奨recommend_approve（score67〜76）だが、いずれも人間の承認/却下判断が記録されないまま滞留している。"
+    evidence: [".agent/state/leads/*.yaml の status/decision フィールド全件grep結果"]
+  - confidence: "Confirmed"
+    statement: "recommend_approveの5件のうち4件（cw-13430593 deadline 2026-09-19、crowdworks-13469793/13472794 deadline 2026-09-26、lancers-5605624 deadline 2026-09-25）は、各leadファイルに記録されたdeadlineが本run時点（2026-09-28）で既に経過しているにもかかわらず、statusはgate1_pendingのまま更新されていない。cw-13430593は特に9日超過。募集終了の再確認（sales-scoutによる再観測Evidence）は本run時点で未実施のため、実際に募集終了しているかはUnknown/Likelyだが、少なくとも『承認/却下の意思決定が案件の応募期限より先に行われていない』ことはEvidenceから確定できる。"
+    evidence: [
+      ".agent/state/leads/2026-09-14-crowdworks-13430593-ai-sns-strategy-partner.yaml#deadline",
+      ".agent/state/leads/2026-09-22-crowdworks-13469793-running-sns-research.yaml#deadline",
+      ".agent/state/leads/2026-09-24-crowdworks-13472794-ai-instagram-feed-creation.yaml#deadline",
+      ".agent/state/leads/2026-09-23-lancers-5605624-ebay-product-listing-research.yaml#deadline"
+    ]
+  - confidence: "Confirmed"
+    statement: "唯一まだdeadlineが到来していないrecommend_approve案件はlancers-5605579（deadline 2026-09-29T15:16、本run時点で残り約1日）のみ。"
+    evidence: [".agent/state/leads/2026-09-22-lancers-5605579-chatgpt-product-research-data-entry.yaml#deadline"]
+hypotheses:
+  - confidence: "Likely"
+    statement: "Gate 1の人間承認に案件のdeadlineを踏まえた優先順位付け・締切アラートの仕組みがないため、AIがrecommend_approveと判断した案件でも応募期限内に人間の可否判断が得られず、機会が競合の強さとは無関係に自然消滅している可能性が高い。"
+    validation: "次回以降のrun summaryでrecommend_approve案件をdeadline残日数の昇順で先頭に提示し、Gate1判断が期限内に行われた件数の割合を追跡する。"
+  - confidence: "Possible"
+    statement: "1727文字・AI支援ツール名を明示した長い技術説明よりも、公開実績数・満足率など短時間で比較できる信頼材料の方が、至急性の高いWordPress復旧案件では選定に強く影響した可能性がある（前回runから継続、母数変化なし）。"
+    validation: "次回の同種案件で、冒頭に実績要約（何件・平均対応時間など）を先出しし、返信率・受注可否を比較する。"
+  - confidence: "Possible"
+    statement: "Gate 1/2/3の承認Evidenceが記録されないまま応募が実行されると、Improvement Leadが『どの推奨が実際に効果があったか』を後から検証できなくなる（前回runから継続、状況変化なし）。"
+    validation: "次回以降、Gate承認（またはユーザーによる独自応募の事前申告）を応募前にstateへ記録できているかをrunごとに確認する。"
+experiments:
+  - name: "Gate1締切アラート表示"
+    segment: "全案件共通（プロセス改善）"
+    change: "fixcraft-orchestratorのrun summaryで、gate1_pendingかつrecommend_approveの案件をdeadline残日数の昇順（経過済みを最優先）で提示し、経過済み案件は明示的に『要再確認』と表示する。"
+    expected_kpi: "recommend_approve案件のうち、deadline経過前にHuman Gate1判断（承認/却下いずれか）が記録される割合の改善。現状は0/5(本run時点、判断記録なし)。"
+    stop_condition: "3回のrunを経ても改善が見られない場合、表示方法の変更ではなくGate1レビュー頻度自体の見直しを検討する。"
+  - name: "経過済みdeadline案件の事実確認"
+    segment: "cw-13430593, crowdworks-13469793/13472794, lancers-5605624"
+    change: "次回morning-sales実行時にsales-scoutへ当該4件の現在の募集状態（募集終了/延長/応募者数）の再観測を依頼し、Confirmed evidenceが取れ次第expired/gate1_rejected等へ状態を更新する。"
+    expected_kpi: "stateの正確性（実態と乖離したgate1_pending滞留の解消）"
+    stop_condition: "該当なし（事実確認のみ、判断はHuman Gate1の権限範囲外の客観的事実反映）"
+  - name: "実績先出し型の提案文フォーマット（継続）"
+    segment: "WordPress障害復旧"
+    change: "提案文冒頭に、対応実績件数・平均着手時間・再発防止策の3行要約を置き、AI支援ツール名など副次情報は末尾へ移動する。"
+    expected_kpi: "reply_rate、win_rate_per_applicationの改善（母数を今後2〜3件蓄積してから判定）"
+    stop_condition: "3件試して改善が見られない場合は元の詳細説明型へ戻す。"
+playbook_candidates: []
+playbook_candidates_note: "Gate1締切超過の事象は本runで初めて集計対象化したため1回目の観測であり、Improvement Governance（2回以上でPlaybook候補）の条件を満たさない。次回run以降も同型の滞留が観測されればPlaybook候補化する。"
+standard_rule_candidates: []
+standard_rule_candidates_note: "母数・run回数ともに不足しており、標準ルール昇格の条件（3回以上かつKPI改善確認）を満たさない。"
+knowledge_change_proposals: []
+knowledge_change_proposals_note: "winning-patterns.md/losing-patterns.mdへの追記は母数不足のため見送り。Gate1締切アラートは運用(orchestrator手順)側の改善提案として experiments[] に保持する。"
+pending_human_gates:
+  - lead_id: "cw-13430593"
+    decision: "recommend_approve"
+    reason: "固定報酬3〜5万円、応募18人/募集8人でAI×SNS自動化のWin Theme提示余地あり。deadline 2026-09-19が既に9日経過し未判断のため最優先で確認要。"
+  - lead_id: "crowdworks-13469793"
+    decision: "recommend_approve"
+    reason: "報酬1,000円と小さいが現金化・実績作りに低リスクで適合。deadline 2026-09-26が経過済みのため状態要再確認。"
+  - lead_id: "crowdworks-13472794"
+    decision: "recommend_approve"
+    reason: "応募4人/募集10人と入口が広く、小粒現金化の実験候補。deadline 2026-09-26が経過済みのため状態要再確認。"
+  - lead_id: "lancers-5605624"
+    decision: "recommend_approve"
+    reason: "有償トライアルで実測可能。deadline 2026-09-25が経過済みのため状態要再確認。"
+  - lead_id: "lancers-5605579"
+    decision: "recommend_approve"
+    reason: "有償トライアル300円で実測時給を取得可能。deadline 2026-09-29T15:16まで約1日、判断が間に合う可能性がある最後のrecommend_approve案件。"
+  - lead_id: "cw-13435160"
+    decision: "needs_more_evidence"
+    reason: "週30時間必須で副業稼働と衝突の可能性。稼働時間交渉余地を確認要（前回runから継続）。"
+  - lead_id: "cw-13435474"
+    decision: "needs_more_evidence"
+    reason: "週30時間要件と本番実装実績Evidence不足（前回runから継続）。"
+  - lead_id: "cw-13431927"
+    decision: "needs_more_evidence"
+    reason: "予算非公開、応募65人/1枠で競争過多（前回runから継続）。"
+  - lead_id: "crowdworks-13446028"
+    decision: "needs_more_evidence"
+    reason: "月額3万円だが毎日約1時間の拘束。作業時刻の柔軟性確認要（前回runから継続）。"
+  - lead_id: "lancers-5601654"
+    decision: "needs_more_evidence"
+    reason: "ComfyUI実績スクリーンショット必須。既存実績Evidenceの有無次第（前回runから継続）。"
+  - lead_id: "crowdworks-13446964"
+    decision: "needs_more_evidence"
+    reason: "応募10→16人へ増加。週稼働時間・拘束時刻がUnknown（前回runから継続）。"
+  - lead_id: "lancers-onsite-10805"
+    decision: "needs_more_evidence"
+    reason: "score57。長期歓迎案件で稼働条件・実装範囲の確認要（2026-09-27新規）。"
+  - lead_id: "lancers-onsite-10897"
+    decision: "needs_more_evidence"
+    reason: "score55。Claude活用支援案件で具体的な作業範囲・稼働条件の確認要（2026-09-27新規）。"
+  - lead_id: "cw-13423932"
+    decision: "recommend_reject"
+    reason: "応募145人、予算5,500円で採算・競争ともに不利（前回runから継続）。"
+  - lead_id: "cw-13481213"
+    decision: "recommend_reject"
+    reason: "Rubric合計スコア60点（pursue基準未満）。勝ち筋が実質なく再現性も低い（前回runから継続）。"
+  - lead_id: "crowdworks-13480125"
+    decision: "recommend_reject"
+    reason: "score35。予算未公示・差別化余地乏しい（2026-09-27新規）。"
+  - lead_id: "lancers-onsite-10551"
+    decision: "recommend_reject"
+    reason: "score35。成人向けコンテンツ領域で組織方針未定義、かつ予算非公開（2026-09-27新規）。方針判断自体もHuman Gate 1の範囲。"
+  - lead_id: "lancers-onsite-9782"
+    decision: "recommend_reject"
+    reason: "score45（2026-09-27新規）。"
+  - lead_id: "lancers-onsite-7244"
+    decision: "recommend_reject"
+    reason: "score40（2026-09-27新規）。"
+blocked_items: []
+failed_sources: []
+data_quality_actions_this_run: []
+next_run_recommendation: "(1) recommend_approveの5件を優先してHuman Gate1判断を得る。特にcw-13430593は9日超過で最優先。(2) deadline経過済みの4件(cw-13430593, crowdworks-13469793, crowdworks-13472794, lancers-5605624)は次回morning-sales時にsales-scoutが現在の募集状態を再観測し、Confirmed evidenceに基づきexpired等へ状態確定する。(3) 応募Evidenceが依然1件のみのため、Gate1締切アラートの効果測定にはまだ複数run分のサンプルが必要。"
