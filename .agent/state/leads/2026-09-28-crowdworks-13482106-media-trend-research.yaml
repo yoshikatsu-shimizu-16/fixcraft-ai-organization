@@ -1,0 +1,43 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "crowdworks-13482106"
+platform: "crowdworks"
+source_job_id: "13482106"
+dedupe_key: "crowdworks:13482106"
+title: "【メディア運営のサポート】旅行・カフェ・ライフスタイルのトレンド情報リサーチ"
+source_url: "https://crowdworks.jp/public/jobs/13482106"
+status: "gate1_pending"
+first_seen_at: "2026-09-28T00:00:00+09:00"
+last_seen_at: "2026-09-28T00:00:00+09:00"
+last_updated_at: "2026-09-28T00:00:00+09:00"
+deadline: "2026-10-03T23:59:59+09:00"
+budget:
+  type: "fixed"
+  min_jpy: 5000
+  max_jpy: 10000
+  notes: "トライアル300円、以降1件あたり2,000円以上を想定。週2〜3件依頼可能な継続型タスク。"
+score: 45
+decision: "recommend_reject"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13482106"
+    observed_at: "2026-09-28T00:00:00+09:00"
+    fact: "2026-09-26掲載。20代向けSNSメディア向けに、カフェ・旅行・ライフスタイルのトレンド調査、競合アカウントの投稿傾向分析、情報の整理・要約を行う業務。AIツール利用可。固定報酬5,000〜10,000円（トライアル300円、以降1件2,000円以上）。募集1名。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13482106"
+    observed_at: "2026-09-28T00:00:00+09:00"
+    fact: "応募期限2026-10-03。募集1人に対し応募30件・契約0件。発注者(natsume.work)は評価5.0（3件）。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13482106"
+    observed_at: "2026-09-28T00:00:00+09:00"
+    fact: "募集要項に「20代の方歓迎」「SNSトレンドへの関心」と明記。年齢・関心属性でのスクリーニングが示唆される。"
+risks:
+  - "募集1名に対し応募30件と競争が極めて激しく、価格以外の明確な差別化余地が乏しい。"
+  - "「20代歓迎」という属性条件があり、FixCraft側の実際の属性はUnknownで、選考上不利になり得る。"
+  - "継続前提（週2〜3件）だが単価が低く、実績化はできても採算・時給面での再現性が低い。"
+  - "発注者評価サンプルは3件のみで、傾向を断定するには不足している。"
+recommendations:
+  - "Rubric合計スコア45(reject_below 55未満)。競争倍率(30応募/1名)とWin Themeの欠如、属性条件の不確実性から、AIとしてはrecommend_rejectとする。"
+  - "人間が追う場合は、実務経験に基づく具体的なリサーチ観点の速さ・正確さのみを差別化材料とし、採否連絡までの時間対効果を早期に見極める。"
+next_action: "Human Gate 1で追跡可否を判断する。AI推奨はrecommend_rejectだが、承認・却下は人間が行う。"
+artifacts: []
