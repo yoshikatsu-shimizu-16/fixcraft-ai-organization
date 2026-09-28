@@ -1,7 +1,37 @@
-version: "1.0"
+version: "1.1"
+strategy:
+  phase: "cash_and_track_record"
+  monthly_cash_kpi_jpy: 20000
+  target_monthly_wins_min: 3
+  target_monthly_wins_max: 6
+  priority_order:
+    - "actual_cash"
+    - "completed_job_count"
+    - "client_rating_and_feedback"
+    - "repeatability_by_category"
+    - "technical_portfolio_value"
+  technical_portfolio_required: false
+  notes:
+    - "SEとしての実績になるかは加点要素であり必須条件ではない"
+    - "LLM評価・AIテスト・Web調査・データ入力等の非開発案件も現金化と実績獲得の候補として扱う"
 commercial:
   minimum_effective_hourly_rate_jpy: null
   missing_rate_behavior: "Sales Director must show economics as unknown and request human input instead of inventing a threshold"
+  preferred_single_job_min_jpy: 2000
+  preferred_single_job_max_jpy: 20000
+  small_job_rule: "2,000〜5,000円程度でも、1〜2時間で完了見込み、低リスク、条件明確、受注確率と時給換算が許容できるなら積極評価する"
+  low_value_patterns:
+    - "1件数円レベルで大量件数が必要"
+    - "時給換算が著しく低い"
+    - "報酬条件が不明確"
+    - "作業量が膨張しやすい"
+    - "サイト外誘導が前提"
+availability:
+  downrank:
+    - "平日日中の強い拘束"
+    - "週20時間超の稼働"
+    - "長期常駐"
+    - "大量制作・大量処理で総工数が読めない"
 prototype:
   default_timebox_minutes: 30
   budget_tiers:
@@ -13,6 +43,16 @@ prototype:
 outcome:
   no_response_after_days: 7
   rule: "Use no_response only when at least this many days have elapsed since the latest outbound message and there is no client reply"
+  track:
+    - "applications"
+    - "replies"
+    - "wins"
+    - "losses"
+    - "actual_work_hours"
+    - "actual_revenue_jpy"
+    - "client_rating"
+    - "category"
 analysis:
   preferred_competitor_sample_size: 3
   small_sample_warning_below: 3
+  phase_learning_rule: "カテゴリ別の応募数・返信率・受注率・実作業時間・実収益・評価を蓄積し、十分なサンプルができるまで対象カテゴリを早期に絞り込みすぎない"
