@@ -1,0 +1,111 @@
+run_id: "RUN-20260929-evening-pdca"
+skill: "fixcraft-orchestrator(evening-pdca)"
+period:
+  start: "2026-09-13"
+  end: "2026-09-29"
+  note: "2026-09-28 evening-pdca以降の差分を確認。新規Leadは2件（lancers-5608455, crowdworks-13482106）。新規Application/Communication/OutcomeのEvidenceはなし。"
+counts:
+  leads_total: 23
+  gate1_pending_current: 21
+  applied: 1
+  replied: 0
+  won: 0
+  lost: 1
+  no_response: 0
+  expired_recorded: 1
+counts_confidence: "Confirmed（2026-09-28集計21件に、その後commitされた新規Lead 2件を加算。Applicationはapplications配下にlancers-5606677の1件のみ）"
+revenue_jpy: 0
+revenue_evidence: ".agent/state/applications/lancers-5606677-2026-09-25.yaml actual_revenue_jpy=0"
+rates:
+  reply_rate: "0/1 = 0%（母数1、方向性判断不可）"
+  win_rate_per_application: "0/1 = 0%（母数1、方向性判断不可）"
+  win_rate_after_reply: "Unknown（返信0件）"
+kpi:
+  monthly_revenue_target_jpy: 20000
+  actual_revenue_jpy: 0
+  achievement_rate: "0%"
+  priority: "まず1〜2件の受注で再現可能な勝ち筋を確立する"
+
+outcome_recorder:
+  status: "no_new_outcome"
+  confirmed:
+    - "lancers-5606677はlost/no_reply/売上0円のまま。"
+    - "2026-09-28 evening-pdca以降、新規応募・返信・受注・失注・無返信確定のEvidenceは追加されていない。"
+  unknown:
+    - "既存gate1_pending案件のうち、募集期限経過後の実際の募集状態は再観測EvidenceがないものはUnknown。"
+
+competitive_intelligence:
+  new_leads:
+    - lead_id: "lancers-5608455"
+      score: 86
+      decision: "recommend_approve"
+      deadline: "2026-09-30T17:06:00+09:00"
+      confirmed: "60分5,000円、SE歓迎、観測時8提案/募集1名、技術納品リスクなし。"
+      win_theme: "SEとして生成AIを実務で使っている具体的経験を、虚偽なく短く提示する。"
+      risk: "応募条件に本人の具体的体験が必要。Human Gate 1未承認なので応募工程へ進めない。"
+    - lead_id: "crowdworks-13482106"
+      score: 45
+      decision: "recommend_reject"
+      deadline: "2026-10-03T23:59:59+09:00"
+      confirmed: "固定5,000〜10,000円、トライアル300円、観測時30応募/募集1名。"
+      win_theme: "弱い。属性条件と競争数に対してFixCraft固有の実績差別化が乏しい。"
+      risk: "低単価・高競争で、月2万円KPIの再現可能な勝ち筋になりにくい。"
+  wordpress_loss_5606677:
+    confirmed:
+      - "20,000円で応募し、無返信のままlost。"
+      - "ユーザー提示Evidenceで募集終了、68提案、当選1/1、受注者wood0214を確認済み。"
+    likely:
+      - "緊急WordPress復旧では、同種実績の可視性と即応性が選定リスク低減に寄与した可能性が高い。"
+    possible:
+      - "1727文字の長い提案、AI支援ツール名、副業で平日夜間・土日中心という表現が不利に働いた可能性。"
+    unknown:
+      - "受注者の今回の提案本文、提示価格、発注者の最終決定理由。"
+  technical_quality:
+    wordpress_security: "既存Playbookのバックアップ→切り分け→セキュリティ確認→最小修正→検証・再発防止は維持。単一失注から技術手順の欠陥とは判定しない。"
+    hp_lp_design: "当期間にHP/LP応募・受注・失注の新Evidenceなし。評価不能。"
+    prototype_relation: "新規2件はいずれも受注前試作を正当化するEvidenceなし。Gate 1未承認であり試作禁止。"
+
+improvement_lead:
+  se_review_learning:
+    - statement: "単一のWordPress失注を理由に活動全体をWordPress一本へ寄せず、WordPress障害・GAS/業務自動化・Webシステム小規模改修の複数レーンで、案件ごとに近い実績を見える化する。"
+      occurrence_status: "同趣旨のユーザーSEレビューは現時点で1系列の議論として扱い、回数を水増ししない。Playbook昇格なし。"
+    - statement: "Proofのような抽象的な営業用語ではなく『実績の見える化』として具体化する。"
+      occurrence_status: "1回。Playbook昇格なし。"
+  process_learning:
+    - statement: "recommend_approve案件がHuman Gate 1未判断のままdeadlineへ接近・経過するボトルネックが前回runに続いて観測された。"
+      occurrence_status: "2 run連続観測。Playbook候補条件を満たす。"
+
+experiments:
+  - name: "締切前Human Gate 1即時判断"
+    hypothesis: "高適合案件をdeadline順にHuman Gateへ出せば、競合分析以前の機会損失を減らせる。"
+    change: "lancers-5608455を最優先Human Gate 1候補として提示し、deadline 2026-09-30 17:06より前にapprove/rejectの人間判断を記録する。承認された場合のみbuild-proposalへ進む。"
+    success_metric: "deadline前にHuman Gate 1のapprove/reject Evidenceが1件記録される。"
+  - name: "Gate 1 deadline alertをPlaybook候補化"
+    hypothesis: "recommend_approveをdeadline残時間順に並べ、24時間以内を強調すれば未判断失効を減らせる。"
+    change: "evening/morning summaryでrecommend_approve案件をdeadline昇順にし、24時間以内を最優先表示する運用をPlaybook候補として次回も検証する。"
+    success_metric: "今後3 runで、deadline到来前のHuman Gate 1判断率が現状より改善する。"
+
+playbook_candidates:
+  - name: "gate1-deadline-prioritization"
+    reason: "Human Gate 1未判断のrecommend_approve案件がdeadlineへ接近・経過する同型ボトルネックを2026-09-28と2026-09-29の2 run連続で観測。"
+    proposed_rule: "recommend_approve案件をdeadline残時間の昇順で提示し、24時間以内を最優先Human Gate対象にする。期限経過済みは応募可否を推測せず、募集状態の再観測を要求する。"
+    promotion_status: "candidate_only"
+standard_rule_candidates: []
+knowledge_change_proposals: []
+knowledge_change_proposals_note: "受注母数1・失注1のためwinning/losing patternの確定更新はまだ行わない。"
+
+pending_human_gates:
+  - lead_id: "lancers-5608455"
+    decision: "recommend_approve"
+    urgency: "highest"
+    deadline: "2026-09-30T17:06:00+09:00"
+    reason: "score 86、60分5,000円、SE歓迎、技術納品リスクなし。第一段階KPIの現金化・実績作りに適合。ただし本人の具体的体験を虚偽なく説明できることが前提。"
+  - lead_id: "crowdworks-13482106"
+    decision: "recommend_reject"
+    deadline: "2026-10-03T23:59:59+09:00"
+    reason: "score 45、30応募/募集1名、低単価かつ差別化が弱い。"
+
+state_updates:
+  - "本metricsファイルを追加。Application/Outcome stateは新Evidenceがないため変更しない。"
+  - "Human GateをAIが確定しない。"
+next_run_recommendation: "lancers-5608455のHuman Gate 1判断をdeadline前に最優先。承認Evidenceが得られた場合のみbuild-proposal。既存期限経過案件はmorning-salesで募集状態を再観測する。"
