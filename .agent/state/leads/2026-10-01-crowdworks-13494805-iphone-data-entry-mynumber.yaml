@@ -1,0 +1,36 @@
+schema: fixcraft-lead-workflow
+version: "2.1"
+lead_id: "crowdworks-13494805"
+platform: "crowdworks"
+source_job_id: "13494805"
+dedupe_key: "crowdworks:13494805"
+title: "【iPhoneユーザー限定】10分で完結データ入力　主婦、初心者大歓迎"
+source_url: "https://crowdworks.jp/public/jobs/13494805"
+status: "gate1_pending"
+first_seen_at: "2026-10-01T21:30:00+09:00"
+last_seen_at: "2026-10-01T21:30:00+09:00"
+last_updated_at: "2026-10-01T21:30:00+09:00"
+deadline: "2026-10-14"
+budget:
+  type: "fixed"
+  amount_jpy: 5000
+  tax_included: true
+score: 72
+decision: "needs_more_evidence"
+evidence:
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13494805"
+    observed_at: "2026-10-01T21:30:00+09:00"
+    fact: "2026-10-01掲載、応募期限2026-10-14。固定報酬5,000円、所要時間目安5〜10分、募集10人に対し応募8人・契約0人。ECサイトへのデータ入力でマニュアルあり。"
+  - confidence: "Confirmed"
+    source: "https://crowdworks.jp/public/jobs/13494805"
+    observed_at: "2026-10-01T21:30:00+09:00"
+    fact: "作業にはマイナカード読み取りが含まれる。発注者は評価0件、本人確認未提出、発注ルールチェック未回答。"
+risks:
+  - "マイナカード読み取りの目的・読み取る情報・保存先・個人情報の取扱いが募集文だけでは不明。"
+  - "発注者の評価実績が0件で本人確認未提出のため、支払・個人情報取扱いの信頼性を確認できない。"
+recommendations:
+  - "金額・所要時間・募集人数は現金化フェーズに非常に合うが、本人確認書類を扱うため応募前に用途と個人情報取扱いの確認を必須とする。"
+  - "マイナカードの券面情報・電子証明書・暗証番号等の提供を求める内容なら見送る。"
+next_action: "Human Gate 1。応募前に、マイナカード読み取りの具体的目的、取得情報、保存有無、利用するアプリ/サイト、本人確認情報の取扱いを質問する。AI推奨はneeds_more_evidence。"
+artifacts: []
