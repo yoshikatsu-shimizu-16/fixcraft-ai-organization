@@ -1,0 +1,26 @@
+date: "2026-10-02"
+run_type: "manual-win-update"
+phase_kpi_jpy: 20000
+confirmed_outcome:
+  won_count: 1
+  lead_id: "crowdworks-13481213"
+  contract_amount_including_tax_jpy: 5500
+  worker_receivable_after_platform_fee_jpy: 4290
+  actual_revenue_jpy: 0
+  work_status: "contracted_in_progress"
+  due_at: "2026-10-10"
+kpi_progress:
+  contracted_gross_jpy: 5500
+  contracted_gross_progress_pct: 27.5
+  expected_net_after_platform_fee_jpy: 4290
+  realized_revenue_jpy: 0
+notes:
+  - "契約成立はConfirmed。納品・検収前なのでactual revenueは0円。"
+  - "開発者向け技術評価・利用評価実験を再現性検証の優先探索レーンに追加。"
+  - "1勝のみのため標準勝ち筋には昇格しない。"
+evidence:
+  - "CrowdWorks契約詳細画面（ユーザー提供、2026-10-02確認）"
+  - "https://crowdworks.jp/public/jobs/13481213"
+next_action:
+  - "2026-10-10までに納品し、検収・実作業時間・実収益・評価を追記する"
+  - "同種案件を追加で2〜4件探索・応募し、再現性を検証する"
