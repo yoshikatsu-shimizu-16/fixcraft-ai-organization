@@ -1,0 +1,82 @@
+run_id: "RUN-20261001-evening-pdca"
+skill: "fixcraft-orchestrator(evening-pdca)"
+period:
+  start: "2026-09-13"
+  end: "2026-10-01"
+  note: "2026-09-30 evening-pdca以降を確認。applications配下に新規実応募Evidenceなし。新規返信・受注・失注・no_response確定Evidenceも確認できない。"
+counts:
+  applied: 1
+  replied: 0
+  won: 0
+  lost: 1
+  no_response: 0
+counts_confidence: "Confirmed（applications配下の実応募Evidenceはlancers-5606677の1件のみ）"
+revenue_jpy: 0
+rates:
+  reply_rate: "0/1 = 0%（母数1）"
+  win_rate_per_application: "0/1 = 0%（母数1）"
+kpi:
+  monthly_revenue_target_jpy: 20000
+  actual_revenue_jpy: 0
+  achievement_rate: "0%"
+  priority: "まず1〜2件の受注で再現可能な勝ち筋を確立する"
+
+outcome_recorder:
+  status: "no_new_application_outcome"
+  confirmed:
+    - "lancers-5606677はlost/no_reply/売上0円のまま。"
+    - "2026-09-30 evening-pdca以降、新規Application Evidenceはない。"
+    - "新規返信・受注・失注・no_response確定Evidenceはない。"
+  unknown:
+    - "State外で手動応募・返信が発生しているかはEvidenceがないためUnknown。"
+
+competitive_intelligence:
+  wordpress_loss_5606677:
+    confirmed:
+      - "20,000円で応募し、無返信のままlost。"
+      - "ユーザー提示Evidenceで68提案、当選1/1、受注者wood0214を確認済み。"
+    likely:
+      - "緊急WordPress復旧では同種実績の可視性と即応性が選定リスク低減に寄与した可能性が高い。"
+    possible:
+      - "1727文字の提案、AI支援ツール名、副業で平日夜間・土日中心という表現が不利に働いた可能性。"
+    unknown:
+      - "受注者の今回の提案本文、提示価格、発注者の最終決定理由。"
+  selection_and_win_theme:
+    status: "no_new_outcome_evidence"
+    note: "新規勝敗Evidenceがないため、案件選定・Win Theme・価格・納期・試作との相関について新しい因果判断を追加しない。"
+  technical_quality:
+    wordpress_security: "新Evidenceなし。既存のバックアップ→切り分け→セキュリティ確認→最小修正→検証・再発防止を維持。"
+    hp_lp_design: "新Evidenceなし。評価不能。"
+    prototype_relation: "新しい試作Evidenceなし。Gate 1未承認案件で試作しない。"
+
+improvement_lead:
+  se_review_learning:
+    - statement: "単一WordPress失注からWordPress一本へ寄せず、WordPress障害・GAS/業務自動化・Webシステム小規模改修の複数レーンで、案件ごとに近い実績を見える化する。"
+      occurrence_status: "同一系列のユーザーSEレビューとして保持。新しい独立指摘なし。"
+  process_learning:
+    - statement: "recommend_approve案件のHuman Gate 1未判断によるdeadline失効を防ぐ。"
+      occurrence_status: "3 run連続観測済み。改善施策の効果を測る新対象Evidenceが本runではないため、標準ルール候補へは昇格しない。"
+
+experiments:
+  - name: "Human Gate 1締切優先運用の効果確認"
+    hypothesis: "recommend_approve案件をdeadline残時間順に提示し、24時間以内・残6時間で再提示すれば未判断失効を減らせる。"
+    change: "次の対象案件でdeadline残時間を明示し、AIは承認せずHuman Gate 1判断を優先提示する。"
+    success_metric: "次のdeadline 24時間以内recommend_approve案件で、締切前にHuman Gate 1 approve/reject Evidenceが記録される。"
+  - name: "実応募母数の確保"
+    hypothesis: "応募母数1では提案・価格・専門レーンの勝ち筋を評価できないため、高適合案件の期限内判断と応募Evidence蓄積が先決。"
+    change: "WordPress/GAS/Web小規模改修の複数レーンを維持し、既存実績と適合する案件を優先してHuman Gateへ届ける。"
+    success_metric: "次のPDCAまでに新規応募Evidenceまたは明示的なGate 1判断Evidenceが1件以上追加される。"
+
+playbook_candidates:
+  - name: "gate1-deadline-prioritization"
+    reason: "同型ボトルネックを3 run連続観測済み。"
+    proposed_rule: "recommend_approve案件をdeadline残時間昇順で提示し、24時間以内を最優先Human Gate対象にする。残6時間で未判断なら再提示する。期限経過後は応募失注と混同せずmissed opportunityとして記録する。"
+    promotion_status: "candidate_only; 改善効果未確認"
+standard_rule_candidates: []
+knowledge_change_proposals: []
+knowledge_change_proposals_note: "本runは新規勝敗Evidenceなし。応募母数1のためKnowledge/Playbookの確定更新を行わない。"
+
+state_updates:
+  - "本metricsファイルを追加。Application/Outcome stateは新Evidenceがないため変更しない。"
+  - "Human GateをAIが確定しない。"
+next_run_recommendation: "morning-salesで複数レーンの高適合案件を探索し、recommend_approveはdeadline残時間順にHuman Gate 1へ提示する。新しい応募・返信Evidenceが出るまで勝敗パターンを確定しない。"
