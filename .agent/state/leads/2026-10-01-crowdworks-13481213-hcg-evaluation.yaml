@@ -1,0 +1,41 @@
+lead_id: "crowdworks-13481213"
+platform: "crowdworks"
+source_job_id: "13481213"
+dedupe_key: "crowdworks:13481213"
+title: "静的解析とLLMを融合したコードグラフ自動生成ツール（HCG）の利用評価実験（ツールを利用し、評価アンケート回答）"
+source_url: "https://crowdworks.jp/public/jobs/13481213"
+status: "won"
+score: null
+decision: null
+first_seen_at: "2026-10-01"
+last_seen_at: "2026-10-02T00:13:00+09:00"
+last_updated_at: "2026-10-02T00:13:00+09:00"
+deadline: "2026-10-10"
+budget:
+  listed_range_jpy: "5000-10000"
+  contract_amount_including_tax_jpy: 5500
+  worker_receivable_after_platform_fee_jpy: 4290
+  actual_revenue_jpy: 0
+gate1:
+  approval_evidence: "Unknown; retrospective record created after user supplied contract evidence"
+gate2:
+  approval_evidence: "Unknown; retrospective record created after user supplied contract evidence"
+gate3:
+  approval_evidence: "User completed application and contract before this State record was created"
+evidence:
+  - type: "user_supplied_screenshot"
+    observed_at: "2026-10-02T00:13:00+09:00"
+    detail: "CrowdWorks契約詳細画面で契約成立、仮払い済み、契約金額5,500円（税込）、ワーカー受取見込4,290円、評価データdeveloper_04、完了期限2026-10-10を確認。"
+  - type: "public_job_page"
+    source: "https://crowdworks.jp/public/jobs/13481213"
+    observed_at: "2026-10-02"
+    detail: "募集内容はHCGの利用評価実験。Java/Python/JavaScript、Git、Python、Ollama、8GB以上のPC、CFG/AST/PDG理解を条件とし、想定作業時間約2時間、税抜5,000円、募集10人。"
+risks:
+  - "納品・検収前のため実収益はまだ0円として扱う"
+  - "ローカルLLM/Ollamaおよび評価環境のセットアップで想定2時間を超える可能性"
+  - "評価品質が低い場合は修正依頼の可能性"
+recommendations:
+  - "同種の開発者向けツール評価・研究実験・AI/LLM評価案件を優先探索する"
+  - "1勝だけで標準勝ち筋と断定せず、次の2〜4件で返信率・受注率・実作業時間を検証する"
+next_action: "2026-10-10までにHCG評価を完了し、納品・検収・実作業時間・実収益・評価をEvidence付きで追記する"
+artifacts: []
