@@ -1,0 +1,47 @@
+lead_id: "crowdworks-13481213"
+platform: "crowdworks"
+source_job_id: "13481213"
+dedupe_key: "crowdworks:13481213"
+status: "contracted_in_progress"
+submitted_at: "Unknown"
+submitted_at_precision: "unknown"
+submission_method: "manual_by_user"
+submission_evidence:
+  type: "retrospective_user_attestation_and_contract_screenshot"
+  observed_at: "2026-10-02T00:13:00+09:00"
+  detail: "CrowdWorks契約詳細画面の提示により、応募後に契約成立した事実を確認。応募日時・送信画面は未取得。"
+price:
+  contract_amount_including_tax_jpy: 5500
+  worker_receivable_after_platform_fee_jpy: 4290
+  actual_revenue_jpy: 0
+work:
+  title: "静的解析とLLMを融合したコードグラフ自動生成ツール（HCG）の利用評価実験（ツールを利用し、評価アンケート回答）"
+  started_at: "2026-10-01"
+  due_at: "2026-10-10"
+  estimated_hours_from_listing: 2
+  evaluation_code: "developer_04"
+  work_status: "in_progress"
+  deliverables:
+    - "HCGツールの指定手順による評価"
+    - "コードサンプル60件の確認"
+    - "Google Forms評価アンケート15問への回答"
+outcome: "won"
+outcome_decided_at: "2026-10-01"
+contract_amount_jpy: 5500
+actual_work_hours: null
+actual_revenue_jpy: 0
+reply_status: "client_replied_and_contracted"
+client_response_at: "2026-10-01T23:00:00+09:00"
+client_comments: "応募承認後、評価方法マニュアルとHCG GitHubリポジトリが案内され、developer_04として2026-10-10までに評価するよう依頼。"
+outcome_evidence:
+  type: "user_supplied_screenshot"
+  observed_at: "2026-10-02T00:13:00+09:00"
+  detail: "契約詳細画面で契約成立・仮払い済み・契約金額5,500円（税込）・ワーカー受取見込4,290円を確認。"
+learnings:
+  - "開発者向けツール評価・研究実験は、既存SEスキルをそのまま使え、納品境界が明確で短時間のため相性が良い可能性がある。"
+  - "今回の1勝だけでは標準勝ち筋と断定せず、同種案件の追加受注で再現性を検証する。"
+tracking:
+  completion_submitted: false
+  inspection_completed: false
+  rating_received: false
+  payout_confirmed: false
