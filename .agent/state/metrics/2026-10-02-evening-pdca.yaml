@@ -1,0 +1,106 @@
+date: "2026-10-02"
+run_type: "evening-pdca"
+mode: "evening-pdca"
+phase_kpi_jpy: 20000
+priority: "まず1〜2件の受注で再現可能な勝ち筋を確立する"
+
+outcome_recorder:
+  unique_applications_confirmed: 2
+  replies_confirmed: 1
+  wins_confirmed: 1
+  losses_confirmed: 1
+  no_reply_confirmed: 1
+  pending_outcomes: 0
+  realized_revenue_jpy: 0
+  contracted_gross_jpy: 5500
+  expected_net_after_platform_fee_jpy: 4290
+  reply_rate_pct: 50.0
+  win_rate_pct: 50.0
+  kpi_realized_progress_pct: 0.0
+  kpi_contracted_gross_progress_pct: 27.5
+  evidence:
+    - lead_id: "crowdworks-13481213"
+      outcome: "won"
+      source: ".agent/state/applications/crowdworks-13481213-2026-10-01.yaml"
+      observed: "契約成立、5,500円税込、受取見込4,290円、2026-10-10期限、納品・検収前のためactual_revenue=0"
+    - lead_id: "lancers-5606677"
+      outcome: "lost_no_reply"
+      source: ".agent/state/applications/lancers-5606677-2026-09-25.yaml"
+      observed: "20,000円提案、無返信、募集終了後に本人非当選を直接Evidenceで確認"
+
+competitive_intelligence:
+  first_win:
+    lead_id: "crowdworks-13481213"
+    category: "developer_technical_evaluation_research_participation"
+    confirmed:
+      - "開発者向けHCGツール利用評価実験で契約成立"
+      - "契約額5,500円税込、受取見込4,290円"
+      - "Java/Python/JavaScript等の開発経験、Git、Ollama等を使う技術評価案件"
+      - "指定手順、コードサンプル確認、アンケート回答という納品境界が明確"
+    likely:
+      - "既存SE経験を直接使え、実装納品よりスコープ膨張リスクが低いことが本人との適合度を高めた"
+      - "開発者属性で応募者が絞られる評価案件は、一般モニターより差別化しやすい可能性がある"
+    possible:
+      - "短時間・複数名募集・技術条件付きという案件構造が受注確率を高めた可能性がある"
+    unknown:
+      - "全応募者数と競合者の詳細"
+      - "発注者がユーザーを選んだ最終理由"
+      - "実作業時間、検収結果、最終評価、実現収益"
+    win_theme_candidate: "長年のSE経験を使う短時間・技術条件付きの評価実験を、開発案件とは独立した営業レーンとして再現性検証する"
+    pricing_analysis: "5,500円税込は契約成立Evidenceあり。実作業時間未確定のため実質時給はまだ評価しない。"
+    delivery_analysis: "期限2026-10-10。納品境界は明確だが、完了Evidenceがないため納期品質は未評価。"
+    prototype_relevance: "今回の受注で受注前試作が寄与したEvidenceはない。不要だった可能性を勝因として確定しない。"
+    technical_quality: "作業中。納品・検収前のためUnknown。"
+
+  prior_loss:
+    lead_id: "lancers-5606677"
+    confirmed:
+      - "20,000円で応募"
+      - "無返信で失注"
+      - "募集終了時68提案、1名当選、本人は非当選"
+    likely:
+      - "受注者の同種WordPress復旧・セキュリティ実績の可視性と即応性が選定リスクを下げた"
+    possible:
+      - "1,727文字の長い提案"
+      - "AI支援ツール名の明示"
+      - "平日夜間・土日中心という表現"
+    unknown:
+      - "受注者の今回の提案価格"
+      - "受注者の提案本文"
+      - "発注者の最終決定理由"
+    wordpress_security_quality: "提案方針はバックアップ、影響範囲調査、復旧、再発防止を含む。新Evidenceなしのため前回評価を維持。"
+
+  hp_lp_design_quality:
+    status: "Unknown"
+    reason: "当日までにHP/LP案件の応募・返信・受注・失注または成果物品質に関する新Evidenceなし"
+
+improvement_lead:
+  se_review:
+    observed: "ユーザーはcrowdworks-13481213について『本当に相性がいい。こういった仕事もどしどし探して』と評価した。"
+    governance: "重要な一次レビューとして保持するが、同種指摘2回以上のPlaybook候補条件にはまだ到達したと数えない。"
+  knowledge_state:
+    existing_change_confirmed: ".agent/knowledge/sales/search-keywords.md に Developer Technical Evaluation / Research Participation が独立カテゴリとして追加済み"
+    standard_rule_promotion: false
+    reason: "受注は1件のみで再現性・改善効果未確認。標準勝ち筋へ昇格しない。"
+  tomorrow_experiments:
+    - id: "technical-evaluation-repeatability"
+      hypothesis: "開発者向け技術評価・利用評価実験は、既存SE経験との一致と明確な納品境界により短時間で受注しやすい営業レーンになり得る。"
+      change: "CrowdWorks/Lancersで利用評価実験、開発ツール評価、エンジニアモニター、技術評価、LLM/AIツール評価、静的解析、コード分析、PoC、ベータテストを独立レーンとして優先探索する。"
+      success_metric: "同種の応募可能案件を1件以上Gate 1候補化し、Human Gate判断Evidenceを残す。応募された場合は返信・受注を追跡する。"
+    - id: "first-win-quality-and-economics"
+      hypothesis: "今回の案件が2時間前後で安全に完了し検収されれば、月20,000円に向けた小粒案件の有効な型になる。"
+      change: "crowdworks-13481213の実作業時間、完了提出、検収、評価、実現収益を分離して記録する。"
+      success_metric: "期限内完了Evidenceを得て、actual_minutes・inspection_completed・rating・actual_revenueのうち確認できた項目をState更新できる。"
+
+state_updates:
+  - "2026-10-02の契約成立は既存Application Stateとwin-updateに反映済みのため二重更新しない"
+  - "本PDCAでKPIを応募2・返信1・受注1・失注1・無返信1としてEvidenceベース集計"
+  - "actual_revenueは検収・支払確定前のため0円を維持"
+
+human_gates:
+  - "新規案件のGate 1/2/3は本runでAI確定しない"
+  - "未確認の受注・失注・検収・評価・支払を確定しない"
+
+next_action:
+  - "開発者向け技術評価・利用評価実験の2件目候補を優先探索し、再現性を検証する"
+  - "crowdworks-13481213の完了・検収・実作業時間・評価・実収益をEvidence取得後に更新する"
