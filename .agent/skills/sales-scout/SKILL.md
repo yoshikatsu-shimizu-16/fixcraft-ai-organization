@@ -15,6 +15,7 @@ enabledな対象市場を毎回再現可能な検索方法で探索し、AI/LLM�
 - optional market filter / category filter / query override / max leads
 
 # Required Context
+- `.agent/playbooks/market-discovery.md`
 - `knowledge/sales/market-sources.yaml`
 - `knowledge/sales/search-keywords.md`
 - `state/lead-state-machine.yaml`
@@ -41,9 +42,11 @@ enabledな対象市場を毎回再現可能な検索方法で探索し、AI/LLM�
 - SNS案件を「Webマーケティング」などの広い語だけで検索済み扱いしない
 
 # Procedure
+共通Playbookの新着・募集中一覧 → カテゴリ一覧 → 媒体内検索と補助検索 → 個別open確認 → 除外 → dedupeの順序で以下を実行する。検索だけでは探索完了としない。
+
 1. market-sourcesのenabled市場を列挙し、各市場の `source_type`、`search_categories`、`discovery_method` を読む。
-2. `source_strategies` を参照し、公開検索、企業課題タグ、求人アラート、登録者向け推薦など利用可能な探索経路を特定する。
-3. `open_crowdsourcing_marketplace` では各必須カテゴリにつき原則2つ以上のQueryを構築する。その他の市場では利用可能なカテゴリ・検索機能・通知ごとに再現可能な検索を行う。
+2. `source_strategies` を参照し、新着・募集中一覧、カテゴリ一覧、媒体内検索、企業課題タグ、求人アラート、登録者向け推薦など利用可能な探索経路を特定する。
+3. 一覧とカテゴリを巡回した後、`open_crowdsourcing_marketplace` では各必須カテゴリにつき原則2つ以上のQueryを構築する。その他の市場では利用可能なカテゴリ・検索機能・通知ごとに再現可能な検索を行う。
 4. 公開検索型では特に以下を独立して検索する。
    - AI / LLM / AI Automation
    - SNS Operations / SNS Automation
@@ -61,6 +64,7 @@ enabledな対象市場を毎回再現可能な検索方法で探索し、AI/LLM�
 - エージェント経由の個別紹介は、求人URLが非公開でも本人宛メールを一次Evidenceとして候補にできる。現行状態と応募条件はUnknownのまま記録し、メール記載の返信手順で応募してはならない。
 - 「プロフィールに登録済みのスキルと一致」は推薦ロジックのEvidenceであり、実務経験・成果・応募適格性の証明として扱わない。
 - 応募時に職務経歴書、希望報酬、稼働時間等を送るサイトでは、Human Gate 3の承認前にメール返信・フォーム送信をしない。
+- search-keywords.mdの独立レーンを確認し、未対応・アクセス不能・未確認を区別する。募集不明は保留、終了は候補から除外する。
 - `AI / LLM / AI Automation` と `SNS Operations / SNS Automation` は0件でも省略不可。
 - 同じdedupe_keyは新規Leadにしない。
 - URLまたは案件識別子がなく再現不能な候補はLead化せず`needs_more_evidence`へ置く。
@@ -74,6 +78,8 @@ enabledな対象市場を毎回再現可能な検索方法で探索し、AI/LLM�
 - `category_coverage[]` (各要素に `status: searched | zero_results | not_supported | blocked` のいずれかを設定)
 - `source_coverage[]` (`source_type`, `discovery_methods_checked[]`, `limitations[]` を含む)
 - `queries[]`
+- `discovery_log`と保存先artifact。state/discovery/discovery-template.yamlの項目を持つ
+- `rejected_items[]`。終了・不明・重複の理由とEvidenceを持つ
 - `leads[]`
 - `duplicates[]`
 - `blocked_sources[]`

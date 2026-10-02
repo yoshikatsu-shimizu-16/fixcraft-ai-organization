@@ -23,3 +23,26 @@ rates:
 efficiency:
   revenue_per_application_jpy: null
   revenue_per_sales_hour_jpy: null
+# 共通Playbookの発見期間コホートで媒体別に集計する。
+source_metrics: []
+source_metric_fields:
+  source: null
+  cohort_start: null
+  cohort_end: null
+  measured_at: null
+  eligible_unique_leads: null
+  applied: null
+  replied: null
+  won: null
+  lost: null
+  unresolved: null
+  unknown_records: null
+  discovery_minutes: null
+  contracted_gross_jpy: null
+  actual_revenue_jpy: null
+  application_rate: null
+  reply_rate: null
+  win_rate: null
+  eligible_leads_per_discovery_hour: null
+  actual_revenue_per_discovery_hour_jpy: null
+  contracted_gross_per_discovery_hour_jpy: null

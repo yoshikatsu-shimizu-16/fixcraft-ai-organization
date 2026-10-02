@@ -40,3 +40,5 @@
 ## 変更品質
 
 Skillを追加・変更したら `python .agent/scripts/validate-agent-organization.py` を実行する。Role、Mission、Inputs、Decision Rules、Output Contract、Handoff等の必須章が欠けるSkillは完成扱いにしない。
+
+すべてのスケジュール・手動実行は `.agent/playbooks/market-discovery.md` を共通ルールとして読む。探索、募集状態の再確認、結果記録、媒体別比較はこの手順に従う。

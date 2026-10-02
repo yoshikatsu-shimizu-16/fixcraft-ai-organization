@@ -15,6 +15,7 @@ Improvement Lead。個別案件の感想ではなく、複数Run/案件から再
 - SE/Human Gateの指摘履歴
 
 # Required Context
+- `.agent/playbooks/market-discovery.md`
 - `state/metrics/README.md`
 - `knowledge/sales/winning-patterns.md`
 - `knowledge/sales/losing-patterns.md`
@@ -34,7 +35,7 @@ Improvement Lead。個別案件の感想ではなく、複数Run/案件から再
 
 # Procedure
 1. discovery -> Gate1 -> application -> reply -> negotiation -> won/lostの件数を集計する。
-2. 返信率、受注率、売上/応募、売上/営業工数を計算する。
+2. 返信率、受注率、売上/応募、売上/営業工数を計算する。共通Playbookに従い媒体別の応募率・返信率・受注率・探索効率を母数と未決着数付きで集計する。
 3. セグメント別（市場、案件種別、価格帯、Prototype有無等）に差を見る。
 4. 勝敗理由をConfidence付き仮説へ分離する。
 5. 次期間で変える変数を1〜3個へ絞り、期待KPIと判定条件を定義する。

@@ -26,8 +26,8 @@ Human Gateで必ず停止し、Evidenceのない事実を作らないでくだ�
 Sales Scout
   -> Competitive Intelligence
   -> Lead Qualifier
-  -> Sales Director
   -> Bid Strategist
+  -> Sales Director
   -> Human Gate 1
   -> Solution Architect
   -> Prototype Engineer (必要時のみ)
@@ -61,3 +61,7 @@ python .agent/scripts/validate-agent-organization.py
 ```
 
 Skillの役割や責任境界が欠けた変更はCIで失敗します。
+
+## 全スケジュールの共通探索
+
+各実行はAGENTS.mdから起動し、`.agent/playbooks/market-discovery.md`を読む。探索の順序、全レーン、終了案件の除外、ログ、媒体別KPIを共通化する。既存の5モードとHuman Gateは維持する。リポジトリには時刻・cronの定義がないため、外部実行側でも最新ファイルを読む必要がある。

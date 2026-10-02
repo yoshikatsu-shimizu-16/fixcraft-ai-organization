@@ -1,5 +1,5 @@
 schema: fixcraft-lead-workflow
-version: "2.1"
+version: "2.2"
 required: [lead_id, platform, dedupe_key, title, source_url, status, first_seen_at, last_updated_at, evidence, risks, next_action]
 properties:
   lead_id: {type: string}
@@ -26,3 +26,23 @@ properties:
   recommendations: {type: array}
   next_action: {type: string}
   artifacts: {type: array}
+  # 追加項目は任意。既存Stateを読み続けられるようrequiredは維持する。
+  source: {type: [string, "null"]}
+  category: {type: [string, "null"]}
+  discovered_at: {type: [string, "null"]}
+  posted_at: {type: [string, "null"]}
+  applicants: {type: [integer, "null"], minimum: 0}
+  capacity: {type: [integer, "null"], minimum: 0}
+  reward: {type: [object, "null"], description: "currency, gross amount or range, net estimate, payment conditions and evidence"}
+  estimated_minutes: {type: [number, "null"], minimum: 0}
+  open_check: {type: object, description: "status open/closed/unknown, checked_at, evidence"}
+  requester_signal: {type: [object, "null"]}
+  rejection_reason: {type: [string, "null"]}
+  cross_source_duplicate_of: {type: [string, "null"]}
+  applied: {type: [string, "null"], description: "first evidenced application timestamp"}
+  replied: {type: [string, "null"], description: "first evidenced reply timestamp"}
+  won: {type: [string, "null"], description: "first evidenced win timestamp"}
+  lost: {type: [string, "null"], description: "first evidenced loss timestamp"}
+  actual_minutes: {type: [number, "null"], minimum: 0}
+  actual_revenue: {type: [number, "null"], minimum: 0, description: "realized JPY revenue only"}
+  rating: {type: [object, "null"], description: "value, scale, source, checked_at, evidence"}

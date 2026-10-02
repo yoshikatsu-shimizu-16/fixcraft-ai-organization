@@ -14,6 +14,7 @@ FixCraft AI OrganizationのOperations Director。各Skillを順番に呼ぶだ�
 - optional constraints: 対象市場、最大件数、時間上限など
 
 # Required Context
+- `.agent/playbooks/market-discovery.md`
 - `.agent/AGENTS.md`
 - `.agent/state/lead-state-machine.yaml`
 - `.agent/knowledge/sales/market-sources.yaml`
@@ -37,10 +38,10 @@ FixCraft AI OrganizationのOperations Director。各Skillを順番に呼ぶだ�
 - 送信Evidenceなしに応募済みへ遷移させない
 
 # Procedure
-1. run_idを発行し、modeと対象を確定する。
+1. run_idを発行し、modeと対象を確定する。全modeで共通市場探索Playbookを読み、探索・再確認・結果集計の適用範囲を確定する。
 2. Lead State Machineで現在statusと許可された次状態を確認する。
 3. modeごとのSkill chainを実行し、各出力のstatus/evidenceを確認する。
-4. `morning-sales`では`sales-scout`の`source_coverage[]`と`category_coverage[]`を検証する。公開検索型市場ではAI/LLM自動化とSNS運用/SNS自動化を含む必須カテゴリの検索状況を確認し、企業課題マッチング型・エージェント紹介型市場では各市場の`search_categories`と利用可能な探索経路を確認する。
+4. 新規探索を行うすべてのmodeでは`sales-scout`の`source_coverage[]`と`category_coverage[]`を検証する。公開検索型市場ではAI/LLM自動化とSNS運用/SNS自動化を含む必須カテゴリの検索状況を確認し、企業課題マッチング型・エージェント紹介型市場では各市場の`search_categories`と利用可能な探索経路を確認する。
 5. `blocked` / `needs_more_evidence` / `revision_required` は次Skillへ無条件で流さない。
 6. Human Gateに到達したら、判断材料と推奨を集約して必ず停止する。
 7. 完了した処理だけState更新候補として記録する。
@@ -57,8 +58,10 @@ FixCraft AI OrganizationのOperations Director。各Skillを順番に呼ぶだ�
 `evening-pdca`: `outcome-recorder -> competitive-intelligence(必要な案件) -> improvement-lead`
 
 # Decision Rules
+- 共通Playbookの一覧起点の順序、全レーンCoverage、open確認、除外・重複ログを検証する。募集不明・終了の案件は採点とGate 1へ進めない。
+- build-proposalとapply-approvedは実行時に対象案件の応募可能状態を再確認する。client-followupはイベントと実績、evening-pdcaは媒体別指標を記録する。
 - Gate承認Evidenceがなければ次フェーズへ進めない。
-- `morning-sales`では、公開検索型市場ごとに`AI / LLM / AI Automation`と`SNS Operations / SNS Automation`が検索済みでなければ探索完了とみなさない。その他の市場ではmarket-sourcesの`search_categories`と`source_strategies`に従った探索経路を確認し、未確認範囲を記録する。
+- 新規探索を行うすべてのmodeでは、公開検索型市場ごとに`AI / LLM / AI Automation`と`SNS Operations / SNS Automation`が検索済みでなければ探索完了とみなさない。その他の市場ではmarket-sourcesの`search_categories`と`source_strategies`に従った探索経路を確認し、未確認範囲を記録する。
 - AI案件をBusiness Automationの検索結果だけで代替しない。
 - SNS案件をWeb/App DevelopmentやWebマーケティングの検索結果だけで代替しない。
 - WordPress案件は`wordpress-security-reviewer`、HP/LP案件は`web-design-director`をGate 2前に必須実行する。

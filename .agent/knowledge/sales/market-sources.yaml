@@ -1,5 +1,5 @@
-version: "1.0"
-objective: "在宅副業向けの技術案件を複数市場から継続探索し、市場依存を避ける"
+version: "1.1"
+objective: "在宅副業向けの開発・評価・モニター・インタビュー・データ作業を複数市場から継続探索する"
 sources:
   crowdworks:
     name: CrowdWorks
@@ -7,7 +7,7 @@ sources:
     priority: 1
     source_type: "open_crowdsourcing_marketplace"
     base_url: "https://crowdworks.jp/"
-    discovery_method: "public web search or authenticated browser when available"
+    discovery_method: "new active listings, category listings, native keyword search, then supplementary engine search; verify individual availability"
     search_categories: "all"
     application_method: "human Gate 3 approval required; do not claim submission without evidence"
   lancers:
@@ -16,7 +16,7 @@ sources:
     priority: 2
     source_type: "open_crowdsourcing_marketplace"
     base_url: "https://www.lancers.jp/"
-    discovery_method: "public web search or authenticated browser when available"
+    discovery_method: "new active listings, category listings, native keyword search, then supplementary engine search; verify individual availability"
     search_categories: "all"
     application_method: "human Gate 3 approval required; do not claim submission without evidence"
   sankaku:
@@ -79,7 +79,9 @@ sources:
     priority: 9
     base_url: "https://coconala.com/"
     source_type: "service_purchase_marketplace"
-    discovery_method: "enable only after defining matching/search policy for service-purchase style listings"
+    discovery_method: "inspect active buyer requests separately from seller service listings; service listings are not application leads"
+    discovery_status: candidate
+    application_method: "Human Gate 3 required"
     search_categories: "all"
 
   flexy:
@@ -100,10 +102,32 @@ sources:
     base_url: "https://paiza.jp/"
     discovery_method: "enable after confirming freelance/sidework preference; exclude standard full-time recruiting alerts"
     search_categories: ["AI / LLM / AI Automation", "Web / App Development"]
+candidate_sources:
+  visasq:
+    name: ビザスク
+    source_type: expert_interview
+    discovery_status: candidate
+    discovery_method: "inspect available current interview requests or personal invitations; verify expertise eligibility and availability"
+  shufti:
+    name: シュフティ
+    source_type: open_crowdsourcing_marketplace
+    discovery_status: candidate
+  craudia:
+    name: クラウディア
+    source_type: open_crowdsourcing_marketplace
+    discovery_status: candidate
+  user_testing_research_monitor:
+    name: ユーザーテスト・研究参加・モニター系サービス
+    source_type: research_participation
+    discovery_status: candidate
+    discovery_method: "identify concrete services and their official active recruitment routes; do not treat this group as a searched source"
 rules:
+  common_playbook: ".agent/playbooks/market-discovery.md"
+  candidate_policy: "inspect official discovery routes on exploration runs; record actual source identity, access, recruitment type and limitations before proposing enabled status; no account registration or submission during discovery"
+  discovery_order: [new_active_listings, category_listings, native_keyword_search, supplementary_engine_search, individual_open_check, dedupe, competitive_intelligence, lead_qualifier, bid_strategist, sales_director, human_gate]
   enabled_sources_each_morning: "all"
   source_strategies:
-    open_crowdsourcing_marketplace: "search all mandatory categories using multiple issue-plus-skill queries"
+    open_crowdsourcing_marketplace: "start with new active listings, then category listings and native keywords across all lanes; engine search is supplementary only"
     project_matching_platform: "search active projects by applicable skill tags and inspect project-level role/effort; newsletter selections alone do not prove full coverage"
     curated_sidework_agent: "review new-project alerts and active role listings; match against verified profile evidence and available workload"
     curated_freelance_agent: "review public listings and account-specific recommendations; include agent-mediated/private leads as private notification evidence"
@@ -115,3 +139,4 @@ rules:
   no_result_behavior: "record searched source, query, timestamp and zero-result evidence; do not invent leads"
   access_failure_behavior: "mark source blocked and continue other enabled sources"
   terms_and_permissions: "respect platform terms, authentication boundaries and tool permissions"
+  enabled_sources_each_discovery_run: "all; retain enabled_sources_each_morning as a legacy alias"

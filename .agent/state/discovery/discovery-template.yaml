@@ -1,0 +1,35 @@
+run_id: ""
+mode: ""
+started_at: ""
+completed_at: null
+entries: []
+# entriesの各行には以下を記録する。一覧巡回と個別確認を分ける。
+entry_fields:
+  source: null
+  listing_url: null
+  category: null
+  discovery_stage: null
+  pages_or_items_scanned: {pages: null, items: null}
+  search_terms: []
+  discovered_at: null
+  posted_at: null
+  lead_id: null
+  source_url: null
+  applicants: null
+  capacity: null
+  reward: null
+  estimated_minutes: null
+  status: null
+  open_check: {status: unknown, checked_at: null, evidence: []}
+  requester_signal: null
+  rejection_reason: null
+  duplicate_of: null
+  scan_minutes: null
+  coverage_status: null
+  limitations: []
+summary:
+  items_scanned: null
+  new_unique_open_leads: null
+  rejected: null
+  duplicates: null
+  discovery_minutes: null

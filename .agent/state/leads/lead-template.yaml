@@ -20,3 +20,22 @@ risks: []
 recommendations: []
 next_action: ""
 artifacts: []
+source: null
+category: null
+discovered_at: null
+posted_at: null
+applicants: null
+capacity: null
+reward: null
+estimated_minutes: null
+open_check: {status: unknown, checked_at: null, evidence: []}
+requester_signal: null
+rejection_reason: null
+cross_source_duplicate_of: null
+applied: null
+replied: null
+won: null
+lost: null
+actual_minutes: null
+actual_revenue: null
+rating: null
