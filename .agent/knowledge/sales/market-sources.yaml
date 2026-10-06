@@ -1,4 +1,4 @@
-version: "1.1"
+version: "1.2"
 objective: "在宅副業向けの開発・評価・モニター・インタビュー・データ作業を複数市場から継続探索する"
 sources:
   crowdworks:
@@ -10,6 +10,15 @@ sources:
     discovery_method: "new active listings, category listings, native keyword search, then supplementary engine search; verify individual availability"
     search_categories: "all"
     application_method: "human Gate 3 approval required; do not claim submission without evidence"
+  ai_crowdworks:
+    name: "AIクラウドワークス"
+    enabled: true
+    priority: 3
+    source_type: "project_matching_platform"
+    base_url: "https://ai.crowdworks.jp/projects/"
+    discovery_method: "browse official project listings with pagination in a browser; inspect available categories, native search and authenticated recommendations separately; verify individual project availability"
+    search_categories: ["AI / LLM / AI Automation", "SNS Operations / SNS Automation", "Business Automation / Integration", "Web / App Development", "AI / LLM Evaluation / Testing / Tool Feedback"]
+    application_method: "interest buttons, applications, messages and profile submissions require human Gate 3 approval; discovery is read-only"
   lancers:
     name: Lancers
     enabled: true
@@ -22,7 +31,7 @@ sources:
   sankaku:
     name: "サンカク（ふるさと副業）"
     enabled: true
-    priority: 4
+    priority: 5
     source_type: "project_matching_platform"
     base_url: "https://sankak.jp/"
     discovery_method: "public project listings and IT/tech, PM/engineering, DX tags; inspect project problem, expected role, location, and application format"
@@ -31,7 +40,7 @@ sources:
   remogu:
     name: "Remogu（リモグ）"
     enabled: true
-    priority: 5
+    priority: 6
     source_type: "curated_freelance_agent"
     base_url: "https://remogu.jp/"
     discovery_method: "public listings plus authenticated member recommendations; evaluate weekly hours, start date, contract, and required skills"
@@ -40,7 +49,7 @@ sources:
   shuumatsu_worker:
     name: "シューマツワーカー"
     enabled: true
-    priority: 3
+    priority: 4
     source_type: "curated_sidework_agent"
     base_url: "https://shuuumatu-worker.jp/"
     discovery_method: "public project listings and authenticated recommendations; filter for part-time hours, remote work, and verified skill requirements"
@@ -49,7 +58,7 @@ sources:
   lotsful:
     name: lotsful
     enabled: true
-    priority: 6
+    priority: 7
     source_type: "curated_sidework_platform"
     base_url: "https://lotsful.jp/"
     discovery_method: "authenticated member recommendations and public listings; screen by job role, required experience, workload, and remote/location conditions"
@@ -58,7 +67,7 @@ sources:
   anycrew:
     name: Anycrew
     enabled: true
-    priority: 7
+    priority: 8
     source_type: "open_sidework_marketplace"
     base_url: "https://app.any-crew.com/offers"
     discovery_method: "public active listings plus authenticated skill-match emails; search skills and check active status, weekly hours, work location, and deadline"
@@ -67,7 +76,7 @@ sources:
   itpro_partners:
     name: "ITプロパートナーズ"
     enabled: true
-    priority: 8
+    priority: 9
     source_type: "curated_freelance_agent"
     base_url: "https://itpropartners.com/job"
     discovery_method: "public listings and authenticated agent recommendations; prioritize weekly workload and remote-compatible projects"
@@ -76,7 +85,7 @@ sources:
   coconala:
     name: Coconala
     enabled: false
-    priority: 9
+    priority: 10
     base_url: "https://coconala.com/"
     source_type: "service_purchase_marketplace"
     discovery_method: "inspect active buyer requests separately from seller service listings; service listings are not application leads"
@@ -87,7 +96,7 @@ sources:
   flexy:
     name: FLEXY
     enabled: false
-    priority: 10
+    priority: 11
     source_type: "curated_freelance_agent"
     base_url: "https://flxy.jp/media/"
     discovery_method: "enable after confirming active job recommendation access; public listings are limited"
@@ -97,7 +106,7 @@ sources:
   paiza_freelance:
     name: "paiza（フリーランス案件案内）"
     enabled: false
-    priority: 11
+    priority: 12
     source_type: "career_and_freelance_platform"
     base_url: "https://paiza.jp/"
     discovery_method: "enable after confirming freelance/sidework preference; exclude standard full-time recruiting alerts"

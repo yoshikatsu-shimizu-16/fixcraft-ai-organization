@@ -14,7 +14,7 @@ Human Gateで必ず停止し、Evidenceのない事実を作らないでくだ�
 
 ## 実行モード
 
-- `morning-sales`: `.agent/knowledge/sales/market-sources.yaml` でenabledの全市場（CrowdWorks、Lancers、サンカク、Remogu、シューマツワーカー、lotsful、Anycrew、ITプロパートナーズ）から候補収集、競合調査、採点、Gate 1候補
+- `morning-sales`: `.agent/knowledge/sales/market-sources.yaml` でenabledの全市場（CrowdWorks、Lancers、AIクラウドワークス、サンカク、Remogu、シューマツワーカー、lotsful、Anycrew、ITプロパートナーズ）から候補収集、競合調査、採点、Gate 1候補
 - `build-proposal`: Gate 1承認済み案件を設計・試作・レビューし、Gate 2/3候補へ
 - `apply-approved`: Gate 3承認済み応募の提出支援と応募記録
 - `client-followup`: 発注者返信、追加質問、交渉、クロージング
