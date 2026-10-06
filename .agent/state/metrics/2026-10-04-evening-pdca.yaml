@@ -1,0 +1,113 @@
+date: "2026-10-04"
+run_type: "evening-pdca"
+mode: "evening-pdca"
+phase_kpi_jpy: 20000
+priority: "まず1〜2件の受注で再現可能な勝ち筋を確立する"
+
+outcome_recorder:
+  unique_applications_confirmed: 2
+  replies_confirmed: 1
+  wins_confirmed: 1
+  losses_confirmed: 1
+  no_reply_confirmed: 1
+  pending_outcomes: 0
+  realized_revenue_jpy: 0
+  contracted_gross_jpy: 5500
+  expected_net_after_platform_fee_jpy: 4290
+  reply_rate_pct: 50.0
+  win_rate_pct: 50.0
+  kpi_realized_progress_pct: 0.0
+  kpi_contracted_gross_progress_pct: 27.5
+  new_outcome_evidence_since_previous_pdca: false
+  evidence:
+    - lead_id: "crowdworks-13481213"
+      outcome: "won_in_progress"
+      source: ".agent/state/applications/crowdworks-13481213-2026-10-01.yaml"
+      observed: "契約成立、5,500円税込、受取見込4,290円。期限2026-10-10。completion_submitted=false、inspection_completed=false、rating_received=false、payout_confirmed=false。"
+    - lead_id: "lancers-5606677"
+      outcome: "lost_no_reply"
+      source: ".agent/state/applications/lancers-5606677-2026-09-25.yaml"
+      observed: "既存Evidenceで20,000円提案、無返信、非当選を確認済み。2026-10-04時点で新Evidenceなし。"
+
+competitive_intelligence:
+  first_win:
+    lead_id: "crowdworks-13481213"
+    category: "developer_technical_evaluation_research_participation"
+    confirmed:
+      - "開発者向けHCGツール利用評価実験で契約成立済み"
+      - "契約額5,500円税込、受取見込4,290円"
+      - "指定手順、コードサンプル確認、評価アンケートという納品境界が明確"
+      - "2026-10-04時点で完了提出・検収・評価・支払の新EvidenceはStateにない"
+    likely:
+      - "既存SE経験を直接使える技術条件付き評価案件は本人との適合度が高い可能性がある"
+    possible:
+      - "短時間・技術条件付き・評価作業という構造が実装案件よりスコープ膨張を抑える可能性がある"
+    unknown:
+      - "実作業時間"
+      - "検収結果"
+      - "最終評価"
+      - "実現収益"
+      - "発注者の最終選定理由"
+    win_theme_status: "candidate_only"
+    reason: "1勝のみで再現性未確認。標準勝ち筋へ昇格しない。"
+    pricing_analysis: "契約5,500円はConfirmed。actual_work_hours未確認のため実質時給はUnknown。"
+    delivery_analysis: "期限2026-10-10。完了Evidenceがないため納期品質はUnknown。"
+    prototype_relevance: "受注前試作が寄与したEvidenceなし。"
+    technical_quality: "作業中のためUnknown。"
+
+  prior_loss:
+    lead_id: "lancers-5606677"
+    confirmed:
+      - "20,000円で応募"
+      - "無返信で失注"
+      - "募集終了時68提案、1名当選、本人は非当選"
+    likely:
+      - "受注者の同種WordPress復旧・セキュリティ実績の可視性と即応性が選定リスクを下げた"
+    possible:
+      - "1,727文字の長い提案"
+      - "AI支援ツール名の明示"
+      - "平日夜間・土日中心という表現"
+    unknown:
+      - "受注者の今回の提案価格"
+      - "受注者の提案本文"
+      - "発注者の最終決定理由"
+    wordpress_security_quality: "新Evidenceなし。既存評価を維持。"
+
+  hp_lp_design_quality:
+    status: "Unknown"
+    reason: "HP/LP案件の新しい応募・成果物・結果Evidenceなし"
+
+improvement_lead:
+  se_review:
+    observed: "ユーザーは初受注案件について『本当に相性がいい。こういった仕事もどしどし探して』と評価済み。"
+    repeated_same_class_review_count_confirmed: 1
+    playbook_candidate_promoted: false
+    standard_rule_promoted: false
+    reason: "同種SE指摘2回以上の独立Evidenceなし。受注も1件のみで改善効果未確認。"
+  knowledge_and_playbook:
+    current_knowledge: ".agent/knowledge/sales/search-keywords.md では Developer Technical Evaluation / Research Participation が独立カテゴリ化済み"
+    common_playbook: ".agent/playbooks/market-discovery.md でも開発者向け技術評価・利用評価実験を独立レーンとして扱う"
+    change_candidate: "なし。追加受注または完了品質・収益Evidenceを待つ。"
+  tomorrow_experiments:
+    - id: "technical-evaluation-repeatability"
+      hypothesis: "開発者向け技術評価・利用評価実験は再現可能な受注レーンになり得る。"
+      change: "次回探索でDeveloper Technical Evaluation / Research Participationを独立レーンとして確認し、条件一致案件を優先評価する。"
+      success_metric: "同種の応募可能案件を1件以上Gate 1候補化し、Human Gate判断Evidenceを残す。"
+    - id: "first-win-quality-and-economics"
+      hypothesis: "HCG案件が短時間で期限内完了・検収されれば、月20,000円に向けた小粒案件の有効な型になる。"
+      change: "crowdworks-13481213の実作業時間、完了提出、検収、評価、実現収益を確認できた時点で分離記録する。"
+      success_metric: "actual_work_hours、completion_submitted、inspection_completed、rating、actual_revenueのうち新Evidenceが得られた項目をState更新する。"
+
+state_updates:
+  - "2026-10-04時点で新しい応募・返信・受注・失注Evidenceなし。既存Application/Outcomeを変更しない。"
+  - "KPIは応募2・返信1・受注1・失注1・無返信1、契約額5,500円、実現売上0円を維持。"
+  - "state/discoveryには2026-10-04のmorning-sales discoveryログを確認できず、新規探索成果を推測しない。"
+  - "2026-10-03のpartial discoveryログは存在するが、本PDCAでは新しい応募・Outcome Evidenceとして扱わない。"
+
+human_gates:
+  - "新規案件のGate 1/2/3をAI確定しない"
+  - "未確認の完了・検収・評価・支払を確定しない"
+
+next_action:
+  - "技術評価・利用評価実験の2件目候補で再現性を検証する"
+  - "crowdworks-13481213の完了品質と実作業時間・実収益Evidenceを取得後に更新する"

@@ -1,0 +1,215 @@
+run_id: "2026-10-02-morning-sales-1049-jst"
+mode: "morning-sales"
+started_at: "2026-10-02T10:49:00+09:00"
+completed_at: "2026-10-02T11:05:00+09:00"
+entries:
+  - source: crowdworks
+    listing_url: "https://crowdworks.jp/public/jobs/13499053"
+    category: "Cash / Track-record Microtasks"
+    discovery_stage: supplementary_engine_search
+    pages_or_items_scanned: {pages: null, items: 1}
+    search_terms: ["2026年10月02日 データ入力"]
+    discovered_at: "2026-10-02T10:55:00+09:00"
+    posted_at: "2026-10-02"
+    lead_id: "crowdworks-13499053"
+    source_url: "https://crowdworks.jp/public/jobs/13499053"
+    applicants: 16
+    capacity: 20
+    reward: "固定報酬5,000〜10,000円表示、詳細は1件100円〜"
+    estimated_minutes: null
+    status: "open_search_evidence"
+    open_check: {status: "needs_more_evidence", checked_at: "2026-10-02T10:55:00+09:00", evidence: ["検索取得時点で応募期限2026-10-03、契約0/20。個別ページ直接取得は失敗"]}
+    requester_signal: "評価0、本人確認未提出、発注ルールチェック未回答"
+    rejection_reason: null
+    duplicate_of: null
+    scan_minutes: null
+    coverage_status: partial
+    limitations: ["総件数と総作業時間が不明", "個別ページ直接取得失敗", "発注者実績なし"]
+  - source: crowdworks
+    listing_url: "https://crowdworks.jp/public/jobs/13494089"
+    category: "Cash / Track-record Microtasks"
+    discovery_stage: supplementary_engine_search
+    pages_or_items_scanned: {pages: null, items: 1}
+    search_terms: ["2026年10月02日 データ入力"]
+    discovered_at: "2026-10-02T10:56:00+09:00"
+    posted_at: "2026-10-02"
+    lead_id: "crowdworks-13494089"
+    source_url: "https://crowdworks.jp/public/jobs/13494089"
+    applicants: 16
+    capacity: 3
+    reward: "手数料控除後時給約1,500円目安、表示10,000〜30,000円"
+    estimated_minutes: 210
+    status: "open_search_evidence"
+    open_check: {status: "needs_more_evidence", checked_at: "2026-10-02T10:56:00+09:00", evidence: ["検索取得時点で応募期限2026-10-03、契約0/3。個別ページ直接取得は失敗"]}
+    requester_signal: "評価0、本人確認未提出、発注ルールチェック未回答"
+    rejection_reason: null
+    duplicate_of: null
+    scan_minutes: null
+    coverage_status: partial
+    limitations: ["毎月継続希望", "個別ページ直接取得失敗", "発注者実績なし"]
+  - source: crowdworks
+    listing_url: "https://crowdworks.jp/public/jobs/13477825"
+    category: "AI / LLM Evaluation / Testing / Tool Feedback"
+    discovery_stage: supplementary_engine_search
+    pages_or_items_scanned: {pages: 1, items: 1}
+    search_terms: ["2026年10月02日 AI"]
+    discovered_at: "2026-10-02T10:57:00+09:00"
+    posted_at: "2026-09-25"
+    lead_id: "crowdworks-13477825"
+    source_url: "https://crowdworks.jp/public/jobs/13477825"
+    applicants: 42
+    capacity: 2
+    reward: "有料トライアル15社10,500円、本番1本700円"
+    estimated_minutes: null
+    status: "open"
+    open_check: {status: "open", checked_at: "2026-10-02T10:57:00+09:00", evidence: ["個別ページで応募期限2026-10-02、応募42、契約0、募集2を確認"]}
+    requester_signal: "評価4.4/49、本人確認済み"
+    rejection_reason: "本採用後週20〜30時間・最低2か月継続で現在の短期小粒方針に不一致。競争42/2"
+    duplicate_of: null
+    scan_minutes: null
+    coverage_status: checked
+    limitations: ["応募期限当日"]
+  - source: lancers
+    listing_url: "https://www.lancers.jp/work/detail/5610582"
+    category: "Cash / Track-record Microtasks"
+    discovery_stage: supplementary_engine_search
+    pages_or_items_scanned: {pages: 1, items: 1}
+    search_terms: ["2026年10月02日 データ入力"]
+    discovered_at: "2026-10-02T10:58:00+09:00"
+    posted_at: "2026-10-02T05:51:00+09:00"
+    lead_id: "lancers-5610582"
+    source_url: "https://www.lancers.jp/work/detail/5610582"
+    applicants: null
+    capacity: 130
+    reward: "5円/件、1人1件"
+    estimated_minutes: null
+    status: "open"
+    open_check: {status: "open", checked_at: "2026-10-02T10:58:00+09:00", evidence: ["募集中、締切2026-10-03 05:51、8/130作業済み"]}
+    requester_signal: null
+    rejection_reason: "1件5円かつ1人1件で現金化効率が極端に低い"
+    duplicate_of: null
+    scan_minutes: null
+    coverage_status: checked
+    limitations: []
+  - source: lancers
+    listing_url: "https://www.lancers.jp/work/detail/5610637"
+    category: "Cash / Track-record Microtasks"
+    discovery_stage: supplementary_engine_search
+    pages_or_items_scanned: {pages: 1, items: 1}
+    search_terms: ["2026年10月02日 データ入力"]
+    discovered_at: "2026-10-02T10:59:00+09:00"
+    posted_at: "2026-10-02T09:26:00+09:00"
+    lead_id: "lancers-5610637"
+    source_url: "https://www.lancers.jp/work/detail/5610637"
+    applicants: null
+    capacity: 150
+    reward: "22円/件、1人1件"
+    estimated_minutes: null
+    status: "open"
+    open_check: {status: "open", checked_at: "2026-10-02T10:59:00+09:00", evidence: ["募集中、締切2026-10-09 09:26、2/150作業済み"]}
+    requester_signal: null
+    rejection_reason: "1人1件22円で現金化効率が極端に低い"
+    duplicate_of: null
+    scan_minutes: null
+    coverage_status: checked
+    limitations: []
+  - source: lancers
+    listing_url: "https://www.lancers.jp/work/detail/5610891"
+    category: "Web / App Development"
+    discovery_stage: supplementary_engine_search
+    pages_or_items_scanned: {pages: 1, items: 1}
+    search_terms: ["2026年10月02日 AI"]
+    discovered_at: "2026-10-02T11:00:00+09:00"
+    posted_at: "2026-10-02"
+    lead_id: "lancers-5610891"
+    source_url: "https://www.lancers.jp/work/detail/5610891"
+    applicants: 7
+    capacity: 1
+    reward: "300,000〜500,000円"
+    estimated_minutes: null
+    status: "open"
+    open_check: {status: "open", checked_at: "2026-10-02T11:00:00+09:00", evidence: ["募集中、締切2026-10-09、提案7、当選0、募集1"]}
+    requester_signal: null
+    rejection_reason: "LiDAR/PLC/通信を含む技術統合が主題で適合度が低く、短期小粒案件ではない"
+    duplicate_of: null
+    scan_minutes: null
+    coverage_status: checked
+    limitations: []
+  - source: anycrew
+    listing_url: "https://app.any-crew.com/offers"
+    category: "AI / LLM / AI Automation"
+    discovery_stage: active_listing_plus_individual_check
+    pages_or_items_scanned: {pages: 1, items: 1}
+    search_terms: ["AI エンジニア 副業"]
+    discovered_at: "2026-10-02T11:01:00+09:00"
+    posted_at: null
+    lead_id: "anycrew-3855"
+    source_url: "https://app.any-crew.com/offers/3855"
+    applicants: null
+    capacity: null
+    reward: "時給3,000〜6,000円"
+    estimated_minutes: 480
+    status: "open"
+    open_check: {status: "open", checked_at: "2026-10-02T11:01:00+09:00", evidence: ["募集期間2026-10-30まで。フルリモート、平日夜/土日可、月20〜50時間程度"]}
+    requester_signal: "Anycrewエージェント仲介"
+    rejection_reason: null
+    duplicate_of: null
+    scan_minutes: null
+    coverage_status: checked
+    limitations: ["Notionを使った開発経験とClaude Code等の開発経験を応募時に具体記載する必要あり", "短期小粒ではなく3か月契約・長期想定"]
+  - source: sankaku
+    listing_url: "https://sankak.jp/"
+    category: null
+    discovery_stage: supplementary_engine_search
+    pages_or_items_scanned: {pages: null, items: null}
+    search_terms: ["副業 AI エンジニア 2026"]
+    discovered_at: "2026-10-02T11:02:00+09:00"
+    posted_at: null
+    lead_id: null
+    source_url: null
+    applicants: null
+    capacity: null
+    reward: null
+    estimated_minutes: null
+    status: "coverage_incomplete"
+    open_check: {status: unknown, checked_at: "2026-10-02T11:02:00+09:00", evidence: []}
+    requester_signal: null
+    rejection_reason: null
+    duplicate_of: null
+    scan_minutes: null
+    coverage_status: blocked
+    limitations: ["公式新着一覧の十分な巡回Evidenceを取得できず、検索エンジン結果で代替完了とは扱わない"]
+  - source: shuumatsu_worker
+    listing_url: "https://shuuumatu-worker.jp/"
+    category: null
+    discovery_stage: supplementary_engine_search
+    pages_or_items_scanned: {pages: null, items: null}
+    search_terms: ["案件 AI エンジニア 副業"]
+    discovered_at: "2026-10-02T11:03:00+09:00"
+    posted_at: null
+    lead_id: null
+    source_url: null
+    applicants: null
+    capacity: null
+    reward: null
+    estimated_minutes: null
+    status: "coverage_incomplete"
+    open_check: {status: unknown, checked_at: "2026-10-02T11:03:00+09:00", evidence: []}
+    requester_signal: null
+    rejection_reason: null
+    duplicate_of: null
+    scan_minutes: null
+    coverage_status: blocked
+    limitations: ["公式新着/案件一覧の十分な巡回Evidenceを取得できず、検索エンジン結果で代替完了とは扱わない"]
+summary:
+  items_scanned: 8
+  new_unique_open_leads: 6
+  rejected: 4
+  duplicates: 0
+  discovery_minutes: 16
+  coverage_complete: false
+  failed_or_unverified_enabled_sources: [sankaku, shuumatsu_worker, remogu, lotsful, itpro_partners]
+  notes:
+    - "CrowdWorks/Lancersは検索エンジン補完から当日掲載案件を確認したが、公式の新着一覧起点の完全巡回Evidenceは取得できていないためfull coverageとはしない"
+    - "Anycrewは公式案件一覧と個別案件を確認"
+    - "mandatory coverage不足のため、このrunでは新規Gate 1候補を確定せず、要追加確認候補のみ記録"

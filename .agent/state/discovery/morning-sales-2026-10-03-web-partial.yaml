@@ -1,0 +1,58 @@
+run_id: "morning-sales-2026-10-03-web-partial"
+mode: "morning-sales"
+started_at: "2026-10-03"
+completed_at: "2026-10-03"
+entries:
+  - source: crowdworks
+    listing_url: "https://crowdworks.jp/public/jobs/13499063"
+    category: "WordPress / Web Repair"
+    discovery_stage: supplementary_engine_search
+    pages_or_items_scanned: {pages: null, items: 1}
+    search_terms: ["WordPress 修正 2026 10月"]
+    discovered_at: "2026-10-03"
+    posted_at: "2026-10-02"
+    lead_id: null
+    source_url: "https://crowdworks.jp/public/jobs/13499063"
+    applicants: null
+    capacity: null
+    reward: "50000-100000 JPY"
+    estimated_minutes: null
+    status: open
+    open_check: {status: open, checked_at: "2026-10-03", evidence: ["応募期限 2026-10-05"]}
+    requester_signal: "rating 4.5/51 reviews; identity unverified"
+    rejection_reason: "TOP+4 pages; scope is larger than current short-time cash/track-record priority"
+    duplicate_of: null
+    scan_minutes: null
+    coverage_status: partial
+    limitations: ["search-engine discovery; official new-listing traversal not verified"]
+  - source: anycrew
+    listing_url: "https://app.any-crew.com/offers/3855"
+    category: "Web / App Development"
+    discovery_stage: supplementary_engine_search
+    pages_or_items_scanned: {pages: null, items: 1}
+    search_terms: ["AI エンジニア 副業"]
+    discovered_at: "2026-10-03"
+    posted_at: null
+    lead_id: null
+    source_url: "https://app.any-crew.com/offers/3855"
+    applicants: null
+    capacity: null
+    reward: "3000-6000 JPY/hour"
+    estimated_minutes: "480-960/week"
+    status: open
+    open_check: {status: open, checked_at: "2026-10-03", evidence: ["public offer page accessible"]}
+    requester_signal: "Anycrew agent listing"
+    rejection_reason: "weekly 8-16 hours; not a 1-3 hour short evaluation job"
+    duplicate_of: null
+    scan_minutes: null
+    coverage_status: partial
+    limitations: ["search-engine discovery; official active-list traversal not verified"]
+summary:
+  items_scanned: 2
+  new_unique_open_leads: 0
+  rejected: 2
+  duplicates: 0
+  discovery_minutes: null
+  coverage_complete: false
+  gate1_candidates: 0
+  note: "Supplementary web search found no new Gate 1 candidate. Official new/active listing traversal and enabled-source coverage could not be evidenced in this run; do not treat this as complete morning-sales coverage."
