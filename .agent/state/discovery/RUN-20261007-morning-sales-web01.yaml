@@ -1,8 +1,36 @@
 run_id: RUN-20261007-morning-sales-web01
 mode: morning-sales
-started_at: '2026-10-07'
+started_at: "2026-10-07"
+completed_at: null
 status: needs_more_evidence
 coverage_complete: false
 summary:
+  items_scanned: null
+  new_unique_open_leads: 0
+  rejected: null
+  duplicates: null
+  discovery_minutes: null
   gate1_candidates: 0
-  note: 'Official listing coverage incomplete; no applications sent.'
+  note: "No applications, prototypes or Human Gate approvals."
+source_coverage:
+  crowdworks: {status: blocked, reason: "Official listing JavaScript error; supplemental search only."}
+  lancers: {status: partial, reason: "General/task/system category listings; not exhaustive."}
+  ai_crowdworks: {status: blocked, reason: "Loading placeholder only."}
+  anycrew: {status: partial}
+  sankaku: {status: blocked, reason: "Authentication redirect."}
+  remogu: {status: partial}
+  shuumatsu_worker: {status: partial}
+  lotsful: {status: blocked}
+  itpro_partners: {status: partial}
+category_coverage:
+  - {category: developer_technical_evaluation, status: partial}
+  - {category: ai_llm_evaluation, status: partial}
+  - {category: wordpress_web_repair, status: partial}
+  - {category: short_microtasks, status: partial}
+  - {category: sns_operations, status: partial}
+  - {category: business_automation, status: partial}
+lead_qualification: {status: blocked, reason: "No verified open qualified lead."}
+bid_strategy: {status: blocked}
+sales_director: {recommendation: hold, pending_human_gates: []}
+state_updates: []
+next_action: "Revisit official listings and verify individual availability."
