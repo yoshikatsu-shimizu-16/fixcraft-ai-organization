@@ -34,3 +34,16 @@ bid_strategy: {status: blocked}
 sales_director: {recommendation: hold, pending_human_gates: []}
 state_updates: []
 next_action: "Revisit official listings and verify individual availability."
+entries:
+  - source: crowdworks
+    source_url: "https://crowdworks.jp/public/jobs/13506958"
+    category: short_microtasks
+    reward: "2000 JPY/article"
+    open_check: {status: unknown, checked_at: "2026-10-07"}
+    rejection_reason: "Zero client reviews; interview and total effort uncertain."
+  - source: crowdworks
+    source_url: "https://crowdworks.jp/public/jobs/13512247"
+    category: wordpress_web_repair
+    reward: "4000 JPY/page"
+    open_check: {status: unknown, checked_at: "2026-10-07"}
+    rejection_reason: "Unpaid test coding required."
