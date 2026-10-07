@@ -1,0 +1,112 @@
+date: "2026-10-07"
+run_type: "evening-pdca"
+mode: "evening-pdca"
+phase_kpi_jpy: 20000
+priority: "まず1〜2件の受注で再現可能な勝ち筋を確立する"
+
+outcome_recorder:
+  unique_applications_confirmed: 2
+  replies_confirmed: 1
+  wins_confirmed: 1
+  losses_confirmed: 1
+  no_reply_confirmed: 1
+  pending_outcomes: 0
+  realized_revenue_jpy: 0
+  contracted_gross_jpy: 5500
+  expected_net_after_platform_fee_jpy: 4290
+  reply_rate_pct: 50.0
+  win_rate_pct: 50.0
+  kpi_realized_progress_pct: 0.0
+  kpi_contracted_gross_progress_pct: 27.5
+  new_outcome_evidence_since_previous_pdca: false
+  evidence:
+    - lead_id: "crowdworks-13481213"
+      outcome: "won_in_progress"
+      source: ".agent/state/applications/crowdworks-13481213-2026-10-01.yaml"
+      observed: "契約成立、5,500円税込、受取見込4,290円。期限2026-10-10。2026-10-07時点で完了提出・検収・評価・支払の新EvidenceはStateにない。"
+    - lead_id: "lancers-5606677"
+      outcome: "lost_no_reply"
+      source: ".agent/state/applications/lancers-5606677-2026-09-25.yaml"
+      observed: "20,000円提案、無返信、非当選を既存Evidenceで確認済み。新Evidenceなし。"
+
+competitive_intelligence:
+  first_win:
+    lead_id: "crowdworks-13481213"
+    confirmed:
+      - "開発者向けHCGツール利用評価実験で契約成立済み"
+      - "契約額5,500円税込、受取見込4,290円"
+      - "指定手順、コードサンプル確認、評価アンケートという納品境界が明確"
+    likely:
+      - "既存SE経験を直接使える技術条件付き評価案件は本人との適合度が高い可能性がある"
+    possible:
+      - "短時間・技術条件付き・評価作業という構造が実装案件よりスコープ膨張を抑える可能性がある"
+    unknown:
+      - "実作業時間"
+      - "検収結果"
+      - "最終評価"
+      - "実現収益"
+      - "発注者の最終選定理由"
+    win_theme_status: "candidate_only"
+    pricing_analysis: "契約5,500円はConfirmed。実作業時間未確認のため実質時給はUnknown。"
+    delivery_analysis: "期限2026-10-10。完了Evidenceがないため納期品質はUnknown。"
+    prototype_relevance: "受注前試作が寄与したEvidenceなし。"
+    technical_quality: "作業中のためUnknown。"
+  prior_loss:
+    lead_id: "lancers-5606677"
+    confirmed:
+      - "20,000円で応募"
+      - "無返信で失注"
+      - "募集終了時68提案、1名当選、本人は非当選"
+    likely:
+      - "受注者の同種WordPress復旧・セキュリティ実績の可視性と即応性が選定リスクを下げた"
+    possible:
+      - "1,727文字の長い提案"
+      - "AI支援ツール名の明示"
+      - "平日夜間・土日中心という表現"
+    unknown:
+      - "受注者の今回の提案価格"
+      - "受注者の提案本文"
+      - "発注者の最終決定理由"
+    wordpress_security_quality: "新Evidenceなし。既存評価を維持。"
+  hp_lp_design_quality:
+    status: "Unknown"
+    reason: "HP/LP案件の新しい応募・成果物・結果Evidenceなし"
+
+improvement_lead:
+  se_review:
+    observed: "初受注案件についての『本当に相性がいい。こういった仕事もどしどし探して』というSEレビューを継続参照。"
+    repeated_same_class_review_count_confirmed: 1
+    playbook_candidate_promoted: false
+    standard_rule_promoted: false
+  process_update:
+    confirmed:
+      - "2026-10-07にAIクラウドワークスが通常CrowdWorksとは別のenabled探索媒体として設定・共通Playbookへ追加された。"
+      - "公式一覧URLとHuman Gate 3境界は確認済み。"
+      - "実際の一覧巡回・案件探索は未検証で、案件数・ページ数はUnknown。"
+    source: ".agent/state/2026-10-07-ai-crowdworks-source-update.md"
+    implication: "次回探索で新媒体の実効性を測る。未検証のため現時点で応募母数や勝ち筋には加算しない。"
+  knowledge_and_playbook:
+    current_knowledge: "Developer Technical Evaluation / Research Participation は独立カテゴリ化済み。AIクラウドワークスもenabled媒体へ追加済み。"
+    change_candidate: "なし。追加受注または完了品質・収益Evidence、新媒体の実探索Evidenceを待つ。"
+  tomorrow_experiments:
+    - id: "ai-crowdworks-first-live-discovery"
+      hypothesis: "AIクラウドワークスを追加することで、技術評価・AI/LLM系の応募可能候補を既存媒体以外から増やせる。"
+      change: "次回morning-salesで公式一覧を実巡回し、個別案件の募集状態まで確認する。"
+      success_metric: "応募可能な重複排除済みLeadを1件以上確認する、または0件なら巡回範囲と0件Evidenceを残す。"
+    - id: "first-win-quality-and-economics"
+      hypothesis: "HCG案件が短時間で期限内完了・検収されれば、月20,000円に向けた小粒案件の有効な型になる。"
+      change: "crowdworks-13481213の実作業時間、完了提出、検収、評価、実現収益を確認できた項目だけState更新する。"
+      success_metric: "actual_work_hours、completion_submitted、inspection_completed、rating、actual_revenueのうち新Evidenceを1項目以上取得する。"
+
+state_updates:
+  - "新しい応募・返信・受注・失注Evidenceなし。既存Application/Outcomeを変更しない。"
+  - "KPIは応募2・返信1・受注1・失注1・無返信1、契約額5,500円、実現売上0円を維持。"
+  - "AIクラウドワークス追加は探索プロセス更新として認識し、未実探索なのでLead/KPIには加算しない。"
+
+human_gates:
+  - "新規案件のGate 1/2/3をAI確定しない"
+  - "未確認の完了・検収・評価・支払を確定しない"
+
+next_action:
+  - "AIクラウドワークスを次回探索で実巡回し、技術評価・AI/LLM系候補の増分を検証する"
+  - "crowdworks-13481213の完了品質と実作業時間・実収益Evidenceを取得後に更新する"
