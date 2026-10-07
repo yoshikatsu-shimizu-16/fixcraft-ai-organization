@@ -1,0 +1,8 @@
+run_id: RUN-20261007-morning-sales-web01
+mode: morning-sales
+started_at: '2026-10-07'
+status: needs_more_evidence
+coverage_complete: false
+summary:
+  gate1_candidates: 0
+  note: 'Official listing coverage incomplete; no applications sent.'
