@@ -10,7 +10,10 @@ realized_revenue_jpy: 0
 contracted_gross_jpy: 5500
 reply_rate_pct: 50
 win_rate_pct: 50
-new_evidence: 'CrowdWorks HCG escrow funding notification dated 2026-10-06; no verified delivery, inspection or payout.'
+new_evidence: 'User reports HCG work completed and submitted; currently awaiting client inspection. WordPress 5606677 remains confirmed lost after application with no client contact.'
+interpretation_notes:
+  - 'CrowdWorksでは不採用時に個別返信がないことを通常運用としてユーザーが経験的に認識している。no_reply自体を失注原因や異常コミュニケーションと解釈せず、契約・選定結果などのOutcome Evidenceを優先する。'
+  - 'HCGは契約上wonだが、作業完了後の検収待ち。検収・支払完了まではrealized_revenue_jpyへ計上しない。'
 next_experiments:
-  - 'Record HCG submission, actual hours, inspection and payout evidence before 2026-10-10 deadline.'
-  - 'Verify AI CrowdWorks live listing in browser; web-only view remains loading, do not count unknown listings as zero.'
+  - 'Record HCG inspection result, any revision request, actual work hours and payout evidence after client review.'
+  - 'Continue prioritizing developer-focused technical evaluation / tool evaluation jobs and test whether a second win can be obtained.'
