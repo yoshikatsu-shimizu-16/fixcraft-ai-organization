@@ -52,6 +52,12 @@ outcome:
     - "actual_revenue_jpy"
     - "client_rating"
     - "category"
+search_execution:
+  success_definition: "探索の成功は検索を実行したことではなく、応募判断に進めるGate 1候補を見つけること。候補0件や弱い候補だけの場合は、同一Run内で検索語・カテゴリ・市場を変えて追加探索する。"
+  persistence_rule: "enabled市場と必須カテゴリの確認が終わる前、または有望候補が3件未満のまま未探索経路が残っている場合は探索を止めない。検索結果を水増しせず、掲載直後・新着順・類義語・隣接カテゴリ・技術評価/モニター・小粒現金化案件へ検索を広げる。"
+  exhausted_rule: "有望候補が不足したまま終了する場合は、確認済み市場・検索語・0件/除外理由・未確認経路をEvidenceとして残し、翌Runで未確認または新着部分から再開する。"
+  kpi_gap_rule: "毎Runで月20,000円KPIまでの契約額/実現売上の不足額を確認し、不足がある限り新規案件探索を継続する。1件受注しただけで探索を弱めない。"
+  actionability_rule: "生の検索ヒット数ではなく、応募可能・条件適合・締切前の案件数を成果として扱う。Human Gate未判断の高適合案件は締切残時間を優先して提示する。"
 analysis:
   preferred_competitor_sample_size: 3
   small_sample_warning_below: 3
