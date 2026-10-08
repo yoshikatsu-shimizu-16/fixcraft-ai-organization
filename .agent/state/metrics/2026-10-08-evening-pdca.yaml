@@ -1,0 +1,16 @@
+date: '2026-10-08'
+mode: evening-pdca
+phase_kpi_jpy: 20000
+confirmed_applications: 2
+confirmed_replies: 1
+confirmed_wins: 1
+confirmed_losses: 1
+confirmed_no_reply: 1
+realized_revenue_jpy: 0
+contracted_gross_jpy: 5500
+reply_rate_pct: 50
+win_rate_pct: 50
+new_evidence: 'CrowdWorks HCG escrow funding notification dated 2026-10-06; no verified delivery, inspection or payout.'
+next_experiments:
+  - 'Record HCG submission, actual hours, inspection and payout evidence before 2026-10-10 deadline.'
+  - 'Verify AI CrowdWorks live listing in browser; web-only view remains loading, do not count unknown listings as zero.'
