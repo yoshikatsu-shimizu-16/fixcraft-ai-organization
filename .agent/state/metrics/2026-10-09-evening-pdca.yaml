@@ -32,3 +32,15 @@ analysis_confidence:
   unknown: "Selection reasons, actual work time, payment, HP/LP design quality."
 competitive_samples: 2
 no_reply_note: "No reply is not evidence of why a proposal lost."
+
+market_evidence:
+  hcg_public_applicants: 71
+  hcg_public_contracts: 7
+  hcg_public_openings: 10
+  wordpress_public_proposals: 68
+  wordpress_public_awards: 1
+technical_evaluation_scoring_review:
+  original_score: 60
+  original_ai_decision: recommend_reject
+  later_verified_outcome: won
+  lesson_status: "one false-negative candidate; not a standard rule"
