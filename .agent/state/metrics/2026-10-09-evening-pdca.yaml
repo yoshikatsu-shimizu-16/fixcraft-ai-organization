@@ -24,3 +24,11 @@ tomorrow_experiments:
 knowledge_candidate: "Reassess technical evaluation scoring after original HCG recommend_reject became a confirmed win."
 playbook_candidate_status: "insufficient independent repetitions or measured effect; do not promote"
 state_reconciliation_pending: "HCG application and duplicate lead records need correction."
+
+analysis_confidence:
+  confirmed: "HCG contracted and submitted; inspection pending; WordPress lost."
+  likely: "SE skills match bounded technical evaluation work."
+  possible: "Multiple openings, proposal length, availability and visible past work may influence outcomes."
+  unknown: "Selection reasons, actual work time, payment, HP/LP design quality."
+competitive_samples: 2
+no_reply_note: "No reply is not evidence of why a proposal lost."
