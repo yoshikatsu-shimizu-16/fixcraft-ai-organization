@@ -1,0 +1,87 @@
+schema: fixcraft-lead-workflow
+version: "2.2"
+lead_id: "lancers-5613901"
+platform: lancers
+source_job_id: "5613901"
+dedupe_key: "lancers:5613901"
+title: "雑貨ECの新規法人営業先リサーチ・店舗リスト作成（まずは10件トライアル）"
+source_url: "https://www.lancers.jp/work/detail/5613901"
+status: gate1_pending
+first_seen_at: "2026-10-10T08:00:00+09:00"
+last_seen_at: "2026-10-10T08:00:00+09:00"
+last_updated_at: "2026-10-10T08:00:00+09:00"
+deadline: "2026-10-14T11:11:00+09:00"
+budget:
+  type: fixed
+  advertised_max_jpy: 5000
+  confirmed_trial_amount_jpy: null
+score: 71
+score_breakdown:
+  fit: 10
+  win_path: 11
+  price: 5
+  cash_velocity: 10
+  track_record: 10
+  urgency: 3
+  client_quality: 5
+  risk: 7
+  competition: 10
+decision: recommend_approve
+decision_exception: "Rubric standard Gate 1 is 75+, but 71 is conditionally recommended for pursuing clarification only: 10-item trial, zero proposals, client 2/2 orders; exact trial pay remains Unknown. No bid or work before Human Gates."
+gate1: {status: pending, approved_by: null, approved_at: null}
+gate2: {status: not_requested, approved_by: null, approved_at: null}
+gate3: {status: not_requested, approved_by: null, approved_at: null}
+source: lancers
+category: cash_track_record_microtasks
+discovered_at: "2026-10-10T08:00:00+09:00"
+posted_at: "2026-10-09"
+applicants: 0
+capacity: 1
+reward:
+  currency: JPY
+  listing_range: "up to 5,000 JPY"
+  trial_amount_confirmed: null
+  price_positioning_hypothesis: "Aim for 3,000 JPY / 10 verified stores if client accepts; do not present as offered pay"
+estimated_minutes: null
+open_check:
+  status: open
+  checked_at: "2026-10-10"
+  evidence:
+    - "https://www.lancers.jp/work/detail/5613901 (indexed individual detail, '募集中', deadline 2026-10-14 11:11, 0 proposals)"
+requester_signal:
+  display_name: tsuuhantl07
+  reviews_observed: 2
+  awards_over_requests: "2/2 (100%)"
+  identity_verification: Unknown
+  confidence: medium
+evidence:
+  - confidence: Confirmed
+    source: "https://www.lancers.jp/work/detail/5613901"
+    observed_at: "2026-10-10"
+    fact: "2026-10-09 listing; open to 2026-10-14 11:11; project budget <=5,000 JPY; zero proposals and one opening; 10-store initial research trial; client 2 orders from 2 requests."
+  - confidence: Confirmed
+    source: "https://www.lancers.jp/work/detail/5613901"
+    observed_at: "2026-10-10"
+    fact: "Public websites and contact pages researched, existing list deduped, spreadsheet updated; no outreach; 50/100-store follow-on possible."
+  - confidence: Unknown
+    source: "https://www.lancers.jp/work/detail/5613901"
+    observed_at: "2026-10-10"
+    fact: "Exact 10-item trial compensation, acceptable sourcing quality, actual time and profile verification not confirmed."
+risks:
+  - "Price of 10-item trial is not specified; 5,000 JPY is listing ceiling, not agreed payment."
+  - "Email/contact discovery and strict imported-goods eligibility could take longer than expected."
+  - "Only 2 observed past client orders; small evidence sample."
+  - "Platform's current page access is intermittently rate-limited; recheck open before any submission."
+recommendations:
+  - "Human Gate 1: recommend_approve for investigation and pricing clarification, NOT approval to submit."
+  - "Bid Strategy: emphasize accurate public-source verification, deduplication, explicit eligibility checks and 10-row bounded trial; do not claim unverified scraping-tool capability."
+  - "Ask client to confirm trial fixed payment and accepted criteria; suggest 3,000 JPY/10 entries as a negotiable hypothesis, not a fact."
+next_action: "Human Gate 1 decision; then clarify 10-item trial price and accepted-store criteria before Gate 3; no application sent."
+artifacts: []
+applied: null
+replied: null
+won: null
+lost: null
+actual_minutes: null
+actual_revenue: null
+rating: null
