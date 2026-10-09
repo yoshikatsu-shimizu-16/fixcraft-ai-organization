@@ -1,0 +1,5 @@
+run_id: RUN-20261010-morning-sales-web01
+mode: morning-sales
+status: needs_more_evidence
+coverage_complete: false
+human_gate: pending
