@@ -1,5 +1,16 @@
 run_id: RUN-20261010-morning-sales-web01
 mode: morning-sales
+date: "2026-10-10"
 status: needs_more_evidence
 coverage_complete: false
 human_gate: pending
+kpi:
+  target_jpy: 20000
+  contracted_jpy: 5500
+  realized_jpy: 0
+  contract_gap_jpy: 14500
+  realized_gap_jpy: 20000
+summary:
+  gate1_candidates: 1
+  held_candidates: 2
+  evidence: "See .agent/state/leads/2026-10-10-lancers-5613901-zakka-ec-store-research-trial.yaml"
