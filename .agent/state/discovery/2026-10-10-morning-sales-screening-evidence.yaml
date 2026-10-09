@@ -1,0 +1,23 @@
+date: "2026-10-10"
+mode: morning-sales
+run_id: RUN-20261010-morning-sales-web01
+category_coverage:
+  developer_evaluation: partial
+  ai_llm_evaluation: partial
+  wordpress: partial
+  automation: partial
+  web_development: partial
+  microtasks: partial
+  user_testing: partial
+  sns: partial
+held:
+  - {id: "crowdworks-13516005", reason: "Unit pay and task volume unknown"}
+  - {id: "lancers-5614217", reason: "Detail inaccessible; client and scope unknown"}
+rejected:
+  - {id: "crowdworks-13516226", reason: "100 JPY test for 1000 characters"}
+  - {id: "crowdworks-13507178", reason: "139 applicants and quantity unspecified"}
+  - {id: "crowdworks-13517534", reason: "Unverified new client; repeat-listing risk"}
+  - {id: "crowdworks-13518032", reason: "200 JPY test and daily 300 JPY tasks"}
+  - {id: "lancers-5614118", reason: "6000 characters plus research for 1500 JPY"}
+  - {id: "crowdworks-13516331", reason: "30h per week"}
+  - {id: "lancers-5614105", reason: "Large scope, no client orders"}
