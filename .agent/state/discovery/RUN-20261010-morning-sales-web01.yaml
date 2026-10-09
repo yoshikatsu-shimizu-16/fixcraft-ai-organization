@@ -3,7 +3,7 @@ mode: morning-sales
 date: "2026-10-10"
 status: needs_more_evidence
 coverage_complete: false
-human_gate: pending
+human_gate: none
 kpi:
   target_jpy: 20000
   contracted_jpy: 5500
@@ -11,10 +11,10 @@ kpi:
   contract_gap_jpy: 14500
   realized_gap_jpy: 20000
 summary:
-  gate1_candidates: 1
-  held_candidates: 2
+  gate1_candidates: 0
+  held_candidates: 3
   source: ".agent/state/metrics/2026-10-09-evening-pdca.yaml"
-  lead: "lancers-5613901"
+  lead: "lancers-5613901 (hold: direct open and trial fee unknown)"
 source_coverage:
   crowdworks: "partial; official new list JavaScript error"
   lancers: "partial; official new list HTTP 429"
