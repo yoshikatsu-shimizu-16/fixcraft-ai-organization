@@ -1,5 +1,26 @@
-date: '2026-10-09'
+date: "2026-10-09"
 mode: evening-pdca
 phase_kpi_jpy: 20000
-status: completed
-applications: 2
+confirmed_cumulative_applications: 2
+confirmed_cumulative_replies: 1
+confirmed_cumulative_wins: 1
+confirmed_cumulative_losses: 1
+confirmed_cumulative_no_reply: 1
+cumulative_reply_rate_pct: 50
+cumulative_win_rate_pct: 50
+october_applications: 1
+october_wins: 1
+contracted_gross_jpy: 5500
+expected_net_jpy: 4290
+realized_revenue_jpy: 0
+contracted_gross_gap_jpy: 14500
+hcg_work_status: "completed_submitted_inspection_pending"
+hcg_inspection_pending_confirmed_at: "2026-10-09T15:04:03+09:00"
+wordpress_outcome: "lost_without_reply"
+new_inbound_consultation: "long-hours PMO inquiry, not an application or reply"
+tomorrow_experiments:
+  - "Find at least one new open and verified Gate 1 candidate in technical evaluation and short-task lanes."
+  - "Monitor HCG inspection and prepare follow-up for human review if still pending."
+knowledge_candidate: "Reassess technical evaluation scoring after original HCG recommend_reject became a confirmed win."
+playbook_candidate_status: "insufficient independent repetitions or measured effect; do not promote"
+state_reconciliation_pending: "HCG application and duplicate lead records need correction."
