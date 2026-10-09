@@ -1,0 +1,36 @@
+schema: fixcraft-lead-workflow
+version: "2.2"
+lead_id: "crowdworks-13519210"
+platform: "crowdworks"
+source_job_id: "13519210"
+dedupe_key: "crowdworks:13519210"
+title: "DX and business process optimization PMO consulting invitation"
+source_url: "https://crowdworks.jp/public/jobs/13519210"
+status: discovered
+first_seen_at: "2026-10-09T17:25:00+09:00"
+last_seen_at: "2026-10-09T17:25:00+09:00"
+last_updated_at: "2026-10-09T18:17:10+09:00"
+deadline: null
+budget: null
+score: null
+decision: recommend_reject
+gate1: {status: not_requested, approved_by: null, approved_at: null}
+gate2: {status: not_requested, approved_by: null, approved_at: null}
+gate3: {status: not_requested, approved_by: null, approved_at: null}
+evidence:
+  - confidence: Confirmed
+    source: "CrowdWorks inbound invitation notification received 2026-10-09"
+    observed_at: "2026-10-09T17:25:00+09:00"
+    fact: "Monthly workload 80-110 hours, hybrid remote/Osaka, start December 2026; compensation negotiable."
+  - confidence: Unknown
+    source: "Individual public job page not accessible in this run"
+    observed_at: "2026-10-09"
+    fact: "Current public application availability not independently confirmed."
+risks:
+  - "Monthly workload exceeds current short-hour side-work strategy."
+  - "On-site work and long engagement create scheduling burden."
+recommendations:
+  - "AI recommends not pursuing in the current monthly 20000 JPY micro-job phase."
+  - "Inbound invitation is not an application, client reply to an application, or win."
+next_action: "No outreach without Human Gate; keep for historical inbound-source analysis."
+artifacts: []
