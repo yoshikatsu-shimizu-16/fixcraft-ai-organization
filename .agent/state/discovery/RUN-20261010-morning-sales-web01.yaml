@@ -13,4 +13,18 @@ kpi:
 summary:
   gate1_candidates: 1
   held_candidates: 2
-  evidence: "See .agent/state/leads/2026-10-10-lancers-5613901-zakka-ec-store-research-trial.yaml"
+  source: ".agent/state/metrics/2026-10-09-evening-pdca.yaml"
+  lead: "lancers-5613901"
+source_coverage:
+  crowdworks: "partial; official new list JavaScript error"
+  lancers: "partial; official new list HTTP 429"
+  ai_crowdworks: "blocked; loading placeholder"
+  sankaku: "blocked; redirect loop"
+  remogu: "partial; new project cards"
+  shuumatsu_worker: "partial; landing only"
+  lotsful: "blocked; fetch failed"
+  anycrew: "partial; public offers"
+  itpro_partners: "partial; public listings"
+queries: ["WordPress 修正", "GAS 自動化", "LLM 評価", "開発ツール モニター", "Webテスト", "データ入力", "店舗リスト作成", "SNS運用", "Web調査 トライアル"]
+method_note: "Supplementary web search; native listing coverage unverified."
+next_run: "Check open jobs and trial fee; continue unscanned categories."
