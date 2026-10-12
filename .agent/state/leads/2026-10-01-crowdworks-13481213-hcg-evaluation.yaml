@@ -33,6 +33,12 @@ evidence:
   - type: "user_attestation"
     observed_at: "2026-10-08T18:57:00+09:00"
     detail: "ユーザー本人がHCGの作業を完了して提出済みで、現在は発注者の検収待ちと報告。"
+work_time_estimate:
+  actual_work_hours: 4
+  precision: "approximate_user_estimate"
+  effective_hourly_gross_jpy: 1375
+  effective_hourly_net_expected_jpy: 1072.5
+  evidence: "2026-10-12 user attestation: 約4時間"
 evidence_status_update:
   type: "user_attestation"
   observed_at: "2026-10-12"
