@@ -2,7 +2,7 @@ lead_id: "crowdworks-13481213"
 platform: "crowdworks"
 source_job_id: "13481213"
 dedupe_key: "crowdworks:13481213"
-status: "contracted_in_progress"
+status: "contracted_inspection_passed_payout_confirmed"
 submitted_at: "Unknown"
 submitted_at_precision: "unknown"
 submission_method: "manual_by_user"
@@ -20,7 +20,7 @@ work:
   due_at: "2026-10-10"
   estimated_hours_from_listing: 2
   evaluation_code: "developer_04"
-  work_status: "in_progress"
+  work_status: "completed_and_accepted"
   deliverables:
     - "HCGツールの指定手順による評価"
     - "コードサンプル60件の確認"
@@ -41,7 +41,14 @@ learnings:
   - "開発者向けツール評価・研究実験は、既存SEスキルをそのまま使え、納品境界が明確で短時間のため相性が良い可能性がある。"
   - "今回の1勝だけでは標準勝ち筋と断定せず、同種案件の追加受注で再現性を検証する。"
 tracking:
-  completion_submitted: false
-  inspection_completed: false
+  completion_submitted: true
+  inspection_completed: true
   rating_received: false
-  payout_confirmed: false
+  payout_confirmed: true
+  payout_received: false
+  payout_received_at: null
+  confirmation_evidence:
+    type: "user_attestation"
+    observed_at: "2026-10-12"
+    detail: "本人よりHCG案件の検収完了と振込確定の報告。銀行口座着金は未確認。"
+
