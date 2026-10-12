@@ -28,7 +28,14 @@ work:
 outcome: "won"
 outcome_decided_at: "2026-10-01"
 contract_amount_jpy: 5500
-actual_work_hours: null
+actual_work_hours: 4
+actual_work_hours_precision: "approximate_user_estimate"
+effective_hourly_gross_jpy: 1375
+effective_hourly_net_expected_jpy: 1072.5
+work_time_evidence:
+  type: "user_attestation"
+  observed_at: "2026-10-12"
+  detail: "本人が実作業時間は約4時間と報告。"
 actual_revenue_jpy: 0
 reply_status: "client_replied_and_contracted"
 client_response_at: "2026-10-01T23:00:00+09:00"
