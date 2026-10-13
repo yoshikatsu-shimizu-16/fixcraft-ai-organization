@@ -1,0 +1,26 @@
+run_id: RUN-20261014-morning-sales-newest-listing-review
+mode: morning-sales
+date: "2026-10-14"
+status: needs_more_evidence
+coverage_complete: false
+human_gate_approved: false
+kpi: {target_jpy: 20000, contracted_gross_jpy: 5500, expected_net_jpy: 4290, realized_revenue_jpy: 0, contracted_gap_jpy: 14500, realized_gap_jpy: 20000}
+source_coverage:
+  coconala: {status: partial, pages_opened: 3, displayed_items: 120, sort_verified: false, next_page: 4}
+  craudia: {status: partial, pages_opened: 3, displayed_items: 45, sort_verified: false, next_page: 4}
+  crowdworks: {status: blocked, pages_opened: 0, reason: "JavaScript"}
+  lancers: {status: blocked, pages_opened: 0, reason: "HTTP 405"}
+  ai_crowdworks: {status: blocked, pages_opened: 0, reason: "loading"}
+  anycrew: {status: partial}
+  sankaku: {status: unscanned}
+  remogu: {status: unscanned}
+  shuumatsu_worker: {status: unscanned}
+  lotsful: {status: unscanned}
+  itpro_partners: {status: unscanned}
+summary:
+  displayed_items: 165
+  fully_screened_items: null
+  recommended_gate1: ["coconala-5321334"]
+  held: ["coconala-5323019"]
+  note: "表示件数は詳細審査数ではない。候補3件未満で探索未完了。"
+next_action: "未巡回市場とカテゴリ、一覧の続きから再開"
