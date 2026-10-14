@@ -1,0 +1,10 @@
+run_id: RUN-20261015-morning-sales
+mode: morning-sales
+date: '2026-10-15'
+status: needs_more_evidence
+coverage_complete: false
+human_gate_approved: false
+kpi: {target_jpy: 20000, contracted_gross_jpy: 5500, expected_net_jpy: 4290, realized_revenue_jpy: 0, contracted_gap_jpy: 14500, realized_gap_jpy: 20000}
+source_coverage: {crowdworks: blocked, lancers: blocked, coconala: partial, craudia: partial, ai_crowdworks: blocked, anycrew: partial, sankaku: blocked, remogu: partial, shuumatsu_worker: unscanned, lotsful: blocked, itpro_partners: partial}
+summary: {gate1_recommended: 1, new_gate1_recommended: 0, held: 2}
+next_action: 'Resume official newest listings and blocked sources; Human Gate remains pending.'
