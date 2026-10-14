@@ -8,8 +8,8 @@ title: "貸出管理アプリ『カシカン』の実利用レビュー記事"
 source_url: "https://coconala.com/requests/5323019"
 status: enriched
 first_seen_at: "2026-10-14"
-last_seen_at: "2026-10-14"
-last_updated_at: "2026-10-14"
+last_seen_at: "2026-10-15"
+last_updated_at: "2026-10-15"
 posted_at: "2026-10-13"
 deadline: "2026-10-23"
 score: 67
@@ -19,15 +19,22 @@ gate2: {status: not_requested, approved_by: null, approved_at: null}
 gate3: {status: not_requested, approved_by: null, approved_at: null}
 source: coconala
 category: "Cash / Track-record Microtasks"
-applicants: 15
+applicants: 21
 capacity: null
 budget: {gross_min_jpy: 5000, gross_max_jpy: 10000}
 estimated_minutes: null
-open_check: {status: open, checked_at: "2026-10-14", evidence: ["公式詳細で応募する表示、締切2026-10-23"]}
+open_check: {status: open, checked_at: "2026-10-15", evidence: ["https://coconala.com/requests/5323019 応募する表示、締切2026-10-23、応募21"]}
 requester_signal: {rating: "5.0 (46)", public_orders: 46, public_order_rate_pct: 68, completion_rate_pct: 86}
 evidence:
   - {type: official_job_page, source: "https://coconala.com/requests/5323019", observed_at: "2026-10-14", fact: "自分のブログ/noteに2,000〜4,000字のオリジナル実利用レビュー掲載。報酬5,000〜10,000円、応募15人、10/23締切"}
   - {type: official_requester_profile_summary, source: "https://coconala.com/requests/5323019", observed_at: "2026-10-14", fact: "評価5.0(46)、発注46件、発注率68%、取引完了率86%"}
+latest_q_and_a:
+  observed_at: "2026-10-15"
+  source_url: "https://coconala.com/requests/5323019"
+  facts:
+    - "発注者回答: noteの閲覧数・フォロワー数に明確な最低条件なし。ただし読者層・親和性を重視"
+    - "発注者回答: 構成・文章整理の生成AI補助は可、修正0〜1回程度"
+  implication: "掲載先と報酬・実工数が不明のためGate 1は保留維持"
 risks:
   - "自己所有の公開ブログまたはnoteが必要。本人の掲載先・読者層・広告記事掲載方針が未確認"
   - "アプリ検証、スクリーンショット、2,000〜4,000字執筆、公開で1〜3時間を超える可能性"
