@@ -15,3 +15,7 @@ listing_scan:
   crowdworks: {pages: 0, items: 0, reason: 'JavaScript error'}
   lancers: {pages: 0, items: 0, reason: 'HTTP 405'}
   ai_crowdworks: {pages: 0, reason: 'Loading only'}
+
+category_coverage: {technical_evaluation: partial, wordpress: partial, gas_automation: partial, web_repair: partial, data_qa: partial, ai_llm: partial, sns: partial, interviews: unscanned}
+search_terms: ['WordPress 修正', 'GAS 自動化', '開発ツール 評価', 'アプリ テスター', 'データ 調査', 'Excel VBA 修正']
+exclusion_summary: 'Low rates, excess scope, expired listings, experience mismatch, long commitments'
