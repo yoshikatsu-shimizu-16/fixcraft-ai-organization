@@ -8,3 +8,10 @@ kpi: {target_jpy: 20000, contracted_gross_jpy: 5500, expected_net_jpy: 4290, rea
 source_coverage: {crowdworks: blocked, lancers: blocked, coconala: partial, craudia: partial, ai_crowdworks: blocked, anycrew: partial, sankaku: blocked, remogu: partial, shuumatsu_worker: unscanned, lotsful: blocked, itpro_partners: partial}
 summary: {gate1_recommended: 1, new_gate1_recommended: 0, held: 2}
 next_action: 'Resume official newest listings and blocked sources; Human Gate remains pending.'
+
+listing_scan:
+  coconala: {pages: 3, displayed: 120, fully_screened: null, sort_verified: false, next_page: 4}
+  craudia: {pages: 2, displayed: 30, fully_screened: null, sort_verified: false, next_page: 3}
+  crowdworks: {pages: 0, items: 0, reason: 'JavaScript error'}
+  lancers: {pages: 0, items: 0, reason: 'HTTP 405'}
+  ai_crowdworks: {pages: 0, reason: 'Loading only'}
