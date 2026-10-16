@@ -1,0 +1,14 @@
+run_id: RUN-20261017-morning-sales
+mode: morning-sales
+date: "2026-10-17"
+status: needs_more_evidence
+coverage_complete: false
+kpi: {target_jpy: 20000, contracted_gross_jpy: 5500, expected_net_jpy: 4290, realized_revenue_jpy: 0, contracted_gap_jpy: 14500, realized_gap_jpy: 20000}
+listing_scan:
+  coconala: {pages: 1, displayed: 40}
+  craudia: {pages: 3, displayed: 45, next_page: 4}
+  anycrew: {pages: 1, displayed: 20}
+  crowdworks: {pages: 0, reason: blocked}
+  lancers: {pages: 0, reason: blocked}
+summary: {new_gate1_recommended: 0, existing_gate1_recommended: 1, new_held: 1}
+next_action: "Resume blocked official listings and all remaining routes; no Human Gate approved."
