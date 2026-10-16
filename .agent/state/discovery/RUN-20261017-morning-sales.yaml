@@ -12,3 +12,10 @@ listing_scan:
   lancers: {pages: 0, reason: blocked}
 summary: {new_gate1_recommended: 0, existing_gate1_recommended: 1, new_held: 1}
 next_action: "Resume blocked official listings and all remaining routes; no Human Gate approved."
+source_coverage: {ai_crowdworks: blocked_loading, sankaku: blocked_login, remogu: partial, shuumatsu_worker: landing_only, lotsful: blocked, itpro_partners: landing_only}
+evidence:
+  - {source: coconala, url: "https://coconala.com/requests/5321334", fact: "Android evaluation: open, 27 applicants, 11 contracts, 2026-10-26 deadline"}
+  - {source: coconala, url: "https://coconala.com/requests/5328185", fact: "Bonenkai notice: open, 78 applicants, 0 contracts, 2026-10-19 deadline"}
+  - {source: coconala, url: "https://coconala.com/requests/5329857", fact: "Template transfer: open, 9 applicants, budget unit unclear"}
+  - {source: craudia, url: "https://www.craudia.com/work_list/3", fact: "Mixed expired listings, no new verified Gate 1"}
+  - {source: crowdworks, url: "https://crowdworks.jp/public/jobs/13536935", fact: "Supplementary search only; direct detail blocked; not Gate 1"}
