@@ -1,0 +1,74 @@
+run_id: RUN-20261018-morning-sales
+mode: morning-sales
+date: "2026-10-18"
+status: needs_more_evidence
+coverage_complete: false
+kpi:
+  target_jpy: 20000
+  contracted_gross_jpy: 5500
+  expected_net_jpy: 4290
+  realized_revenue_jpy: 0
+  contracted_gap_jpy: 14500
+  realized_gap_jpy: 20000
+  evidence: ".agent/state/applications/crowdworks-13481213-2026-10-01.yaml"
+listing_scan:
+  coconala:
+    listing_url: "https://coconala.com/requests"
+    pages: 4
+    displayed: 160
+    sort: "listing timestamps appear descending; sort selector not independently verified"
+    filtering: "unfiltered; closed listings included"
+    evidence: ["https://coconala.com/requests", "https://coconala.com/requests?page=2", "https://coconala.com/requests?page=3", "https://coconala.com/requests?page=4"]
+    next_page: 5
+  craudia:
+    listing_url: "https://www.craudia.com/work_list"
+    category_urls: ["https://www.craudia.com/work_list/category2/217", "https://www.craudia.com/work_list/category2/314"]
+    pages: 1
+    category_pages: 2
+    listing_displayed: 15
+    category_displayed: 15
+    note: "Category items were marked 募集終了; no active lead from those pages."
+  anycrew:
+    listing_url: "https://app.any-crew.com/offers"
+    pages: 1
+    items: null
+    note: "Listings primarily require 8-40 hours/week; detailed scan incomplete."
+  crowdworks:
+    listing_url: "https://crowdworks.jp/public/jobs/search?category_id=367&order=new"
+    pages: 0
+    reason: "official listing inaccessible to search fetcher"
+    supplementary_search_only: true
+  lancers:
+    listing_url: "https://www.lancers.jp/work/search?sort=started&open=1"
+    pages: 0
+    reason: "HTTP 429"
+    supplementary_search_only: true
+  ai_crowdworks:
+    listing_url: "https://ai.crowdworks.jp/projects/"
+    pages: 0
+    reason: "loading or inaccessible"
+summary:
+  new_gate1_recommended: 0
+  existing_gate1_recommended: 1
+  new_held: 1
+  new_rejected_or_downranked: 5
+  discovery_minutes: null
+  note: "Displayed listing rows are not equivalent to individual detail checks. Some rows were already closed."
+candidate_evidence:
+  - {source: coconala, id: "5330445", url: "https://coconala.com/requests/5330445", decision: needs_more_evidence, reason: "30000-50000 JPY; 600-word translation plus screen/phone recording; 7 applicants, 0 orders; identity/video rights and installation permissions unclear."}
+  - {source: coconala, id: "5321334", url: "https://coconala.com/requests/5321334", decision: recommend_approve_existing, reason: "Open Oct 18, deadline Oct 26, 27 applicants, 11 contracts, requester 5.0(666) and 640 orders."}
+  - {source: coconala, id: "5330719", url: "https://coconala.com/requests/5330719", decision: downrank, reason: "2 WP pages; budget unknown, 81 applicants, requester public orders 0."}
+  - {source: coconala, id: "5320142", url: "https://coconala.com/requests/5320142", decision: downrank, reason: "10000 JPY but public real-life photos and personal history required."}
+  - {source: coconala, id: "5330403", url: "https://coconala.com/requests/5330403", decision: downrank, reason: "3000 JPY for one month and daily reminders."}
+  - {source: crowdworks, id: "13539643", url: "https://crowdworks.jp/public/jobs/13539643", decision: downrank, reason: "30000-50000 JPY, 42 applicants for 1 position, 10-day multi-function WordPress site."}
+  - {source: crowdworks, id: "13534393", url: "https://crowdworks.jp/public/jobs/13534393", decision: downrank, reason: "verified buyer, 6 applicants for 4 openings, but 8h/week on weekend mornings for 6+ months at 1000-1500 JPY/h."}
+  - {source: craudia, category: wordpress, url: "https://www.craudia.com/work_list/category2/314", decision: no_active_candidate, reason: "14 entries displayed, all marked closed."}
+  - {source: craudia, category: scraping, url: "https://www.craudia.com/work_list/category2/217", decision: no_active_candidate, reason: "1 entry displayed, marked closed."}
+blocked_or_unscanned:
+  - "CrowdWorks official newest-first pages and mandatory categories"
+  - "Lancers official newest-first pages and mandatory categories"
+  - "AI CrowdWorks loading and project detail"
+  - "Remaining enabled marketplaces and authenticated recommendations"
+  - "Coconala page 5 onward, category-filtered listings, native keyword searches"
+  - "Craudia additional categories and pages"
+next_action: "Resume official lists in browser environment; prioritize technical evaluations and WordPress/GAS short fixes; no Human Gate approved."
