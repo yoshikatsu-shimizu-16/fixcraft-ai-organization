@@ -1,0 +1,32 @@
+schema: fixcraft-lead-workflow
+version: "2.2"
+lead_id: "coconala-5330445"
+platform: coconala
+source_job_id: "5330445"
+dedupe_key: "coconala:5330445"
+title: "開発者ツールの英日翻訳と操作デモ"
+source_url: "https://coconala.com/requests/5330445"
+status: discovered
+first_seen_at: "2026-10-18"
+last_seen_at: "2026-10-18"
+last_updated_at: "2026-10-18"
+posted_at: "2026-10-17"
+deadline: "2026-10-24"
+budget: {displayed_range_jpy: [30000, 50000]}
+applicants: 7
+score: 59
+decision: needs_more_evidence
+gate1: {status: not_requested}
+gate2: {status: not_requested}
+gate3: {status: not_requested}
+open_check: {status: open, checked_at: "2026-10-18", evidence: ["Official listing shows open application."]}
+evidence:
+  - {type: official_job_page, source: "https://coconala.com/requests/5330445", observed_at: "2026-10-18", fact: "600-word translation and demonstration recording; 7 applicants, 0 contracts; requester public order history 0."}
+risks:
+  - "Client history is limited."
+  - "Usage rights and tool permissions require clarification."
+  - "Total effort and review cycles unknown."
+competitive_intelligence: {observed_applicants: 7, observed_contracts: 0, known_winners: [], confidence: low}
+bid_strategy: {status: on_hold, win_theme: "Technical Japanese localization plus reproducible developer demo"}
+next_action: "Verify requester trust, usage rights, software safety and scope before Gate 1."
+artifacts: []
