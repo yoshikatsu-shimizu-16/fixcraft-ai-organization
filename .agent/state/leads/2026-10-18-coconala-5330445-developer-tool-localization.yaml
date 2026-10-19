@@ -8,19 +8,20 @@ title: "開発者ツールの英日翻訳と操作デモ"
 source_url: "https://coconala.com/requests/5330445"
 status: discovered
 first_seen_at: "2026-10-18"
-last_seen_at: "2026-10-19"
-last_updated_at: "2026-10-19"
+last_seen_at: "2026-10-20"
+last_updated_at: "2026-10-20"
 posted_at: "2026-10-17"
 deadline: "2026-10-24"
 budget: {displayed_range_jpy: [30000, 50000]}
-applicants: 20
+applicants: 23
 score: 59
 decision: needs_more_evidence
 gate1: {status: not_requested}
 gate2: {status: not_requested}
 gate3: {status: not_requested}
-open_check: {status: open, checked_at: "2026-10-19", evidence: ["https://coconala.com/requests/5330445 shows 応募する and deadline 2026-10-24"]}
+open_check: {status: open, checked_at: "2026-10-20", evidence: ["https://coconala.com/requests/5330445 shows 応募する and deadline 2026-10-24"]}
 evidence:
+  - {type: official_job_page, source: "https://coconala.com/requests/5330445", observed_at: "2026-10-20", fact: "Application remains open to Oct 24, 23 applicants, 0 contracts; requester public order count 0. Questions about recording rights and tool safety visible, but answers unverified."}
   - {type: official_job_page, source: "https://coconala.com/requests/5330445", observed_at: "2026-10-19T18:36:00+09:00", fact: "Official page displays 20 applicants, 0 contracts, deadline 2026-10-24 and application button. Public requester orders 0; usage rights, installation safety, face/video permission unanswered."}
   - {type: official_job_page, source: "https://coconala.com/requests/5330445", observed_at: "2026-10-19", fact: "15 applicants, 0 contracts, requester 0 public orders. Questions about face/video usage rights, tool permissions and no-face option visible, but answers not verified. No Gate 1 recommendation."}
   - {type: official_job_page, source: "https://coconala.com/requests/5330445", observed_at: "2026-10-18", fact: "600-word translation and demonstration recording; 7 applicants, 0 contracts; requester public order history 0."}
@@ -28,7 +29,7 @@ risks:
   - "Client history is limited."
   - "Usage rights and tool permissions require clarification."
   - "Total effort and review cycles unknown."
-competitive_intelligence: {observed_applicants: 20, observed_contracts: 0, known_winners: [], confidence: low}
+competitive_intelligence: {observed_applicants: 23, observed_contracts: 0, known_winners: [], confidence: low}
 bid_strategy: {status: on_hold, win_theme: "Technical Japanese localization plus reproducible developer demo"}
 next_action: "Verify requester trust, usage rights, software safety and scope before Gate 1."
 artifacts: []
