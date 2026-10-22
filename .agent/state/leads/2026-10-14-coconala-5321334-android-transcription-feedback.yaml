@@ -6,10 +6,14 @@ source_job_id: "5321334"
 dedupe_key: "coconala:5321334"
 title: "Android文字起こしアプリの使用感レビュー"
 source_url: "https://coconala.com/requests/5321334"
-status: gate1_pending
+status: applied
 first_seen_at: "2026-10-14"
 last_seen_at: "2026-10-23"
 last_updated_at: "2026-10-23"
+applied: "2026-10-23"
+applied_at_precision: "date_only"
+submission_method: "manual_by_user"
+submission_evidence: {type: user_attestation, observed_at: "2026-10-23", detail: "本人がココナラ初応募・提案文の送信を報告。送信時分は不明。Human Gate承認履歴は未確認。"}
 deadline: "2026-10-26"
 score: 78
 decision: recommend_approve
@@ -23,6 +27,7 @@ estimated_minutes: 15
 open_check: {status: open, checked_at: "2026-10-23", evidence: ["https://coconala.com/requests/5321334 shows 応募する, 2026-10-26 deadline, 37 applicants and 16 contracts"]}
 requester_signal: {rating: "5.0 (674)", public_orders: 651, completion_rate_pct: 89}
 evidence:
+  - {type: user_attestation, observed_at: "2026-10-23", fact: "本人よりココナラ初応募（Android文字起こしアプリ評価、案件5321334）を手動で送信済みとの報告と送信文面の提示あり。応募時分、発注者返信、契約結果は未確認。"}
   - {type: official_job_page, source: "https://coconala.com/requests/5321334", observed_at: "2026-10-23", fact: "Official page shows 応募する; deadline 2026-10-26, 37 applicants, 16 contracts, requester rating 5.0(674), 651 public orders. Remaining openings unknown."}
   - {type: official_job_page, source: "https://coconala.com/requests/5321334", observed_at: "2026-10-21T18:43:00+09:00", fact: "Application button shown; 34 applicants, 16 contracts, deadline 2026-10-26; requester 5.0(668), 648 public orders, 89% completion. Remaining openings unknown."}
   - {type: official_job_page, source: "https://coconala.com/requests/5321334", observed_at: "2026-10-20", fact: "Official listing remains open through 2026-10-26; 32 applicants, 16 contracts; requester 5.0(667), 648 public orders. Remaining capacity unknown."}
@@ -34,5 +39,5 @@ risks:
   - "作業時間15分は事前準備を含む概算"
 recommendations:
   - "Human Gate 1 recommend_approve。Androidと開発者経験を生かした具体的な使用感評価"
-next_action: "Human Gate 1承認待ち。Gate 3承認前に応募しない"
+next_action: "応募済み。発注者の返信・契約結果を追跡する。Human Gateの承認履歴は未確認。"
 artifacts: []
