@@ -1,0 +1,42 @@
+lead_id: "coconala-5321334"
+platform: "coconala"
+source_job_id: "5321334"
+dedupe_key: "coconala:5321334"
+source_url: "https://coconala.com/requests/5321334"
+title: "Android文字起こしアプリの使用感レビュー"
+status: "applied"
+is_first_application_on_platform: true
+submitted_at: "2026-10-23"
+submitted_at_precision: "date_only"
+submission_method: "manual_by_user"
+submission_evidence:
+  type: "user_attestation"
+  observed_at: "2026-10-23"
+  detail: "本人がココナラでの初応募を報告し、応募時に送った提案文を提供。スクリーンショット・送信時分は未取得。"
+proposal_text_reported_by_user: |-
+  はじめまして、かつおと申します。
+  翻訳の作業に文字起こしが役立つかを知りたい、というご依頼の目的を拝見しました。
+  会社員として約20年、システム開発や社内SEをしており、普段から、システムのテストやユースケースに沿った動作確認を行っています。今回は、その視点と、一般の利用者としての視点の両方から、感想をお伝えできます。
+  OPPO Reno7（Android）の実機を持っており、普段から音声入力を日常的に使っています。文字起こしに翻訳まで一緒にできれば、かなり便利だと感じているので、実際の使い心地を試してみたいと思い応募しました。
+  ご契約後、いただいたURLからアプリを入れて試し、翻訳の作業に役立つかどうかを中心に、使用感と改善点を文章でお返しします。
+  お返しは、ご契約から3日以内を目安にします。
+  率直な感想をお伝えしますので、よろしくお願いいたします。
+proposal_text_note: "上記は提供文面の『はじめまして』以降の本文。ユーザーのチャット中の『スマホアプリの評価（ココナラ）は応募したよ！リポジトリに反映しておいて』という文章が実際の送信文にも入ったかは未確認。"
+promised_delivery_after_contract: "within_3_days"
+bid_amount_jpy: null
+listed_budget_gross_jpy: 1000
+contract_amount_jpy: null
+actual_revenue_jpy: 0
+reply_status: "Unknown"
+client_response_at: null
+outcome: "pending"
+outcome_decided_at: null
+actual_work_hours: null
+rating: null
+gate_approval_history: "Unknown; not inferred from retrospective manual submission"
+tracking:
+  contract_confirmed: false
+  work_completed: false
+  inspection_completed: false
+  payout_received: false
+next_action: "発注者返信・採否を確認し、契約後は提示した3日以内の目安で実施する。"
