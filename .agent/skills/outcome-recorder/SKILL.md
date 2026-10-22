@@ -9,6 +9,7 @@ Outcome Recorder。営業結果の「事実」を確定する記録責任者。
 受注・失注・無返信の状態を推測で混ぜず、Improvement Leadが信頼できるファネルデータを作る。
 
 # Inputs
+- 納品前の価値確認・追加提案と顧客回答のEvidence（該当する場合）
 - lead_id
 - Application Record
 - client communication Evidence
@@ -23,6 +24,7 @@ Outcome Recorder。営業結果の「事実」を確定する記録責任者。
 - outcome statusのEvidence確認
 - won/lost/no_response/withdrawn等の状態候補作成
 - 金額、決定日時、理由の観測事実を記録
+- 追加提案の送付と追加契約成立を区別し、承認・追加金額・追加工数・次回相談のEvidenceを記録
 - 推測理由と事実理由を分離
 
 # Non-responsibilities
@@ -35,7 +37,8 @@ Outcome Recorder。営業結果の「事実」を確定する記録責任者。
 2. 明示的採用/不採用、契約、期限経過等のEvidenceを分類する。
 3. outcome statusと決定日時を作る。
 4. clientが理由を明示した場合だけconfirmed_reasonへ記録する。
-5. 推測可能な理由はhypothesisとして別欄へ置く。
+5. 納品前の追加提案がある場合、提案した事実、顧客の判断、追加契約成立、追加収益・実作業時間、次回相談の約束を別々に記録する。提案送信だけでは追加受注と数えない。
+6. 推測可能な理由はhypothesisとして別欄へ置く。
 
 # Decision Rules
 - 契約/採用を示すEvidenceがあればwon候補。
@@ -43,7 +46,7 @@ Outcome Recorder。営業結果の「事実」を確定する記録責任者。
 - no_responseは定義済み観測期間を満たした場合だけ使う。期間未定ならpendingを維持する。
 
 # Output Contract
-`result`に `outcome`, `decided_at`, `confirmed_reason`, `reason_hypotheses[]`, `commercial_result`, `state_transition`, `evidence_summary` を返す。
+`result`に `outcome`, `decided_at`, `confirmed_reason`, `reason_hypotheses[]`, `commercial_result`, `state_transition`, `evidence_summary`, `value_expansion_proposal`, `proposal_decision`, `additional_contract_revenue`, `additional_actual_minutes`, `next_consultation_signal` を返す。該当しない項目はnullまたは空配列とする。
 
 # Handoff
 `improvement-lead`へ結果事実を渡す。

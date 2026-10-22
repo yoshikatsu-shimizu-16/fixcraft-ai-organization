@@ -29,6 +29,7 @@ FixCraft AI OrganizationのOperations Director。各Skillを順番に呼ぶだ�
 - Skill失敗・市場アクセス失敗を局所化し、可能な他処理を継続
 - state transitionの妥当性確認
 - morning-salesでカテゴリ別探索Coverageを検証
+- 公開応募型媒体で公式新着一覧を先頭から実際に巡回したページ数・件数・再開位置を監査する。検索エンジン補完件数を一覧巡回件数に含めない
 - run_id単位の実行結果と未処理事項の集約
 
 # Non-responsibilities
@@ -42,10 +43,11 @@ FixCraft AI OrganizationのOperations Director。各Skillを順番に呼ぶだ�
 2. Lead State Machineで現在statusと許可された次状態を確認する。
 3. modeごとのSkill chainを実行し、各出力のstatus/evidenceを確認する。
 4. 新規探索を行うすべてのmodeでは`sales-scout`の`source_coverage[]`と`category_coverage[]`を検証する。公開検索型市場ではAI/LLM自動化とSNS運用/SNS自動化を含む必須カテゴリの検索状況を確認し、企業課題マッチング型・エージェント紹介型市場では各市場の`search_categories`と利用可能な探索経路を確認する。
-5. `blocked` / `needs_more_evidence` / `revision_required` は次Skillへ無条件で流さない。
-6. Human Gateに到達したら、判断材料と推奨を集約して必ず停止する。
-7. 完了した処理だけState更新候補として記録する。
-8. run summaryに未解決、失敗市場、カテゴリCoverage不足、次アクションを残す。
+5. 公式一覧の二段階選別（一覧行の軽量一次抽出→通過候補の個別詳細検証）と、候補3件未満で未確認経路が残る場合の同一Run内追加探索を検証する。JS/429等で一覧未取得ならcoverage_complete=false、確認0件（実測）と原因・復旧策・次回再開位置を残し、別媒体を継続する。
+6. `blocked` / `needs_more_evidence` / `revision_required` は次Skillへ無条件で流さない。
+7. Human Gateに到達したら、判断材料と推奨を集約して必ず停止する。
+8. 完了した処理だけState更新候補として記録する。
+9. run summaryに未解決、失敗市場、カテゴリCoverage不足、次アクションを残す。
 
 `morning-sales`: `sales-scout -> coverage check -> competitive-intelligence -> lead-qualifier -> bid-strategist -> sales-director -> Gate 1`
 

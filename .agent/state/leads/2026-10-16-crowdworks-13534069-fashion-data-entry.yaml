@@ -1,0 +1,38 @@
+schema: fixcraft-lead-workflow
+version: "2.2"
+lead_id: "crowdworks-13534069"
+platform: crowdworks
+source_job_id: "13534069"
+dedupe_key: "crowdworks:13534069"
+title: "ファッションブランドのデータ入力・情報整理"
+source_url: "https://crowdworks.jp/public/jobs/13534069"
+status: enriched
+first_seen_at: "2026-10-16"
+last_seen_at: "2026-10-16"
+last_updated_at: "2026-10-16"
+posted_at: "2026-10-15"
+deadline: "2026-10-19"
+budget: {gross_jpy: null, price_status: "negotiable before contract"}
+applicants: 11
+capacity: 20
+score: 57
+decision: needs_more_evidence
+gate1: {status: not_requested, approved_by: null, approved_at: null}
+gate2: {status: not_requested, approved_by: null, approved_at: null}
+gate3: {status: not_requested, approved_by: null, approved_at: null}
+open_check: {status: open, checked_at: "2026-10-16", evidence: ["Official listing shows deadline 2026-10-19 and no closed notice"]}
+requester_signal: {rating: "0.0 (0)", identity_verified: true, rules_check: true}
+evidence:
+  - {type: official_job_page, source: "https://crowdworks.jp/public/jobs/13534069", observed_at: "2026-10-16", fact: "11 applicants, 20 openings, flexible hours, roughly 10h/week welcome, price and volume negotiated before contract, zero client reviews."}
+competitive_intelligence: {applicants: 11, capacity: 20, requester_rating: "0.0(0)", competing_portfolios: Unknown}
+bid_strategy:
+  win_theme: "Spreadsheet QA and accurate CSV/data formatting"
+  conditions: ["per-unit or hourly reward", "minimum/maximum work volume", "test task payment", "platform-only communications"]
+risks:
+  - "発注者実績0件"
+  - "報酬・作業量未確定、時給計算不可"
+  - "週10時間程度歓迎のため短時間単発とは異なる"
+recommendations:
+  - "現時点でGate1に含めない。報酬と作業量の確定が必要"
+next_action: "報酬単位と作業量が公開または回答された場合に再採点"
+artifacts: []

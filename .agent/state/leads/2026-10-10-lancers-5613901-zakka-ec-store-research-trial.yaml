@@ -1,0 +1,29 @@
+schema: fixcraft-lead-workflow
+version: "2.2"
+lead_id: "lancers-5613901"
+platform: lancers
+source_job_id: "5613901"
+dedupe_key: "lancers:5613901"
+title: "雑貨ECの法人営業先リサーチ・店舗リスト作成（10件トライアル）"
+source_url: "https://www.lancers.jp/work/detail/5613901"
+status: enriched
+first_seen_at: "2026-10-10"
+last_seen_at: "2026-10-10"
+last_updated_at: "2026-10-10"
+deadline: "2026-10-14T11:11:00+09:00"
+score: 71
+decision: needs_more_evidence
+gate1: {status: not_requested, approved_by: null, approved_at: null}
+gate2: {status: not_requested, approved_by: null, approved_at: null}
+gate3: {status: not_requested, approved_by: null, approved_at: null}
+open_check: {status: unknown, checked_at: "2026-10-10", evidence: ["Indexed page says open; direct live detail fetch blocked"]}
+budget: {listed_max_jpy: 5000, trial_pay_jpy: null}
+applicants: 0
+capacity: 1
+estimated_minutes: null
+evidence:
+  - {source: "https://www.lancers.jp/work/detail/5613901", observed_at: "2026-10-10", fact: "Search-crawled detail shows 10-store trial, zero proposals, 2/2 client awards, deadline Oct 14"}
+risks: ["Trial payment not specified", "Direct open check blocked", "Only two client orders"]
+recommendations: ["Hold until direct open check and trial compensation", "If verified, consider 3000 JPY/10 stores as negotiation hypothesis; no free work"]
+next_action: "Recheck direct active status and exact paid trial terms; do not send application"
+artifacts: []

@@ -1,0 +1,37 @@
+schema: fixcraft-lead-workflow
+version: "2.2"
+lead_id: "coconala-5321334"
+platform: coconala
+source_job_id: "5321334"
+dedupe_key: "coconala:5321334"
+title: "Android文字起こしアプリの使用感レビュー"
+source_url: "https://coconala.com/requests/5321334"
+status: gate1_pending
+first_seen_at: "2026-10-14"
+last_seen_at: "2026-10-21"
+last_updated_at: "2026-10-21"
+deadline: "2026-10-26"
+score: 78
+decision: recommend_approve
+gate1: {status: pending_human, approved_by: null, approved_at: null}
+gate2: {status: not_requested, approved_by: null, approved_at: null}
+gate3: {status: not_requested, approved_by: null, approved_at: null}
+budget: {gross_jpy: 1000}
+applicants: 34
+capacity: null
+estimated_minutes: 15
+open_check: {status: open, checked_at: "2026-10-21", evidence: ["https://coconala.com/requests/5321334 shows 応募する, 2026-10-26 deadline, 34 applicants and 16 contracts"]}
+requester_signal: {rating: "5.0 (668)", public_orders: 648, completion_rate_pct: 89}
+evidence:
+  - {type: official_job_page, source: "https://coconala.com/requests/5321334", observed_at: "2026-10-21T18:43:00+09:00", fact: "Application button shown; 34 applicants, 16 contracts, deadline 2026-10-26; requester 5.0(668), 648 public orders, 89% completion. Remaining openings unknown."}
+  - {type: official_job_page, source: "https://coconala.com/requests/5321334", observed_at: "2026-10-20", fact: "Official listing remains open through 2026-10-26; 32 applicants, 16 contracts; requester 5.0(667), 648 public orders. Remaining capacity unknown."}
+  - {type: official_job_page, source: "https://coconala.com/requests/5321334", observed_at: "2026-10-19", fact: "Still open through Oct 26; 31 applicants, 16 contracts; requester rating 5.0(666), 648 public orders, 88% completion. No evidence of remaining slots."}
+  - {type: official_job_page, source: "https://coconala.com/requests/5321334", observed_at: "2026-10-16", fact: "Official page shows 応募する, 24 applicants, 11 contracts, 2026-10-26 deadline; requester 5.0(664), 640 public orders."}
+  - {type: official_job_page, source: "https://coconala.com/requests/5321334", observed_at: "2026-10-14", fact: "Androidアプリの操作2-5分と使用感フィードバック。報酬1,000円、応募19、契約4、10月26日締切。"}
+risks:
+  - "募集枠と追加採用の可否は不明"
+  - "作業時間15分は事前準備を含む概算"
+recommendations:
+  - "Human Gate 1 recommend_approve。Androidと開発者経験を生かした具体的な使用感評価"
+next_action: "Human Gate 1承認待ち。Gate 3承認前に応募しない"
+artifacts: []

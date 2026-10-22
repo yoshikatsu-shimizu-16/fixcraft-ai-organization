@@ -1,0 +1,8 @@
+date: "2026-10-14"
+mode: morning-sales
+excluded:
+  - {lead: "coconala-5323286", reason: "65応募、複雑なWordPress修正、評価必須"}
+  - {lead: "craudia-oiw1447", reason: "動画2,500円、作業量に対し低報酬"}
+  - {lead: "craudia-ffx3678", reason: "AIスクール受講経験が必要、発注実績0"}
+  - {lead: "coconala-5298331", reason: "GAS改修、10月13日締切"}
+queries: ["WordPress 修正", "GAS 自動化", "AIツール 評価", "開発者 モニター", "データチェック"]

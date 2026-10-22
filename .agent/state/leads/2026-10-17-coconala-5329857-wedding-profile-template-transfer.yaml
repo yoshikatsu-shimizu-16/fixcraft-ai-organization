@@ -1,0 +1,62 @@
+schema: fixcraft-lead-workflow
+version: "2.2"
+lead_id: "coconala-5329857"
+platform: coconala
+source_job_id: "5329857"
+dedupe_key: "coconala:5329857"
+title: "結婚式プロフィールブックのCanvaテンプレート転記・校正・個人情報マスキング"
+source_url: "https://coconala.com/requests/5329857"
+status: discovered
+first_seen_at: "2026-10-17"
+last_seen_at: "2026-10-17"
+last_updated_at: "2026-10-17"
+posted_at: "2026-10-17"
+deadline: "2026-10-24"
+budget:
+  displayed_range_jpy: [5000, 10000]
+  unit: Unknown
+score: null
+decision: needs_more_evidence
+gate1: {status: not_requested, approved_by: null, approved_at: null}
+gate2: {status: not_requested, approved_by: null, approved_at: null}
+gate3: {status: not_requested, approved_by: null, approved_at: null}
+applicants: 9
+capacity: null
+estimated_minutes: null
+open_check:
+  status: open
+  checked_at: "2026-10-17"
+  evidence:
+    - "Official page displayed 応募する, deadline 2026-10-24 and 9 applicants."
+requester_signal:
+  rating: "4.7 (153)"
+  public_orders: 5
+  order_rate_pct: 8
+  completion_rate_pct: 100
+evidence:
+  - type: official_job_page
+    source: "https://coconala.com/requests/5329857"
+    observed_at: "2026-10-17"
+    fact: "Canvaテンプレートへ写真・文章転記、メール文面、修正複数回、個人情報マスキング。1か月に6件、依頼後2日以内。表示予算5000-10000円。本文4枚・仕様欄6枚で不一致。応募9、契約0。"
+  - type: official_job_page
+    source: "https://coconala.com/requests/5329857"
+    observed_at: "2026-10-17"
+    fact: "公開質問で予算が1件分か6件合計か、枚数と修正上限が問われている。回答は未確認。"
+risks:
+  - "5,000-10,000円が6件合計か1件あたりか不明で時給算定不能"
+  - "6件を都度2日以内納品、修正複数回で拘束・工数膨張リスク"
+  - "本文4枚と仕様6枚が矛盾"
+  - "個人情報・写真の扱い、外部AIへの入力可否を要確認"
+  - "発注率8%、公開発注実績5件"
+competitive_intelligence:
+  observed_applicants: 9
+  observed_contracts: 0
+  named_competitor_capabilities: Unknown
+  hypothesis: "Canva制作実績を示せる応募者に有利な可能性。受注者の実績は未確認。"
+bid_strategy:
+  status: on_hold
+  win_theme: "テンプレート転記と文字・写真照合、個人情報マスキングの品質を明示"
+  proof: "個人情報を含まないダミー入力例のみ、Gate 1承認前は作成しない"
+  price_condition: "まず1件分の独立有償トライアルと修正上限を確認"
+next_action: "発注者回答により予算単位・1件の枚数・修正上限・対応頻度を確認できるまでGate 1保留。応募・質問送信はしない。"
+artifacts: []
