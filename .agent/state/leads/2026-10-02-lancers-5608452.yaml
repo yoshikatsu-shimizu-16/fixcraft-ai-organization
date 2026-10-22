@@ -1,0 +1,97 @@
+lead_id: LEAD-20261002-002
+platform: lancers
+source_job_id: '5608452'
+dedupe_key: lancers:5608452
+title: フロントエンド副業経験者インタビュー
+source_url: https://www.lancers.jp/work/detail/5608452
+status: qualified
+first_seen_at: '2026-10-02T17:32:00+09:00'
+last_seen_at: '2026-10-02T17:32:00+09:00'
+last_updated_at: '2026-10-02T17:32:00+09:00'
+deadline: '2026-10-05T17:01:00+09:00'
+budget:
+  currency: JPY
+  amount: 3000
+score: null
+decision: needs_more_evidence
+gate1:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+gate2:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+gate3:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+evidence:
+- claim: 詳細に募集中と表示
+  source: https://www.lancers.jp/work/detail/5608452
+  observed_at: '2026-10-02T17:32:00+09:00'
+- claim: 本体30〜60分、事前質問と日程調整あり
+  source: https://www.lancers.jp/work/detail/5608452
+  observed_at: '2026-10-02T17:32:00+09:00'
+- claim: Google Meet、社内利用の録画
+  source: https://www.lancers.jp/work/detail/5608452
+  observed_at: '2026-10-02T17:32:00+09:00'
+risks:
+- フロントエンドの副業受注経験が必須。ユーザーの該当経験は未確認
+- 準備時間と手数料控除後の受取額は未確定
+recommendations:
+- 本人の実体験と受注経路を具体的に説明する。実績を創作しない。
+next_action: 本人の副業受注経験を確認し、条件に合えばGate 1で判断
+artifacts:
+- .agent/state/discovery/RUN-20261002-1732-market-discovery.yaml
+source: lancers
+category: エンジニア属性インタビュー
+discovered_at: '2026-10-02T17:32:00+09:00'
+posted_at: '2026-09-28'
+applicants: 3
+capacity: 2
+reward:
+  currency: JPY
+  gross_amount: 3000
+  net_amount: null
+  basis: 本文の記載。税・手数料の区分はEvidence参照
+estimated_minutes: 60
+open_check:
+  status: open
+  checked_at: '2026-10-02T17:32:00+09:00'
+  evidence:
+  - 個別ページの募集中表示又は応募画面へのリンクを確認
+requester_signal:
+  name: アークワードコンサルティング株式会社
+  positive_reviews: 48
+  negative_reviews: 0
+  order_rate_percent: 95
+  orders: 52/55
+rejection_reason: null
+cross_source_duplicate_of: null
+applied: null
+replied: null
+won: null
+lost: null
+actual_minutes: null
+actual_revenue: null
+rating: null
+qualification:
+  rubric: '2.1'
+  known_scores:
+    client_quality: 10
+    risk: 7
+    competition: 5
+  known_subtotal: 22
+  unknown_criteria:
+  - fit
+  - win_path
+  - price
+  - cash_velocity
+  - track_record
+  - urgency
+  total_score: null
+  reason: 本人適合、採算、実績Proof等を未確認。Unknownを中間点で埋めない。

@@ -1,0 +1,509 @@
+run_id: RUN-20261002-1732-market-discovery
+mode: morning-sales_manual
+started_at: null
+completed_at: '2026-10-02T17:32:00+09:00'
+observation_note: 観測日時は記録時刻。ブラウザでの確認は17:24〜17:32の間。開始時刻の厳密な記録なし。
+entries:
+- source: crowdworks
+  listing_url: https://crowdworks.jp/public/jobs/13500123
+  category: 転記
+  discovery_stage: individual_open_check
+  pages_or_items_scanned:
+    pages: 1
+    items: 1
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  posted_at: '2026-10-02'
+  lead_id: LEAD-20261002-001
+  source_url: https://crowdworks.jp/public/jobs/13500123
+  applicants: 0
+  capacity: 30
+  reward:
+    currency: JPY
+    gross_amount: 4000
+    net_amount: null
+    basis: 本文の記載。税・手数料の区分はEvidence参照
+  estimated_minutes: null
+  status: open_needs_more_evidence
+  open_check:
+    status: open
+    checked_at: '2026-10-02T17:32:00+09:00'
+    evidence:
+    - 個別ページの募集中表示又は応募画面へのリンクを確認
+  requester_signal:
+    name: YO3
+    reviews: 0
+    identity: 未提出
+    recruitments: 1
+  rejection_reason: null
+  duplicate_of: null
+  scan_minutes: null
+  coverage_status: confirmed
+  limitations:
+  - 初回1ファイル契約が可能か不明
+  - ファイルと枚数の単位が一致していない
+  - ページ数・図表・書式再現・修正回数が不明
+  - 発注者の支払実績は未確認
+- source: lancers
+  listing_url: https://www.lancers.jp/work/detail/5608452
+  category: エンジニア属性インタビュー
+  discovery_stage: individual_open_check
+  pages_or_items_scanned:
+    pages: 1
+    items: 1
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  posted_at: '2026-09-28'
+  lead_id: LEAD-20261002-002
+  source_url: https://www.lancers.jp/work/detail/5608452
+  applicants: 3
+  capacity: 2
+  reward:
+    currency: JPY
+    gross_amount: 3000
+    net_amount: null
+    basis: 本文の記載。税・手数料の区分はEvidence参照
+  estimated_minutes: 60
+  status: open_needs_more_evidence
+  open_check:
+    status: open
+    checked_at: '2026-10-02T17:32:00+09:00'
+    evidence:
+    - 個別ページの募集中表示又は応募画面へのリンクを確認
+  requester_signal:
+    name: アークワードコンサルティング株式会社
+    positive_reviews: 48
+    negative_reviews: 0
+    order_rate_percent: 95
+    orders: 52/55
+  rejection_reason: null
+  duplicate_of: null
+  scan_minutes: null
+  coverage_status: confirmed
+  limitations:
+  - フロントエンドの副業受注経験が必須。ユーザーの該当経験は未確認
+  - 準備時間と手数料控除後の受取額は未確定
+- source: crowdworks
+  listing_url: https://crowdworks.jp/public/jobs/13499511
+  category: エンジニア属性インタビュー
+  discovery_stage: individual_open_check
+  pages_or_items_scanned:
+    pages: 1
+    items: 1
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  posted_at: '2026-10-02'
+  lead_id: LEAD-20261002-003
+  source_url: https://crowdworks.jp/public/jobs/13499511
+  applicants: 0
+  capacity: 3
+  reward:
+    currency: JPY
+    gross_amount: 5500
+    net_amount: null
+    basis: 本文の記載。税・手数料の区分はEvidence参照
+  estimated_minutes: 60
+  status: open_needs_more_evidence
+  open_check:
+    status: open
+    checked_at: '2026-10-02T17:32:00+09:00'
+    evidence:
+    - 個別ページの募集中表示又は応募画面へのリンクを確認
+  requester_signal:
+    name: webmedian
+    reviews: 357
+    rating: 4.9
+    identity: 確認済み
+    completion_rate_percent: 96
+    recruitments: 1286
+  rejection_reason: null
+  duplicate_of: null
+  scan_minutes: null
+  coverage_status: confirmed
+  limitations:
+  - SE経験のみでは参加条件を満たさない
+  - 勤務先規模と事故対応経験は未確認
+- source: lancers
+  listing_url: https://www.lancers.jp/work/detail/5610299
+  category: エンジニア属性インタビュー
+  discovery_stage: individual_open_check
+  pages_or_items_scanned:
+    pages: 1
+    items: 1
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  posted_at: '2026-10-01'
+  lead_id: LEAD-20261002-004
+  source_url: https://www.lancers.jp/work/detail/5610299
+  applicants: 1
+  capacity: 10
+  reward:
+    currency: JPY
+    gross_amount: 10000
+    net_amount: null
+    basis: 本文の記載。税・手数料の区分はEvidence参照
+  estimated_minutes: 60
+  status: open_needs_more_evidence
+  open_check:
+    status: open
+    checked_at: '2026-10-02T17:32:00+09:00'
+    evidence:
+    - 個別ページの募集中表示又は応募画面へのリンクを確認
+  requester_signal:
+    name: StockSun株式会社
+    positive_reviews: 0
+    negative_reviews: 0
+    order_rate_percent: 0
+    orders: 0/7
+  rejection_reason: null
+  duplicate_of: null
+  scan_minutes: null
+  coverage_status: confirmed
+  limitations:
+  - 対象企業での経験は未確認
+  - 公開に伴う勤務先・本人の意向確認が必要
+  - 追加の完成動画確認工数は不明
+  - 発注者名は表示名。支払実績未確認
+- source: crowdworks
+  listing_url: https://crowdworks.jp/public/jobs/13491884
+  category: AIサービスヒアリング
+  discovery_stage: individual_open_check
+  pages_or_items_scanned:
+    pages: 1
+    items: 1
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  posted_at: '2026-09-30'
+  lead_id: LEAD-20261002-005
+  source_url: https://crowdworks.jp/public/jobs/13491884
+  applicants: 1
+  capacity: 1
+  reward:
+    currency: JPY
+    gross_amount: 10000
+    net_amount: null
+    basis: 本文の記載。税・手数料の区分はEvidence参照
+  estimated_minutes: 60
+  status: open_needs_more_evidence
+  open_check:
+    status: open
+    checked_at: '2026-10-02T17:32:00+09:00'
+    evidence:
+    - 個別ページの募集中表示又は応募画面へのリンクを確認
+  requester_signal:
+    name: Y_Recruit
+    identity: 未提出
+    recruitments: 28
+    rating: null
+  rejection_reason: null
+  duplicate_of: null
+  scan_minutes: null
+  coverage_status: confirmed
+  limitations:
+  - 対象業界での現在の業務経験は未確認
+  - 税込金額の一覧と本文に差あり
+  - 発注者の評価・完了実績は未確認
+- source: crowdworks
+  listing_url: https://crowdworks.jp/public/jobs/search?order=new
+  category: 全カテゴリ新着
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: 50
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - 新着順、募集終了を隠す。広告が混在。
+  scan_minutes: null
+- source: crowdworks
+  listing_url: https://crowdworks.jp/public/jobs/group/task
+  category: 事務・カンタン作業
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: null
+  search_terms:
+  - インタビュー
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - カテゴリはおすすめ順に戻る。新着順の網羅性なし。
+  scan_minutes: null
+- source: crowdworks
+  listing_url: https://crowdworks.jp/public/jobs/group/ai_machine_learning
+  category: AI
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: null
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - 上位約30件を部分確認。おすすめ順。
+  scan_minutes: null
+- source: crowdworks
+  listing_url: https://crowdworks.jp/public/jobs/group/development
+  category: 開発
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: null
+  search_terms:
+  - GAS
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - 上位9件を確認。GASはカテゴリ内1件。
+  scan_minutes: null
+- source: crowdworks
+  listing_url: https://crowdworks.jp/public/jobs/search?order=new&search%5Bkeywords%5D=AI%E8%A9%95%E4%BE%A1
+  category: AI評価
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: null
+  search_terms:
+  - AI評価
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - 開発・専門分野レビュー・業界インタビューが混在。
+  scan_minutes: null
+- source: crowdworks
+  listing_url: https://crowdworks.jp/public/jobs/search?order=new&search%5Bkeywords%5D=WordPress%20%E4%BF%AE%E6%AD%A3
+  category: WordPress
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: null
+  search_terms:
+  - WordPress 修正
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - 30件表示のうち上位を部分確認。
+  scan_minutes: null
+- source: crowdworks
+  listing_url: https://crowdworks.jp/public/jobs/search
+  category: 技術者インタビュー
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: 1
+  search_terms:
+  - サイバーインシデント
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - 全カテゴリ検索1件。
+  scan_minutes: null
+- source: lancers
+  listing_url: https://www.lancers.jp/work/search?open=1&sort=started&work_rank%5B%5D=0&work_rank%5B%5D=2&work_rank%5B%5D=3
+  category: 全カテゴリ新着
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: null
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - 新着・募集中。仕事ランクフィルタによる未取得範囲あり。
+  scan_minutes: null
+- source: lancers
+  listing_url: https://www.lancers.jp/work/search/task
+  category: タスク・インタビュー
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: null
+  search_terms:
+  - インタビュー
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - 新着・募集中を保持して検索。部分確認。
+  scan_minutes: null
+- source: coconala
+  listing_url: https://coconala.com/requests
+  category: 単発募集
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: null
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - 新着の上位募集を部分確認。WP一致なし。個別確認候補なし。
+  scan_minutes: null
+- source: anycrew
+  listing_url: https://app.any-crew.com/offers
+  category: 公開一覧
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: null
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - 公開一覧の上位を部分確認。
+  scan_minutes: null
+- source: anycrew
+  listing_url: https://app.any-crew.com/offers/professions/software_engineer
+  category: エンジニア
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: null
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - 週16〜40時間等の拘束や終了案件が混在。
+  scan_minutes: null
+- source: remogu
+  listing_url: https://remogu.jp/
+  category: 新着欄
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: null
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - ホームページ新着欄のみ。個別確認なし。
+  scan_minutes: null
+- source: itpropartners
+  listing_url: https://itpropartners.com/job
+  category: 新着一覧
+  discovery_stage: listing_or_native_search
+  pages_or_items_scanned:
+    pages: 1
+    items: null
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: partial
+  limitations:
+  - 週1〜2日、月30〜50時間等。部分確認。
+  scan_minutes: null
+- source: shuuumatu-worker
+  listing_url: https://shuuumatu-worker.jp/projects
+  discovery_stage: listing_attempt
+  pages_or_items_scanned:
+    pages: 0
+    items: 0
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: blocked
+  limitations:
+  - 公開ページから案件内容を取得できず
+- source: sankak
+  listing_url: https://sankak.jp/
+  discovery_stage: listing_attempt
+  pages_or_items_scanned:
+    pages: 0
+    items: 0
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: blocked
+  limitations:
+  - 取得エラー
+- source: lotsful
+  listing_url: https://lotsful.jp/
+  discovery_stage: listing_attempt
+  pages_or_items_scanned:
+    pages: 0
+    items: 0
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: blocked
+  limitations:
+  - 取得エラー
+- source: shufti
+  listing_url: https://app.shufti.jp/jobs
+  discovery_stage: listing_attempt
+  pages_or_items_scanned:
+    pages: 0
+    items: 0
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: blocked
+  limitations:
+  - 取得エラー
+- source: craudia
+  listing_url: https://www.craudia.com/job
+  discovery_stage: listing_attempt
+  pages_or_items_scanned:
+    pages: 0
+    items: 0
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: blocked
+  limitations:
+  - 取得エラー。経路の再確認は未実施
+- source: visasq
+  listing_url: https://visasq.com/
+  discovery_stage: listing_attempt
+  pages_or_items_scanned:
+    pages: 0
+    items: 0
+  search_terms: []
+  discovered_at: '2026-10-02T17:32:00+09:00'
+  coverage_status: blocked
+  limitations:
+  - 取得エラー。現行公開募集経路の再確認は未実施
+- source: lancers
+  source_url: https://www.lancers.jp/work/detail/5610989
+  discovery_stage: rejection
+  rejection_reason: 実報酬は調査3件600円。継続単価未定、Product Research環境が必要。優先候補から除外。
+  coverage_status: confirmed
+- source: lancers
+  source_url: https://www.lancers.jp/work/detail/5610958
+  discovery_stage: rejection
+  rejection_reason: 作業400/400。募集表示があっても空きなし。
+  coverage_status: listing_only
+- source: lancers
+  source_url: https://www.lancers.jp/work/detail/5610988
+  discovery_stage: rejection
+  rejection_reason: プロフィールURL誘導、具体的な業務説明不足。
+  coverage_status: listing_only
+- source: lancers
+  source_url: https://www.lancers.jp/work/detail/5610985
+  discovery_stage: rejection
+  rejection_reason: プロフィールURL誘導、具体的な業務説明不足。
+  coverage_status: listing_only
+- source: lancers
+  source_url: https://www.lancers.jp/work/detail/5610986
+  discovery_stage: rejection
+  rejection_reason: プロフィールURL誘導、具体的な業務説明不足。
+  coverage_status: listing_only
+summary:
+  items_scanned: null
+  new_unique_open_leads: 5
+  rejected: null
+  duplicates: 0
+  discovery_minutes: null
+coverage_status: partial
+limitations:
+- 総確認件数は未集計。閲覧件数を推測で合計しない。
+- 各レーン2Query以上の確認は未完了。全媒体網羅したとは扱わない。
+- 開発者利用評価実験・ユーザーテスト専用媒体の一次一覧巡回は未完了。
+- 研究参加サイトは検索補完の断片のみ。応募可能として提示しない。
+competitive_intelligence:
+  comparables:
+  - https://www.lancers.jp/profile/f_is
+  - https://www.lancers.jp/profile/guzhao
+  - https://www.lancers.jp/profile/nobunaga_01
+  evidence: 5608452個別ページに表示された提案者3名の公開紹介。シルバー、ブロンズ、本人確認の表示あり。
+  limitation: 紹介文のみ。各プロフィール詳細と提案文は未確認。受注者ではない。勝因はUnknown。
+  winners: Unknown
+director:
+  decision: needs_more_evidence
+  next_action: 本人のフロントエンド副業受注経験を確認。転記の初回作業範囲を確認。
+  gate1: not_requested
+  gate3: not_requested

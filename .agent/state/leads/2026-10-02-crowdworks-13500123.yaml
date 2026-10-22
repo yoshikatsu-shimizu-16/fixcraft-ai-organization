@@ -1,0 +1,98 @@
+lead_id: LEAD-20261002-001
+platform: crowdworks
+source_job_id: '13500123'
+dedupe_key: crowdworks:13500123
+title: PDF→Word文字起こし
+source_url: https://crowdworks.jp/public/jobs/13500123
+status: qualified
+first_seen_at: '2026-10-02T17:32:00+09:00'
+last_seen_at: '2026-10-02T17:32:00+09:00'
+last_updated_at: '2026-10-02T17:32:00+09:00'
+deadline: '2026-10-04'
+budget:
+  currency: JPY
+  amount: 4000
+score: null
+decision: needs_more_evidence
+gate1:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+gate2:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+gate3:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+evidence:
+- claim: 平均3,000文字、1ファイル4,000円
+  source: https://crowdworks.jp/public/jobs/13500123
+  observed_at: '2026-10-02T17:32:00+09:00'
+- claim: 総在庫約1,000ファイル。複数人で継続作業
+  source: https://crowdworks.jp/public/jobs/13500123
+  observed_at: '2026-10-02T17:32:00+09:00'
+- claim: 20〜59歳、学生不可、応募画面へのリンクあり
+  source: https://crowdworks.jp/public/jobs/13500123
+  observed_at: '2026-10-02T17:32:00+09:00'
+risks:
+- 初回1ファイル契約が可能か不明
+- ファイルと枚数の単位が一致していない
+- ページ数・図表・書式再現・修正回数が不明
+- 発注者の支払実績は未確認
+recommendations:
+- まず正確な作業範囲を確認する。条件確定まで金額・納期を約束しない。
+next_action: 見本、初回範囲、税込区分、修正回数を確認後に応募判断
+artifacts:
+- .agent/state/discovery/RUN-20261002-1732-market-discovery.yaml
+source: crowdworks
+category: 転記
+discovered_at: '2026-10-02T17:32:00+09:00'
+posted_at: '2026-10-02'
+applicants: 0
+capacity: 30
+reward:
+  currency: JPY
+  gross_amount: 4000
+  net_amount: null
+  basis: 本文の記載。税・手数料の区分はEvidence参照
+estimated_minutes: null
+open_check:
+  status: open
+  checked_at: '2026-10-02T17:32:00+09:00'
+  evidence:
+  - 個別ページの募集中表示又は応募画面へのリンクを確認
+requester_signal:
+  name: YO3
+  reviews: 0
+  identity: 未提出
+  recruitments: 1
+rejection_reason: null
+cross_source_duplicate_of: null
+applied: null
+replied: null
+won: null
+lost: null
+actual_minutes: null
+actual_revenue: null
+rating: null
+qualification:
+  rubric: '2.1'
+  known_scores:
+    client_quality: 5
+    risk: 3
+    competition: 10
+  known_subtotal: 18
+  unknown_criteria:
+  - fit
+  - win_path
+  - price
+  - cash_velocity
+  - track_record
+  - urgency
+  total_score: null
+  reason: 本人適合、採算、実績Proof等を未確認。Unknownを中間点で埋めない。

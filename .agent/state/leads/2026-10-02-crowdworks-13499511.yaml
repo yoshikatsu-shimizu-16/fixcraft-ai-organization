@@ -1,0 +1,101 @@
+lead_id: LEAD-20261002-003
+platform: crowdworks
+source_job_id: '13499511'
+dedupe_key: crowdworks:13499511
+title: サイバーインシデント対応の社内調整インタビュー
+source_url: https://crowdworks.jp/public/jobs/13499511
+status: qualified
+first_seen_at: '2026-10-02T17:32:00+09:00'
+last_seen_at: '2026-10-02T17:32:00+09:00'
+last_updated_at: '2026-10-02T17:32:00+09:00'
+deadline: '2026-10-16'
+budget:
+  currency: JPY
+  amount: 5500
+score: null
+decision: needs_more_evidence
+gate1:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+gate2:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+gate3:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+evidence:
+- claim: 税抜5,000円、一覧5,500円。受取額は手数料控除後
+  source: https://crowdworks.jp/public/jobs/13499511
+  observed_at: '2026-10-02T17:32:00+09:00'
+- claim: Microsoft Teams、60分、応募画面へのリンクあり
+  source: https://crowdworks.jp/public/jobs/13499511
+  observed_at: '2026-10-02T17:32:00+09:00'
+- claim: 従業員100〜2,000名等の事業会社に現在所属
+  source: https://crowdworks.jp/public/jobs/13499511
+  observed_at: '2026-10-02T17:32:00+09:00'
+- claim: 実際の事故対応の取りまとめ・部門間調整、専任事務局なし又は1〜3名兼務体制
+  source: https://crowdworks.jp/public/jobs/13499511
+  observed_at: '2026-10-02T17:32:00+09:00'
+risks:
+- SE経験のみでは参加条件を満たさない
+- 勤務先規模と事故対応経験は未確認
+recommendations:
+- 該当するなら調整の実体験を守秘義務に触れない範囲で提示する。
+next_action: 勤務先規模と事故対応での調整経験を本人に確認
+artifacts:
+- .agent/state/discovery/RUN-20261002-1732-market-discovery.yaml
+source: crowdworks
+category: エンジニア属性インタビュー
+discovered_at: '2026-10-02T17:32:00+09:00'
+posted_at: '2026-10-02'
+applicants: 0
+capacity: 3
+reward:
+  currency: JPY
+  gross_amount: 5500
+  net_amount: null
+  basis: 本文の記載。税・手数料の区分はEvidence参照
+estimated_minutes: 60
+open_check:
+  status: open
+  checked_at: '2026-10-02T17:32:00+09:00'
+  evidence:
+  - 個別ページの募集中表示又は応募画面へのリンクを確認
+requester_signal:
+  name: webmedian
+  reviews: 357
+  rating: 4.9
+  identity: 確認済み
+  completion_rate_percent: 96
+  recruitments: 1286
+rejection_reason: null
+cross_source_duplicate_of: null
+applied: null
+replied: null
+won: null
+lost: null
+actual_minutes: null
+actual_revenue: null
+rating: null
+qualification:
+  rubric: '2.1'
+  known_scores:
+    client_quality: 10
+    risk: 7
+    competition: 10
+  known_subtotal: 27
+  unknown_criteria:
+  - fit
+  - win_path
+  - price
+  - cash_velocity
+  - track_record
+  - urgency
+  total_score: null
+  reason: 本人適合、採算、実績Proof等を未確認。Unknownを中間点で埋めない。

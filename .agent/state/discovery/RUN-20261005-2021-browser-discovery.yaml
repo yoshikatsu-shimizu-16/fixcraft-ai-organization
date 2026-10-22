@@ -1,0 +1,681 @@
+{
+  "run_id": "RUN-20261005-2021-browser-discovery",
+  "mode": "read_only_browser_discovery",
+  "started_at": "2026-10-05T20:21:16+09:00",
+  "completed_at": "2026-10-05T20:32:12+09:00",
+  "entries": [
+    {
+      "source": "crowdworks",
+      "listing_url": "https://crowdworks.jp/public/jobs/recommendations/recommend_for_you?ref=login_header",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "authenticated",
+      "listing_kind": "recommended",
+      "sort_order": "personalized",
+      "checked_at": "2026-10-05T20:21:16+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": 50,
+        "description": "1ページ目の50件。個別確認は別記。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "1ページ目の50件。個別確認は別記。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": []
+    },
+    {
+      "source": "crowdworks",
+      "listing_url": "https://crowdworks.jp/public/jobs/search?order=new",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "authenticated",
+      "listing_kind": "new_active",
+      "sort_order": "new",
+      "checked_at": "2026-10-05T20:22:32+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": 57,
+        "description": "表示は1〜50件。PR等を含む案件リンク57件。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "表示は1〜50件。PR等を含む案件リンク57件。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": []
+    },
+    {
+      "source": "lancers",
+      "listing_url": "https://www.lancers.jp/mypage?",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "authenticated",
+      "listing_kind": "recommended",
+      "sort_order": "personalized",
+      "checked_at": "2026-10-05T20:22:12+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": 12,
+        "description": "おすすめ12件。注目3件・既応募1件はおすすめ件数から除外。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "おすすめ12件。注目3件・既応募1件はおすすめ件数から除外。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": [
+        "個別確認で削除済み案件が1件あった。利用規約の同意画面は操作していない。"
+      ]
+    },
+    {
+      "source": "lancers",
+      "listing_url": "https://www.lancers.jp/work/search?open=1&ref=header_menu",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "authenticated",
+      "listing_kind": "new_active",
+      "sort_order": "new",
+      "checked_at": "2026-10-05T20:23:19+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": 28,
+        "description": "1ページ目の案件リンク28件。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "1ページ目の案件リンク28件。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": []
+    },
+    {
+      "source": "shuumatsu_worker",
+      "listing_url": "https://shuuumatu-worker.jp/projects",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "unauthenticated",
+      "listing_kind": "new_active",
+      "sort_order": "new",
+      "checked_at": "2026-10-05T20:23:20+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": 12,
+        "description": "1ページ目12件。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "1ページ目12件。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": [
+        "会員向け紹介一覧は未確認。"
+      ]
+    },
+    {
+      "source": "sankaku",
+      "listing_url": "https://sankak.jp/project/recommended",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "authenticated",
+      "listing_kind": "recommended",
+      "sort_order": "unknown",
+      "checked_at": "2026-10-05T20:26:39+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": 10,
+        "description": "希望条件の案件一覧の読めた先頭10件。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "希望条件の案件一覧の読めた先頭10件。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": [
+        "残りは読み込み中。一般新着一覧と全件は未確認。"
+      ]
+    },
+    {
+      "source": "remogu",
+      "listing_url": "https://remogu.jp/jobsearch/",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "unauthenticated",
+      "listing_kind": "new_active",
+      "sort_order": "unknown",
+      "checked_at": "2026-10-05T20:23:20+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": 10,
+        "description": "検索画面の下部にある新着紹介10件。検索結果の巡回とは区別する。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "検索画面の下部にある新着紹介10件。検索結果の巡回とは区別する。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": [
+        "検索ボタンで結果一覧への移動を確認できなかった。非公開案件は未確認。"
+      ]
+    },
+    {
+      "source": "remogu",
+      "listing_url": "https://remogu.jp/J36/",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "unauthenticated",
+      "listing_kind": "category",
+      "sort_order": "unknown",
+      "checked_at": "2026-10-05T20:27:21+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": 8,
+        "description": "QAカテゴリの8件。下部新着10件は重複計上しない。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "QAカテゴリの8件。下部新着10件は重複計上しない。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": [
+        "他カテゴリと会員向け紹介は未確認。"
+      ]
+    },
+    {
+      "source": "lotsful",
+      "listing_url": "https://lotsful.jp/jobs",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "unauthenticated",
+      "listing_kind": "new_active",
+      "sort_order": "unknown",
+      "checked_at": "2026-10-05T20:23:20+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": 12,
+        "description": "一覧1ページ目12件。全286件の表示あり。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "一覧1ページ目12件。全286件の表示あり。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": [
+        "新着順の保証と会員向け紹介は未確認。"
+      ]
+    },
+    {
+      "source": "anycrew",
+      "listing_url": "https://app.any-crew.com/offers?running=true",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "unauthenticated",
+      "listing_kind": "category",
+      "sort_order": "unknown",
+      "checked_at": "2026-10-05T20:27:04+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": 20,
+        "description": "募集中のみの1ページ目20件。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "募集中のみの1ページ目20件。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": [
+        "並び順と会員向けスカウトは未確認。"
+      ]
+    },
+    {
+      "source": "anycrew",
+      "listing_url": "https://app.any-crew.com/offers?running=true&professionIds=1",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "unauthenticated",
+      "listing_kind": "category",
+      "sort_order": "unknown",
+      "checked_at": "2026-10-05T20:27:36+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": 4,
+        "description": "募集中のエンジニア4件。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "募集中のエンジニア4件。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": [
+        "並び順は未確認。"
+      ]
+    },
+    {
+      "source": "itpro_partners",
+      "listing_url": "https://itpropartners.com/job?sort=new",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "unauthenticated",
+      "listing_kind": "new_active",
+      "sort_order": "new",
+      "checked_at": "2026-10-05T20:27:04+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": 40,
+        "description": "新着順1ページ目40件。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "新着順1ページ目40件。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": [
+        "会員向け非公開紹介と2ページ目以降は未確認。"
+      ]
+    },
+    {
+      "source": "lancers",
+      "listing_url": "https://www.lancers.jp/work/search/system/code_bug_fixes?open=1",
+      "discovery_stage": "official_browser",
+      "access_method": "browser",
+      "authentication_status": "authenticated",
+      "listing_kind": "category",
+      "sort_order": "new",
+      "checked_at": "2026-10-05T20:28:06+09:00",
+      "scanned_range": {
+        "pages": 1,
+        "items": null,
+        "description": "バグ修正カテゴリは102件表示。先頭ページは求人が中心で、PR案件1件も含む。"
+      },
+      "evidence": [
+        {
+          "type": "browser_dom_observation",
+          "description": "バグ修正カテゴリは102件表示。先頭ページは求人が中心で、PR案件1件も含む。"
+        }
+      ],
+      "coverage_status": "partial",
+      "limitations": [
+        "カテゴリ別の全件巡回は未実施。求人と単発依頼を混同しない。"
+      ]
+    },
+    {
+      "source": "anycrew",
+      "listing_url": "https://app.any-crew.com/offers/3855",
+      "source_url": "https://app.any-crew.com/offers/3855",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "authentication_status": "unauthenticated",
+      "checked_at": "2026-10-05T20:27:50+09:00",
+      "candidate_id": "anycrew-3855",
+      "title": "AIを活用したノーコード開発ベンチャー システム開発エンジニア募集",
+      "status": "条件確認後",
+      "reward": {
+        "hourly_jpy_ex_tax": [
+          3000,
+          6000
+        ],
+        "monthly_hours": [
+          20,
+          50
+        ]
+      },
+      "open_check": {
+        "status": "open_indicator_observed",
+        "checked_at": "2026-10-05T20:27:50+09:00",
+        "evidence": [
+          "Notion等のDB、Claude Codeを用いる社内システム実装。フルリモート、平日夜・土日可。初回3か月、長期想定。10月30日まで。"
+        ]
+      },
+      "fit_and_gap": "AIを使う開発や業務効率化と方向が合う。DBを用いる社内システム開発経験、AI開発経験、開発年数を実例で示す必要がある。",
+      "unknowns": [
+        "一覧の週8〜16時間と本文の月20〜50時間に幅がある。採用後の時間数・時間帯、成果物、検収・支払条件を確認する。"
+      ],
+      "added_work": "開発・要件整理・テスト・顧客調整が必要。コード生成だけでは完了しない。",
+      "score_total": null,
+      "qualification": "needs_more_evidence",
+      "limitations": [
+        "応募可能表示は採用・受注確率や支払確定を意味しない。"
+      ]
+    },
+    {
+      "source": "lotsful",
+      "listing_url": "https://lotsful.jp/jobs/3972",
+      "source_url": "https://lotsful.jp/jobs/3972",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "authentication_status": "unauthenticated",
+      "checked_at": "2026-10-05T20:28:06+09:00",
+      "candidate_id": "lotsful-3972",
+      "title": "埼玉測機社のWebブランディング・SNS発信の仕組みづくり",
+      "status": "条件確認後",
+      "reward": {
+        "monthly_jpy_from": 110000,
+        "monthly_hours": [
+          10,
+          20
+        ]
+      },
+      "open_check": {
+        "status": "open_indicator_observed",
+        "checked_at": "2026-10-05T20:28:06+09:00",
+        "evidence": [
+          "原則リモート。Web/SNS分析、企画・編集、テンプレート、公開ルール、社員へのレクチャー。10月1日掲載。応募リンクあり、締切は見当たらない。"
+        ]
+      },
+      "fit_and_gap": "SNS運用の仕組みづくりや文章・運用手順の整備と方向が合う。BtoBのWebマーケティング・SNS運用の実務経験は未確認。",
+      "unknowns": [
+        "BtoBの実績、契約期間、担当媒体・投稿量、会議時間、応募受付の継続を確認する。"
+      ],
+      "added_work": "分析、編集、運用ルール策定、教育が必要。毎日の投稿代行だけではない。",
+      "score_total": null,
+      "qualification": "needs_more_evidence",
+      "limitations": [
+        "応募可能表示は採用・受注確率や支払確定を意味しない。"
+      ]
+    },
+    {
+      "source": "crowdworks",
+      "listing_url": "https://crowdworks.jp/public/jobs/13505747",
+      "source_url": "https://crowdworks.jp/public/jobs/13505747",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "authentication_status": "authenticated",
+      "checked_at": "2026-10-05T20:26:41+09:00",
+      "candidate_id": "crowdworks-13505747",
+      "title": "研修コンテンツのレビュー担当募集",
+      "status": "条件確認後",
+      "reward": {
+        "per_content_jpy_incl_tax": 1500,
+        "minimum_weekly_contents": 7,
+        "minimum_monthly_contents": 28
+      },
+      "open_check": {
+        "status": "open_indicator_observed",
+        "checked_at": "2026-10-05T20:26:41+09:00",
+        "evidence": [
+          "20〜30枚のスライドレビュー。最低1か月、週7本以上、週単位納期。主な連絡は平日10〜19時。応募1人・募集2人。10月19日締切。"
+        ]
+      },
+      "fit_and_gap": "AI・DX・IT開発の知見を使える。手作業で資料や動画を確認し、修正指示を出す。PowerPoint、Teams、分野知識が必要。",
+      "unknowns": [
+        "動画チェックの範囲、1本の工数、平日連絡への対応、会社アカウントの確認を要する。表示名はINTLOOP株式会社だが本人確認未提出、レビュー0件。"
+      ],
+      "added_work": "28本なら額面4万2千円。1本30分なら額面時給3千円、60分なら1500円という仮定。連絡・修正・手数料は別。",
+      "score_total": null,
+      "qualification": "needs_more_evidence",
+      "limitations": [
+        "応募可能表示は採用・受注確率や支払確定を意味しない。"
+      ]
+    },
+    {
+      "source": "shuumatsu_worker",
+      "listing_url": "https://shuuumatu-worker.jp/projects/19024",
+      "source_url": "https://shuuumatu-worker.jp/projects/19024",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "authentication_status": "unauthenticated",
+      "checked_at": "2026-10-05T20:28:35+09:00",
+      "candidate_id": "shuumatsu-19024",
+      "title": "官公庁向けWebサイトの制作ディレクション",
+      "status": "条件確認後",
+      "reward": {
+        "monthly_jpy_incl_tax": [
+          60000,
+          70000
+        ],
+        "monthly_hours": 20
+      },
+      "open_check": {
+        "status": "open_indicator_observed",
+        "checked_at": "2026-10-05T20:28:35+09:00",
+        "evidence": [
+          "週5時間目安、フルリモート、即日〜2・3か月。顧客折衝、進行管理、ワイヤーフレーム、外部パートナーへの指示。平日日中の稼働が必須。10月2日公開、エントリーリンクあり。"
+        ]
+      },
+      "fit_and_gap": "Web制作・仕様整理・進行管理と方向が合う。クライアント対応の実績と平日日中の時間が必要。",
+      "unknowns": [
+        "平日日中に対応できるか、締切・受付状況、会議頻度、Webディレクター実績を確認する。"
+      ],
+      "added_work": "顧客折衝と制作管理が中心。追加の広告設定・執筆を担当する場合は範囲調整が必要。",
+      "score_total": null,
+      "qualification": "needs_more_evidence",
+      "limitations": [
+        "応募可能表示は採用・受注確率や支払確定を意味しない。"
+      ]
+    },
+    {
+      "source": "lancers",
+      "listing_url": "https://www.lancers.jp/work/detail/5610394",
+      "source_url": "https://www.lancers.jp/work/detail/5610394",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "authentication_status": "authenticated",
+      "checked_at": "2026-10-05T20:26:39+09:00",
+      "candidate_id": "lancers-5610394",
+      "title": "LINEブラウザで商品が入らない問題の解決",
+      "status": "保留",
+      "reward": {
+        "fixed_budget_jpy": [
+          1000,
+          5000
+        ]
+      },
+      "open_check": {
+        "status": "open_indicator_observed",
+        "checked_at": "2026-10-05T20:26:39+09:00",
+        "evidence": [
+          "WooCommerce、PHP・JavaScript/TypeScript、修正とテスト。10月6日18:26締切、68提案・1人募集。発注率67%、14/21。"
+        ]
+      },
+      "fit_and_gap": "技術方向は合うが、再現条件・原因・改修規模は未確認。応募競争も多い。",
+      "unknowns": [
+        "症状の再現条件、端末、テーマ・プラグイン、アクセス権、調査と修正の費用分離を要する。"
+      ],
+      "added_work": "原因調査・実機テストが必要。短時間で終わるとは判断できない。",
+      "score_total": null,
+      "qualification": "needs_more_evidence",
+      "limitations": [
+        "応募可能表示は採用・受注確率や支払確定を意味しない。"
+      ]
+    },
+    {
+      "source": "sankaku",
+      "listing_url": "https://sankak.jp/fukugyo/7821",
+      "source_url": "https://sankak.jp/fukugyo/7821",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "authentication_status": "authenticated",
+      "checked_at": "2026-10-05T20:27:22+09:00",
+      "candidate_id": "sankaku-9567",
+      "title": "解体会社のDX・業務自動化",
+      "status": "継続監視",
+      "reward": {
+        "monthly_jpy_ex_tax": 50000
+      },
+      "open_check": {
+        "status": "open_indicator_observed",
+        "checked_at": "2026-10-05T20:27:22+09:00",
+        "evidence": [
+          "初回3か月・1年想定。月1回来社を想定、交通費は企業負担。AIによる現調情報整理、指示書作成、予定・人員配置。座談会10月23日18:30、申込10月21日12時予定。"
+        ]
+      },
+      "fit_and_gap": "CloudflareやAI業務自動化の方向は合う。短期現金化の優先方針とは距離がある。",
+      "unknowns": [
+        "稼働時間と月5万円に含む範囲、来社対応、段階ごとの成果物・費用を確認する。"
+      ],
+      "added_work": "業務分析、AI連携、運用定着まで必要。大規模な全機能を月5万円で請ける判断はしない。",
+      "score_total": null,
+      "qualification": "needs_more_evidence",
+      "limitations": [
+        "応募可能表示は採用・受注確率や支払確定を意味しない。"
+      ]
+    },
+    {
+      "source": "crowdworks",
+      "source_url": "https://crowdworks.jp/public/jobs/13504790",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "checked_at": "2026-10-05T20:23:33+09:00",
+      "title": "企業リスト作成",
+      "status": "見送り",
+      "rejection_reason": "一覧目安1万〜3万円だが、本文は300件で2100円税込。手作業限定・スクレイピング禁止。既存の店舗収集ツールは使用できない。",
+      "open_check": {
+        "status": "open_indicator_observed"
+      },
+      "evidence": [
+        "一覧目安1万〜3万円だが、本文は300件で2100円税込。手作業限定・スクレイピング禁止。既存の店舗収集ツールは使用できない。"
+      ]
+    },
+    {
+      "source": "crowdworks",
+      "source_url": "https://crowdworks.jp/public/jobs/13213018",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "checked_at": "2026-10-05T20:23:34+09:00",
+      "title": "大学研究への参加",
+      "status": "見送り",
+      "rejection_reason": "18〜29歳限定。24日間の毎日記録と2027年5月までの追跡があり、単発の短時間作業ではない。年齢該当は未確認。",
+      "open_check": {
+        "status": "open_indicator_observed"
+      },
+      "evidence": [
+        "18〜29歳限定。24日間の毎日記録と2027年5月までの追跡があり、単発の短時間作業ではない。年齢該当は未確認。"
+      ]
+    },
+    {
+      "source": "crowdworks",
+      "source_url": "https://crowdworks.jp/public/jobs/13505840",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "checked_at": "2026-10-05T20:23:34+09:00",
+      "title": "限定・至急案件",
+      "status": "見送り",
+      "rejection_reason": "本文は事務案件との記載のみ。報酬1000円税抜だが成果物と工数が不明。",
+      "open_check": {
+        "status": "open_indicator_observed"
+      },
+      "evidence": [
+        "本文は事務案件との記載のみ。報酬1000円税抜だが成果物と工数が不明。"
+      ]
+    },
+    {
+      "source": "lancers",
+      "source_url": "https://www.lancers.jp/work/detail/5582339",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "checked_at": "2026-10-05T20:26:40+09:00",
+      "title": "IT・Webエンジニア体験談記事",
+      "status": "見送り",
+      "rejection_reason": "おすすめに残っているが、個別ページで利用規約・依頼ガイドライン違反による削除を確認。",
+      "open_check": {
+        "status": "removed"
+      },
+      "evidence": [
+        "おすすめに残っているが、個別ページで利用規約・依頼ガイドライン違反による削除を確認。"
+      ]
+    },
+    {
+      "source": "crowdworks",
+      "source_url": "https://crowdworks.jp/public/jobs/13505774",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "checked_at": "2026-10-05T20:26:50+09:00",
+      "title": "AI記事タイトル・見出し編集",
+      "status": "見送り",
+      "rejection_reason": "記事単価表示7000円に対し、本文は初回50円。10案件のお試しと約1時間のオンライン面談を要求。継続単価は未確定。",
+      "open_check": {
+        "status": "open_indicator_observed"
+      },
+      "evidence": [
+        "記事単価表示7000円に対し、本文は初回50円。10案件のお試しと約1時間のオンライン面談を要求。継続単価は未確定。"
+      ]
+    },
+    {
+      "source": "lancers",
+      "source_url": "https://www.lancers.jp/work/detail/5612223",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "checked_at": "2026-10-05T20:28:08+09:00",
+      "title": "企業の売上高調査",
+      "status": "見送り",
+      "rejection_reason": "5円/作業件。実際のフォームは8社の売上高または経常利益の調査。AI使用禁止。作業17/71、募集中だが採算が低い。",
+      "open_check": {
+        "status": "open_indicator_observed"
+      },
+      "evidence": [
+        "5円/作業件。実際のフォームは8社の売上高または経常利益の調査。AI使用禁止。作業17/71、募集中だが採算が低い。"
+      ]
+    },
+    {
+      "source": "crowdworks",
+      "source_url": "https://crowdworks.jp/public/jobs/13506893",
+      "listing_kind": "individual",
+      "access_method": "browser",
+      "checked_at": "2026-10-05T20:28:35+09:00",
+      "title": "風景写真の提供",
+      "status": "見送り",
+      "rejection_reason": "写真3枚で50円。応募手続き込みの採算が低い。",
+      "open_check": {
+        "status": "open_indicator_observed"
+      },
+      "evidence": [
+        "写真3枚で50円。応募手続き込みの採算が低い。"
+      ]
+    }
+  ],
+  "summary": {
+    "sites_visited": 8,
+    "authenticated_sites": [
+      "crowdworks",
+      "lancers",
+      "sankaku"
+    ],
+    "individual_pages_verified": 13,
+    "unique_open_candidates_for_further_review": 6,
+    "conditional_candidates": 4,
+    "hold": 1,
+    "monitor": 1,
+    "rejected": 7,
+    "items_scanned": null,
+    "coverage_complete": false,
+    "search_engine_used": false,
+    "score_total": null,
+    "external_actions_performed": [],
+    "unverified_routes": [
+      "一覧の2ページ目以降と全カテゴリ",
+      "サンカク一般新着一覧",
+      "未ログイン5サイトの会員向け紹介・非公開案件",
+      "開発者評価・ユーザーテスト・AIモニター等の専用カテゴリ巡回"
+    ],
+    "notes": [
+      "総件数はPR・関連枠・重複を混ぜて合算しない。",
+      "候補の実務実績、採算の工数、支払条件、競合比較が不足するため、受注確度の数値や正式スコアは出さない。",
+      "応募・メッセージ・登録・規約同意・契約をしていない。"
+    ]
+  }
+}

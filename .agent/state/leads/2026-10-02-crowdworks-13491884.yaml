@@ -1,0 +1,97 @@
+lead_id: LEAD-20261002-005
+platform: crowdworks
+source_job_id: '13491884'
+dedupe_key: crowdworks:13491884
+title: ヘルスケア企業のAI活用・リスク評価インタビュー
+source_url: https://crowdworks.jp/public/jobs/13491884
+status: qualified
+first_seen_at: '2026-10-02T17:32:00+09:00'
+last_seen_at: '2026-10-02T17:32:00+09:00'
+last_updated_at: '2026-10-02T17:32:00+09:00'
+deadline: '2026-10-13'
+budget:
+  currency: JPY
+  amount: 10000
+score: null
+decision: needs_more_evidence
+gate1:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+gate2:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+gate3:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+evidence:
+- claim: 応募画面へのリンクあり
+  source: https://crowdworks.jp/public/jobs/13491884
+  observed_at: '2026-10-02T17:32:00+09:00'
+- claim: 詳細は税込10,000円。一覧11,000円と差あり
+  source: https://crowdworks.jp/public/jobs/13491884
+  observed_at: '2026-10-02T17:32:00+09:00'
+- claim: ヘルスケア関連企業在籍、AI活用と安全性・セキュリティ・ガバナンス関与が条件
+  source: https://crowdworks.jp/public/jobs/13491884
+  observed_at: '2026-10-02T17:32:00+09:00'
+risks:
+- 対象業界での現在の業務経験は未確認
+- 税込金額の一覧と本文に差あり
+- 発注者の評価・完了実績は未確認
+recommendations:
+- 業界・安全性評価の経験が一致した場合のみ提案する。
+next_action: 対象業界と業務経験を確認。報酬は本文基準で保留
+artifacts:
+- .agent/state/discovery/RUN-20261002-1732-market-discovery.yaml
+source: crowdworks
+category: AIサービスヒアリング
+discovered_at: '2026-10-02T17:32:00+09:00'
+posted_at: '2026-09-30'
+applicants: 1
+capacity: 1
+reward:
+  currency: JPY
+  gross_amount: 10000
+  net_amount: null
+  basis: 本文の記載。税・手数料の区分はEvidence参照
+estimated_minutes: 60
+open_check:
+  status: open
+  checked_at: '2026-10-02T17:32:00+09:00'
+  evidence:
+  - 個別ページの募集中表示又は応募画面へのリンクを確認
+requester_signal:
+  name: Y_Recruit
+  identity: 未提出
+  recruitments: 28
+  rating: null
+rejection_reason: null
+cross_source_duplicate_of: null
+applied: null
+replied: null
+won: null
+lost: null
+actual_minutes: null
+actual_revenue: null
+rating: null
+qualification:
+  rubric: '2.1'
+  known_scores:
+    client_quality: 5
+    risk: 3
+    competition: 5
+  known_subtotal: 13
+  unknown_criteria:
+  - fit
+  - win_path
+  - price
+  - cash_velocity
+  - track_record
+  - urgency
+  total_score: null
+  reason: 本人適合、採算、実績Proof等を未確認。Unknownを中間点で埋めない。

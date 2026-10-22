@@ -1,0 +1,102 @@
+lead_id: LEAD-20261002-004
+platform: lancers
+source_job_id: '5610299'
+dedupe_key: lancers:5610299
+title: AI・DX・ITコンサル経験者の公開対談
+source_url: https://www.lancers.jp/work/detail/5610299
+status: qualified
+first_seen_at: '2026-10-02T17:32:00+09:00'
+last_seen_at: '2026-10-02T17:32:00+09:00'
+last_updated_at: '2026-10-02T17:32:00+09:00'
+deadline: '2026-10-06T16:22:00+09:00'
+budget:
+  currency: JPY
+  amount: 10000
+score: null
+decision: needs_more_evidence
+gate1:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+gate2:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+gate3:
+  status: not_requested
+  approved_by: null
+  approved_at: null
+  artifact: null
+evidence:
+- claim: 募集中。謝礼一律10,000円、手数料込・税別
+  source: https://www.lancers.jp/work/detail/5610299
+  observed_at: '2026-10-02T17:32:00+09:00'
+- claim: 収録約30分、事前確認込み約1時間、完成動画確認あり
+  source: https://www.lancers.jp/work/detail/5610299
+  observed_at: '2026-10-02T17:32:00+09:00'
+- claim: 大手ファーム・SIer本体等、在籍期間・退職時期条件あり
+  source: https://www.lancers.jp/work/detail/5610299
+  observed_at: '2026-10-02T17:32:00+09:00'
+- claim: YouTube公開、企業名公開前提。顔出しなし・加工の選択あり
+  source: https://www.lancers.jp/work/detail/5610299
+  observed_at: '2026-10-02T17:32:00+09:00'
+risks:
+- 対象企業での経験は未確認
+- 公開に伴う勤務先・本人の意向確認が必要
+- 追加の完成動画確認工数は不明
+- 発注者名は表示名。支払実績未確認
+recommendations:
+- 在籍条件と公開条件が一致した場合のみ経験テーマを整理する。
+next_action: 在籍条件と公開許容範囲を確認するまで保留
+artifacts:
+- .agent/state/discovery/RUN-20261002-1732-market-discovery.yaml
+source: lancers
+category: エンジニア属性インタビュー
+discovered_at: '2026-10-02T17:32:00+09:00'
+posted_at: '2026-10-01'
+applicants: 1
+capacity: 10
+reward:
+  currency: JPY
+  gross_amount: 10000
+  net_amount: null
+  basis: 本文の記載。税・手数料の区分はEvidence参照
+estimated_minutes: 60
+open_check:
+  status: open
+  checked_at: '2026-10-02T17:32:00+09:00'
+  evidence:
+  - 個別ページの募集中表示又は応募画面へのリンクを確認
+requester_signal:
+  name: StockSun株式会社
+  positive_reviews: 0
+  negative_reviews: 0
+  order_rate_percent: 0
+  orders: 0/7
+rejection_reason: null
+cross_source_duplicate_of: null
+applied: null
+replied: null
+won: null
+lost: null
+actual_minutes: null
+actual_revenue: null
+rating: null
+qualification:
+  rubric: '2.1'
+  known_scores:
+    client_quality: 5
+    risk: 3
+    competition: 10
+  known_subtotal: 18
+  unknown_criteria:
+  - fit
+  - win_path
+  - price
+  - cash_velocity
+  - track_record
+  - urgency
+  total_score: null
+  reason: 本人適合、採算、実績Proof等を未確認。Unknownを中間点で埋めない。

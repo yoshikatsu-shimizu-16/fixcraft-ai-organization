@@ -58,6 +58,7 @@ FixCraft AI OrganizationのOperations Director。各Skillを順番に呼ぶだ�
 `evening-pdca`: `outcome-recorder -> competitive-intelligence(必要な案件) -> improvement-lead`
 
 # Decision Rules
+- 媒体ごとのブラウザ接続・ログイン状態、新着一覧、利用可能なおすすめ・紹介一覧の確認記録を検証する。必要な経路が未確認ならcoverage_completeをfalseにし、確認範囲と未確認範囲を報告する。検索エンジンで個別案件を取得しただけでは公式一覧を巡回したと扱わない。
 - 共通Playbookの一覧起点の順序、全レーンCoverage、open確認、除外・重複ログを検証する。募集不明・終了の案件は採点とGate 1へ進めない。
 - build-proposalとapply-approvedは実行時に対象案件の応募可能状態を再確認する。client-followupはイベントと実績、evening-pdcaは媒体別指標を記録する。
 - Gate承認Evidenceがなければ次フェーズへ進めない。

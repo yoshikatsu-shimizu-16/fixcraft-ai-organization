@@ -132,8 +132,9 @@ candidate_sources:
     discovery_method: "identify concrete services and their official active recruitment routes; do not treat this group as a searched source"
 rules:
   common_playbook: ".agent/playbooks/market-discovery.md"
+  browser_access_policy: "check official pages in an available browser and record authentication state before declaring access blocked; inspect available account recommendations separately from new active listings; never infer authenticated access or recommendation features across sources"
   candidate_policy: "inspect official discovery routes on exploration runs; record actual source identity, access, recruitment type and limitations before proposing enabled status; no account registration or submission during discovery"
-  discovery_order: [new_active_listings, category_listings, native_keyword_search, supplementary_engine_search, individual_open_check, dedupe, competitive_intelligence, lead_qualifier, bid_strategist, sales_director, human_gate]
+  discovery_order: [browser_access_check, new_active_listings, available_authenticated_recommendations, category_listings, native_keyword_search, supplementary_engine_search, individual_open_check, dedupe, competitive_intelligence, lead_qualifier, bid_strategist, sales_director, human_gate]
   enabled_sources_each_morning: "all"
   source_strategies:
     open_crowdsourcing_marketplace: "start with new active listings, then category listings and native keywords across all lanes; engine search is supplementary only"

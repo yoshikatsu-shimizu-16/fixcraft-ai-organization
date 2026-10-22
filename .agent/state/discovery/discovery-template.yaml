@@ -9,6 +9,13 @@ entry_fields:
   listing_url: null
   category: null
   discovery_stage: null
+  access_method: null # browser / connector / web_search
+  authentication_status: unknown # authenticated / unauthenticated / unknown
+  listing_kind: null # new_active / recommended / invitation / category / native_search / engine_search / individual
+  sort_order: null
+  checked_at: null
+  scanned_range: {pages: null, items: null, posted_from: null, posted_to: null}
+  evidence: []
   pages_or_items_scanned: {pages: null, items: null}
   search_terms: []
   discovered_at: null
@@ -33,3 +40,5 @@ summary:
   rejected: null
   duplicates: null
   discovery_minutes: null
+  coverage_complete: false
+  unverified_routes: []
