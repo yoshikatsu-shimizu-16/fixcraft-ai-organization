@@ -1,0 +1,46 @@
+schema: fixcraft-lead-workflow
+version: "2.2"
+lead_id: "crowdworks-13554621"
+platform: crowdworks
+source_job_id: "13554621"
+dedupe_key: "crowdworks:13554621"
+title: "会社HPの問い合わせページ修正とプラグイン更新"
+source_url: "https://crowdworks.jp/public/jobs/13554621"
+status: discovered
+first_seen_at: "2026-10-24"
+last_seen_at: "2026-10-24"
+last_updated_at: "2026-10-24"
+posted_at: "2026-10-23"
+deadline: "2026-10-25"
+budget: {gross_displayed_jpy: 3300, buyer_quote_target_jpy_before_tax: 3000}
+applicants: 58
+capacity: 1
+score: 66
+decision: needs_more_evidence
+primary_category: wordpress_web_repair
+open_check: {status: unknown, checked_at: "2026-10-24", evidence: ["Official page search index updated Oct 24, deadline Oct 25; direct live job page unavailable; application status unverified."]}
+gate1: {status: not_requested}
+gate2: {status: not_requested}
+gate3: {status: not_requested}
+estimated_minutes: null
+requester_signal: {rating: "5.0/5", review_count: 6, identity: "not_submitted", rules_check: "not_answered"}
+competitive_intelligence:
+  applicants_observed: 58
+  contracts_observed: 0
+  known_winners: []
+  competitor_profiles_checked: 0
+  confidence: low
+score_breakdown: {fit: 10, win_path: 11, price: 8, cash_velocity: 10, track_record: 8, urgency: 5, client_quality: 5, risk: 7, competition: 2}
+bid_strategy:
+  status: conditional
+  win_themes: ["WordPressの障害復旧実績をもとに問い合わせ導線を先に検証", "バックアップ・復元可能性を確保してからプラグイン更新"]
+  proof_plan: "403復旧の本人実績と検証・切戻し手順を提示。受注前の実装はしない。"
+  price_positioning: "予算約3000円税抜に対し、問い合わせページの限定修正と更新対象プラグイン数を契約前に固定する。"
+  questions: ["フォーム修正の具体的不具合と更新対象プラグイン数", "バックアップ/検証環境", "修正回数", "現行応募受付"]
+repeat_potential: {status: possible, evidence: "良ければ更新の継続契約を検討と記載、未契約。"}
+evidence:
+  - {type: official_job_page_via_search_index, source: "https://crowdworks.jp/public/jobs/13554621", observed_at: "2026-10-24", fact: "Posted Oct 23, deadline Oct 25, 3300 JPY displayed, 58 applicants/1 opening, requester 5.0(6) identity not submitted; recurring updates possible; direct open not available."}
+risks: ["応募58名で1名採用、受注確率は低い。", "フォーム不具合の詳細不明で工数膨張リスク。", "個別ページの現行受付状態を直接検証できていない。"]
+recommendations: ["高競争でGate 1推奨水準未達。現行受付と範囲を確認した場合のみ再評価。"]
+next_action: "締切10/25までに公式ページと範囲を確認、競争が強いので優先度は低い。"
+artifacts: []
