@@ -76,6 +76,10 @@ Leadを扱うSkillは可能な限り `lead_id` を返す。複数Leadを発見�
 - Possible: 仮説として合理的だが裏付け不足
 - Unknown: 判断不能
 
+## 7.1 Repeat Customer Strategy
+
+単発公募案件だけに依存せず、初回の小さな有償案件から継続取引につなげる。Sales ScoutはIT・AI納品型業務と継続発注しやすい案件も探索し、Competitive Intelligenceは実際のリピート発注実績を評価する。Lead QualifierとSales Directorは初回採算とは別に継続可能性をEvidence付きで評価する。client-followupは顧客満足と検収の確認後、押し売りせず適切な追加納品を提案する候補を作る。媒体規約・Human Gate・昼間拘束制約を維持し、継続見込みは契約額や実現売上に計上しない。
+
 ## 8. Improvement Governance
 
 同種のSE指摘が2回以上ならPlaybook候補にする。3回以上かつ改善効果をKPIで確認できた場合に標準ルール候補へ昇格する。Knowledge/Playbookの自動上書きは禁止し、Improvement Leadが変更候補を提示する。
