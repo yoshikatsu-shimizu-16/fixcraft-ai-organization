@@ -1,0 +1,128 @@
+run_id: "RUN-20261023-1815-evening-pdca"
+date: "2026-10-23"
+mode: evening-pdca
+status: needs_more_evidence
+phase_kpi_jpy: 20000
+period: {start: "2026-10-01", end: "2026-10-23"}
+counts:
+  october:
+    applied_confirmed: 2
+    replied_confirmed: 1
+    won_confirmed: 1
+    lost_confirmed: 0
+    no_response_current_confirmed: 0
+    pending_outcome: 1
+    reply_rate_pct: 50.0
+    win_rate_per_application_pct: 50.0
+  cumulative_recorded:
+    applied_confirmed: 3
+    replied_confirmed: 1
+    won_confirmed: 1
+    lost_confirmed: 1
+    no_response_current_confirmed: 0
+    historical_no_reply_later_lost: 1
+    pending_outcome: 1
+    reply_rate_pct: 33.33
+    win_rate_per_application_pct: 33.33
+  new_application_today: 1
+  new_reply_today: null
+  new_win_today: null
+  new_loss_today: null
+  new_no_response_today: 0
+  all_platform_histories_audited: false
+revenue:
+  target_jpy: 20000
+  contracted_gross_jpy: 5500
+  contracted_gross_gap_jpy: 14500
+  confirmed_platform_reward_jpy: 4290
+  confirmed_reward_gap_jpy: 15710
+  confirmed_reward_progress_pct: 21.45
+  recorded_bank_received_jpy: 0
+  bank_receipt_status: "Unknown; no bank statement evidence"
+  realized_cash_kpi_gap_jpy: 20000
+  note: "Platform payout confirmation is not bank receipt; do not double count. HCG 2026-10-21 transfer-schedule email has no amount/date."
+applications:
+  - lead_id: crowdworks-13481213
+    applied_at: "2026-10-01 or earlier; exact date Unknown"
+    replied: true
+    outcome: won
+    gross_contract_jpy: 5500
+    platform_reward_confirmed_jpy: 4290
+    actual_work_hours_approx: 4
+    effective_hourly_platform_reward_jpy_approx: 1072.5
+    bank_received: Unknown
+    evidence: [".agent/state/applications/crowdworks-13481213-2026-10-01.yaml", "Gmail 1a12d5660ba2d117 (inspection and 4290 JPY, 2026-10-12 JST)", "Gmail 1a15dbd4f4050482 (transfer scheduled, 2026-10-21 JST)"]
+  - lead_id: lancers-5606677
+    applied_at: "2026-09-25"
+    replied: false
+    outcome: lost
+    historical_no_reply: true
+    bid_jpy: 20000
+    evidence: [".agent/state/applications/lancers-5606677-2026-09-25.yaml", "user-supplied Lancers logged-in screenshot 2026-09-26: 68 proposals, one award, user not selected"]
+  - lead_id: coconala-5321334
+    applied_at: "2026-10-23"
+    applied_at_precision: date_only
+    submission_method: manual_by_user
+    outcome: pending
+    client_reply: Unknown
+    budget_jpy: 1000
+    promised_delivery: "within 3 days after contract"
+    human_gate_approval_history: Unknown
+    evidence: [".agent/state/applications/coconala-5321334-2026-10-23.yaml", ".agent/state/leads/2026-10-14-coconala-5321334-android-transcription-feedback.yaml", "https://coconala.com/requests/5321334 (2026-10-23: 37 applicants, 16 contracts, deadline 2026-10-26)"]
+competitive_intelligence:
+  confirmed:
+    - "HCG contract, inspection passed, 4290 JPY platform reward."
+    - "Lancers WP loss after 68 proposals and one winner; no client reply."
+    - "First Coconala application submitted manually 2026-10-23 (user attestation and actual proposal text)."
+  likely:
+    - "Existing SE skills align with bounded technical evaluation work, but winning causation is unverified."
+  possible:
+    - "Visible WP restoration/security proof, shorter problem-first proposal and explicit availability might improve emergency WP bidding."
+    - "Android proposal combines actual Android device and SE QA perspective; response impact untested."
+  unknown:
+    - "Actual buyer selection reasons, winning bids, remaining Android slots, Android reply/outcome, prototype effect, HP/LP delivery quality."
+  observed_competition:
+    - {lead_id: coconala-5321334, applicants: 37, contracts: 16, checked_at: "2026-10-23", source: "https://coconala.com/requests/5321334"}
+    - {lead_id: coconala-5330445, applicants: 38, contracts: 0, checked_at: "2026-10-23", source: "https://coconala.com/requests/5330445"}
+  domain_quality:
+    wordpress_security: "WP lost proposal describes backup, investigation, rollback and safety controls; no implementation quality evidence from this application."
+    hp_lp_design: "No new delivery/review evidence."
+    technical: "HCG accepted; Android work not contracted; no proof of repeatable quality yet."
+    prototype: "No verified prototype-to-win causal evidence; Gate 1 approval required before any build."
+improvement_lead:
+  se_review_priority: true
+  recurring_feedback:
+    - "Official newest-first category scans: >=3 user corrections; existing market-discovery Playbook covers it; measured improvement still Unknown, not a standard rule."
+  playbook_candidates:
+    - "Track first response and outcome for manually submitted Coconala application before claiming Android microtask win pattern."
+    - "Measure source/category coverage for newly added IT technical writing, gadget review and repeat-customer service lanes."
+  standard_rule_candidates: []
+  knowledge_change_proposals:
+    - "Update stale pre-inspection wording in technical-evaluation-win-candidate.md with verified 2026-10-12 inspection and 4h actual work, only after human review."
+    - "Evaluate coconala enabled:false vs real first application; do not flip automatically."
+  experiments_next_day:
+    - id: "E1"
+      hypothesis: "A real manual submission with device-specific, client-goal-oriented proof provides a better conversion baseline than an indefinitely pending Gate 1 candidate."
+      change: "Track Android application reply/contract status without unsolicited follow-up; record response latency, buyer decision and realized effort if contracted."
+      success_metric: "One evidence-verified status check; no false won/lost/no_response transition."
+    - id: "E2"
+      hypothesis: "New IT technical writing/gadget review and repeatable IT-AI deliverables broaden access to low-risk paid work."
+      change: "Audit official newest-first/category lists for lanes 14-16, record actual scanned rows and screen 2-3 current open listings for total hours and repeat demand."
+      success_metric: "At least one fresh, individually verified Gate 1 candidate with net-hourly estimate; otherwise explicit failed coverage and reasons."
+coverage:
+  new_market_scan_in_evening_run: false
+  latest_repo_discovery_log: ".agent/state/discovery/RUN-20261018-morning-sales.yaml"
+  coverage_complete: false
+  note: "No evidence that mandatory newest-first categories and all enabled sources were covered today. Search-engine snippets and email alerts are not counted as listing scans."
+human_gates:
+  gate1_approved_by_ai: false
+  gate2_approved_by_ai: false
+  gate3_approved_by_ai: false
+  android_retrospective_gate_history: Unknown
+next_action: "client-followup for Android reply evidence; morning-sales official newest-first scans including lanes 14-16; do not send or build without appropriate human approval."
+evidence:
+  - {claim: "First Coconala Android application 2026-10-23", source: ".agent/state/applications/coconala-5321334-2026-10-23.yaml", observed_at: "2026-10-23"}
+  - {claim: "HCG inspection and platform payout 4290 JPY", source: "Gmail 1a12d5660ba2d117", observed_at: "2026-10-12"}
+  - {claim: "Lancers WP loss", source: ".agent/state/applications/lancers-5606677-2026-09-25.yaml", observed_at: "2026-09-26"}
+  - {claim: "Official Android application listing: 37 applicants and 16 contracts", source: "https://coconala.com/requests/5321334", observed_at: "2026-10-23"}
+  - {claim: "New writing and repeat-customer lanes in Knowledge/Playbook", source: ".agent/playbooks/market-discovery.md", observed_at: "2026-10-23"}
