@@ -150,3 +150,15 @@ rules:
   access_failure_behavior: "mark source blocked and continue other enabled sources"
   terms_and_permissions: "respect platform terms, authentication boundaries and tool permissions"
   enabled_sources_each_discovery_run: "all; retain enabled_sources_each_morning as a legacy alias"
+
+# Cross-market mandatory category expansion (2026-10-23)
+# Applies to every enabled market that supports job/category or keyword discovery.
+writing_category_expansion:
+  enabled: true
+  lanes:
+    - "IT technical writing / technical editing / technical fact-check"
+    - "Gadget and PC peripheral writing / comparison / verified hands-on review"
+  search_categories: ["ライティング", "記事作成", "編集・校正", "IT・テクノロジー", "ガジェット・デジタル製品", "商品レビュー"]
+  require_official_newest_list: true
+  count_as_covered_only_when_accessed: true
+  preserve_existing_sources_and_enabled_flags: true
