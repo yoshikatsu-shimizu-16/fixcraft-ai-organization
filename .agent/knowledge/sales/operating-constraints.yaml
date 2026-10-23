@@ -75,3 +75,14 @@ writing_lanes:
   exclusion_patterns: ["採用・転職サービス登録を主目的とする釣り案件", "無償または過度に低単価のテスト記事", "AI利用条件の不明瞭さ", "修正無制限", "アフィリエイトやステルスマーケティングの強制", "製品未使用なのに実使用レビューを求める案件"]
   past_evidence_note: "本人による過去のIT関連記事4本は転職サイト登録の感想、1時間未満と報告。一般的な技術記事の執筆時間・質・受注再現性の証明とはみなさない"
   validation_plan: "少なくとも2週間、応募数・返信・契約・調査込み実作業時間・実現売上・再依頼を開発案件と比較する"
+
+repeat_customer_strategy:
+  enabled: true
+  objective: "初回小額・短納期・明確な納品から顧客満足と継続受注に結び、単発公募への依存を減らす"
+  kpi: {monthly_realized_revenue_jpy: 20000, repeat_clients_target: 1, recurring_revenue_target_status: "experiment"}
+  acquisition_channels: ["公開案件応募", "過去発注者からの再依頼", "ココナラ等の範囲固定サービス出品", "小規模事業者からの適法・非強引な紹介や相談"]
+  repeat_friendly_services: ["IT記事・ガジェット記事の定期執筆/技術校正", "AI文章の定期品質確認", "Google Workspace/データ整備の月次処理", "WordPressの小規模保守/点検", "操作マニュアルの継続更新", "AI・ITスポット相談からの再依頼", "SNS投稿用原稿の月次納品"]
+  selection_rule: "初回案件の適合・採算・発注者信用を優先し、明確な追加ニーズと再依頼実績があれば継続可能性を加点する。継続の約束や存在しない需要を捏造しない"
+  commitment_rule: "月次業務でも納品物・月間上限時間・連絡時間帯・料金・追加作業を明確にし、平日日中の強い拘束や24時間対応を受けない"
+  followup_rule: "検収・顧客満足を確認した後、顧客に役立つ次の小さな改善や定期納品を1つだけ提案する。押し売りや媒体規約に反する直接取引誘導はしない"
+  track: ["client_id_or_platform_alias", "first_paid_order", "delivery_quality", "repeat_potential_evidence", "permission_to_follow_up", "followup_date", "next_need", "repeat_contract_count", "realized_revenue_by_client", "monthly_recurring_actual"]
