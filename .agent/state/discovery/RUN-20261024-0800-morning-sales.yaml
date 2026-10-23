@@ -1,0 +1,190 @@
+run_id: "RUN-20261024-0800-morning-sales"
+mode: morning-sales
+date: "2026-10-24"
+status: needs_more_evidence
+started_at: "2026-10-24T07:59:49+09:00"
+completed_at: null
+observation_time_note: "2026-10-24 JST morning. Individual source access times were not separately captured; do not infer minute-level timestamps."
+authority:
+  repository: "yoshikatsu-shimizu-16/fixcraft-ai-organization"
+  instructions_read_in_order: ["AGENTS.md", ".agent/AGENTS.md", ".agent/skills/fixcraft-orchestrator/SKILL.md"]
+  context_read: [".agent/knowledge/sales/operating-constraints.yaml", ".agent/knowledge/sales/market-sources.yaml", ".agent/knowledge/sales/search-keywords.md", ".agent/playbooks/market-discovery.md", ".agent/state/lead-state-machine.yaml", ".agent/state/metrics/2026-10-23-evening-pdca.yaml", ".agent/knowledge/sales/lead-scoring.yaml"]
+kpi:
+  target_jpy: 20000
+  contracted_gross_jpy: 5500
+  contracted_gross_gap_jpy: 14500
+  platform_reward_confirmed_jpy: 4290
+  platform_reward_gap_jpy: 15710
+  actual_revenue_recorded_jpy: 0
+  realized_cash_gap_jpy: 20000
+  bank_receipt_status: Unknown
+  data_as_of: "2026-10-23"
+  evidence: [".agent/state/metrics/2026-10-23-evening-pdca.yaml", ".agent/state/applications/crowdworks-13481213-2026-10-01.yaml", ".agent/state/applications/coconala-5321334-2026-10-23.yaml"]
+  note: "Contracted amount and confirmed platform reward are not bank receipt; no new payout evidence. Do not double count. Coconala Android application remains pending, not won."
+browser_access:
+  status: blocked
+  reason: "Connected Browser list_tabs returned: Browser access requires the originating browser context; read-only connected browser session unavailable in automation environment."
+  login_status: Unknown
+  authenticated_recommendations_checked: false
+source_coverage:
+  - source: crowdworks
+    enabled: true
+    listing_url: "https://crowdworks.jp/public/jobs/search?order=new"
+    listing_kind: new_active
+    sort_key: new
+    access_method: web_open
+    access_status: blocked
+    reason: "Official newest-first list returned JavaScript display error; category_id=226 also failed; category_id=367 inaccessible."
+    scanned_listing_items: 0
+    scanned_pages: 0
+    detail_verified_open: 0
+    supplementary_engine_search: true
+    individual_search_index_pages_reviewed: ["13554317", "13554621", "13554469", "13552656", "13555443", "13553831", "13554155", "13555091", "13554489", "13542370"]
+    category_coverage:
+      ai_llm: supplementary_only
+      sns_operations: supplementary_only
+      wordpress: supplementary_only
+      automation: supplementary_only
+      technical_evaluation: supplementary_only
+      technical_writing: supplementary_only
+      gadget: not_verified
+      data_and_non_development: supplementary_only
+    resume_url: "https://crowdworks.jp/public/jobs/search?order=new"
+  - source: lancers
+    enabled: true
+    listing_url: "https://www.lancers.jp/work/search?sort=started&open=1"
+    access_method: web_open
+    access_status: blocked
+    reason: "HTTP 405 Method Not Allowed on official list and category URL; connected browser unavailable."
+    scanned_listing_items: 0
+    scanned_pages: 0
+    resume_url: "https://www.lancers.jp/work/search?sort=started&open=1"
+  - source: ai_crowdworks
+    enabled: true
+    listing_url: "https://ai.crowdworks.jp/projects/"
+    access_status: blocked
+    reason: "Official page shows 読み込み中; JS rendering unavailable."
+    scanned_listing_items: 0
+    scanned_pages: 0
+    resume_url: "https://ai.crowdworks.jp/projects/"
+  - source: shuumatsu_worker
+    enabled: true
+    listing_url: "https://shuuumatu-worker.jp/projects"
+    access_status: partial
+    authentication_status: unauthenticated
+    listing_kind: new_active
+    sort_key: Unknown
+    listing_updated_at: "2026-10-23"
+    scanned_listing_items: 12
+    scanned_pages: 1
+    observation: "12 visible listings; one SNS marketing tool media writer needs approx 40h/month, others 30-160h/month or specialty roles. No individually verified high-fit open lead."
+    unscanned_routes: ["page 2+", "member recommendations", "category filters"]
+  - source: anycrew
+    enabled: true
+    listing_url: "https://app.any-crew.com/offers"
+    access_status: partial
+    authentication_status: unauthenticated
+    listing_kind: public_list
+    sort_key: Unknown
+    scanned_listing_items: null
+    scanned_pages: 1
+    observation: "Visible first-page roles include AI DX engineer 16-40h/week, marketing writer 16-24h/week, event planner few hours/week without IT skill match; none individually open-verified."
+    unscanned_routes: ["page 2+", "filter for weekend/evening and few hours", "member recommendations"]
+  - source: remogu
+    enabled: true
+    listing_url: "https://remogu.jp/"
+    access_status: partial
+    authentication_status: unauthenticated
+    scanned_listing_items: 0
+    observation: "Homepage and search UI accessible, direct /job URL inaccessible; actual search result list and authenticated recommendations not checked."
+    unscanned_routes: ["official search results", "member recommendations"]
+  - source: lotsful
+    enabled: true
+    listing_url: "https://lotsful.jp/jobs"
+    access_status: blocked
+    reason: "HTTP 403 Forbidden; connected browser unavailable."
+    scanned_listing_items: 0
+    resume_url: "https://lotsful.jp/jobs"
+  - source: sankaku
+    enabled: true
+    listing_url: "https://sankak.jp/"
+    access_status: blocked
+    reason: "Redirect to Recruit authentication / redirect loop; no authenticated browser."
+    scanned_listing_items: 0
+  - source: itpro_partners
+    enabled: true
+    listing_url: "https://itpropartners.com/job"
+    access_status: partial
+    authentication_status: unauthenticated
+    listing_kind: public_new
+    sort_key: new
+    scanned_listing_items: 40
+    scanned_pages: 1
+    observation: "Official page says 10924 total and 1-40 shown, most 2-5 days/week or 50-160h/month; no verified short-time lead."
+    unscanned_routes: ["page 2+", "member recommendations", "filters"]
+  - source: coconala
+    enabled: false
+    discovery_status: candidate
+    listing_url: "https://coconala.com/requests"
+    access_status: partial
+    authentication_status: unauthenticated
+    listing_kind: public_new_appearing
+    sort_key: "relative posting timestamps descending on visible page; actual sort setting not confirmed"
+    scanned_listing_items: 40
+    scanned_pages: 1
+    observation: "Official listing shows 286960 total, 1-40 visible; mixed open and closed. Relevant 1-page WordPress job marked closed, gadget app sponsored review requires active blog >1 month and PV evidence (unverified for user)."
+    unscanned_routes: ["page 2+", "category filters", "native keyword search"]
+  - source: craudia
+    enabled: false
+    discovery_status: candidate
+    listing_url: "https://www.craudia.com/work_list"
+    access_status: partial
+    authentication_status: unauthenticated
+    listing_kind: public_list
+    scanned_listing_items: null
+    scanned_pages: 1
+    observation: "Official first page visible, active BUYMA input/research and AI school interview (requires course participation). No high-fit verified candidate; other categories not checked."
+    unscanned_routes: ["WordPress", "AI/LLM", "writing", "data checking", "next page"]
+search_evidence:
+  - {source: crowdworks, method: engine_supplement, terms: ["2026年10月23日 エンジニア 経験 記事", "2026年10月23日 WordPress 修正", "2026年10月23日 GAS スプレッドシート", "2026年10月23日 ガジェット レビュー", "2026年10月23日 アプリ テスト", "2026年10月23日 AI記事 校正"], result: "Several indexed official job details; official listing and live application state unavailable"}
+  - {source: coconala, method: official_list, terms: ["first 40 visible public requests"], result: "No high-fit Gate 1 recommendation; many unrelated, closed, or expertise-mismatched"}
+  - {source: lancers, method: official_list, terms: ["new active", "system"], result: "0 listing rows fetched due HTTP 405, not zero jobs"}
+new_or_refreshed_leads:
+  - {lead_id: "crowdworks-13554317", score: 73, decision: needs_more_evidence, gate1: not_requested, reason: "IT career writing 3000 JPY after 100 JPY trial; 3 applicants/2 positions, but client history and live application status unknown"}
+  - {lead_id: "crowdworks-13554621", score: 66, decision: needs_more_evidence, gate1: not_requested, reason: "WP 3300 JPY with possible recurring work; 58 applicants/1 opening, scope and live status uncertain"}
+  - {lead_id: "crowdworks-13554469", score: 63, decision: needs_more_evidence, gate1: not_requested, reason: "SE experiences 2000 JPY+; 3 applicants/2 openings but intrusive personal questions and inconsistent description"}
+excluded_or_downranked:
+  - {id: "crowdworks:13552656", reason: "AWS/Terraform skills fit, but 10-30h/month, weekday daytime default, emergency response expectations, requester 0 reviews and unverified identity; high ongoing burden"}
+  - {id: "crowdworks:13555443", reason: "AI design-article fact-check 2500 JPY for 5000 chars; design professional experience mandatory, low rate, AI policy left ambiguous as 可/不可"}
+  - {id: "crowdworks:13553831", reason: "50 PDF surveys for 1000 JPY, 74 applicants/20 openings, requester no reviews; number of fields unknown, net-hourly weak"}
+  - {id: "crowdworks:13542370", reason: "30000 JPY/month, buyer 428 reviews but daytime 10-16 shifts 4-5 days/week, 9-18 communication and exclusivity incompatible"}
+  - {id: "crowdworks:13554155", reason: "Mobile security test 30h/week, daytime contact and specialist mobile-security diagnosis requirement"}
+  - {id: "crowdworks:13555091", reason: "Travel AI writing up to 5000 JPY, buyer no reviews/unverified identity, scope and payment unclear"}
+  - {id: "coconala:5340998", reason: "One-page WordPress page job 20000 JPY, 54+ applicants and official listing currently marked 募集終了"}
+  - {id: "coconala:5331694", reason: "WordPress form/redirect 5000-10000 JPY, 200+ applicants and due-date 10/23 already past"}
+  - {id: "coconala:5341009", reason: "Beauty/cosmetics article outside verified expertise; official listing marked 募集終了"}
+  - {id: "coconala:5330445", reason: "Existing hold, due 10/24; client identity and video rights unresolved; not duplicated"}
+dedupe:
+  known_existing_excluded: ["coconala:5321334 (already applied)", "coconala:5330445 (existing hold)"]
+  key_rule: "platform + source_job_id"
+  repository_full_index_verified: false
+  note: "GitHub code search returned no results for directory queries; existing known state and recent commits checked. New file names encode canonical job IDs; full lead-directory dedupe remains unverified."
+summary:
+  coverage_complete: false
+  gate1_recommended_count: 0
+  high_fit_open_verified_count: 0
+  new_leads_recorded: 3
+  source_access_blocked: ["crowdworks official new lists", "lancers", "ai_crowdworks", "lotsful", "sankaku", "authenticated Browser"]
+  actual_list_scanned_items_known_min: 92
+  note: "Known min = coconala 40 + shuumatsu 12 + itpro 40; Anycrew/Craudia not included due no reliable count. Engine search results never counted as official listing rows."
+  unverified_routes:
+    - "CrowdWorks newest-first official lists: all mandatory categories including AI, SNS, WordPress, IT writing, gadgets, technical evaluation"
+    - "Lancers newest-first official lists and category searches"
+    - "AI CrowdWorks JS-rendered list and all pages"
+    - "Authenticated recommendations for all enabled marketplaces"
+    - "Anycrew remaining pages and filters; Remogu search results; lotsful and sankaku authenticated routes"
+    - "Coconala category pages and page 2 onward; Craudia active categories"
+    - "Individual live application button and requester history for all 3 new leads"
+    - "Full repository-wide dedupe listing and competitor profiles/winner histories"
+  next_run_recommendation: "First restore browser access and check CrowdWorks live status and buyer for 13554317 (deadline Nov 6), 13554621 (deadline Oct 25), 13554469 (deadline Oct 28); then newest-first official category pages. Avoid treating search snippets as open verification."
+human_gates: {gate1_approved_by_ai: false, gate2_approved_by_ai: false, gate3_approved_by_ai: false}
