@@ -1,0 +1,50 @@
+schema: fixcraft-lead-workflow
+version: "2.2"
+lead_id: "crowdworks-13554317"
+platform: crowdworks
+source_job_id: "13554317"
+dedupe_key: "crowdworks:13554317"
+title: "ITエンジニア経験を体験談にする転職記事"
+source_url: "https://crowdworks.jp/public/jobs/13554317"
+status: discovered
+first_seen_at: "2026-10-24"
+last_seen_at: "2026-10-24"
+last_updated_at: "2026-10-24"
+posted_at: "2026-10-23"
+deadline: "2026-11-06"
+budget: {trial_jpy_including_tax: 100, per_article_jpy_including_tax: 3000, article_characters: "400-500"}
+applicants: 3
+capacity: 2
+score: 73
+decision: needs_more_evidence
+primary_category: it_technical_writing
+open_check: {status: unknown, checked_at: "2026-10-24", evidence: ["Official job page indexed and fetched by web search on 2026-10-24; individual live page could not be opened, current application button unverified."]}
+gate1: {status: not_requested}
+gate2: {status: not_requested}
+gate3: {status: not_requested}
+estimated_minutes: null
+requester_signal: {identity: Unknown, completed_orders: Unknown, rating: Unknown}
+competitive_intelligence:
+  applicants_observed: 3
+  contracts_observed: 0
+  known_winners: []
+  competitor_profiles_checked: 0
+  comparable_examples: ["crowdworks:13554469", "crowdworks:13555443"]
+  confidence: low
+score_breakdown: {fit: 10, win_path: 11, price: 13, cash_velocity: 11, track_record: 8, urgency: 3, client_quality: 3, risk: 5, competition: 9}
+bid_strategy:
+  status: conditional
+  win_themes: ["約20年のSE実務に基づく一次体験", "技術職と職場環境の具体例を短文で分かりやすく説明"]
+  proof_plan: "過去のIT記事4本は転職サイト登録感想であり、専門技術記事4本とは称さない。HCGの利用評価実績と実務経歴のみ示す。"
+  price_positioning: "指定の有償テスト100円と本採用1記事3000円を区別し、追加登録や外部連絡を求められたら保留。"
+  questions: ["依頼主の発注履歴と実体", "テスト後の選考・発注保証はない点の確認", "外部転職サイトへの登録・紹介誘導の有無", "実際の応募受付状態"]
+repeat_potential: {status: possible, evidence: "本採用後週2-3記事の記載あり。未契約で保証なし。"}
+evidence:
+  - {type: official_job_page_via_search_index, source: "https://crowdworks.jp/public/jobs/13554317", observed_at: "2026-10-24", fact: "Published Oct 23, deadline Nov 6, 3 applicants for 2 positions, trial 100 JPY for 80-120 chars, main 3000 JPY for 400-500 chars, weekly 2-3 articles claimed; live open status unverified."}
+risks:
+  - "発注者の取引・評価・本人確認が確認できない。転職記事案件で外部登録誘導の有無を要検証。"
+  - "有償テスト後の本採用は未保証。価格が高めで依頼主の信用検証が必要。"
+  - "検索結果の転載表示のみで現時点の応募受付ボタンは未確認。"
+recommendations: ["応募可能状態・発注者信用を再確認できたらGate 1再評価。未確認のままGate 1へ送らない。"]
+next_action: "公式個別ページをブラウザで開き募集ボタン、発注者実績、登録誘導を確認。Human Gate 1は未提示。"
+artifacts: []
