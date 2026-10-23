@@ -62,3 +62,16 @@ analysis:
   preferred_competitor_sample_size: 3
   small_sample_warning_below: 3
   phase_learning_rule: "カテゴリ別の応募数・返信率・受注率・実作業時間・実収益・評価を蓄積し、十分なサンプルができるまで対象カテゴリを早期に絞り込みすぎない"
+
+writing_lanes:
+  status: "active_experiment"
+  monthly_cash_goal_jpy: 20000
+  lanes: ["it_technical_writing", "it_fact_check_and_editing", "gadget_review_and_comparison"]
+  priority: "SE実務知識による技術記事・監修・校正と、本人が知識・使用経験を持つガジェットの記事"
+  ai_policy: "募集条件が許すときだけAIを構成・下書き・調査補助に利用し、技術的真偽と一次情報を本人が検証する。AI禁止案件では使わない"
+  truthfulness: "所有していない製品を実機検証済みと書かない。製品仕様とレビュー体験を区別し、出典と広告表示ルールを守る"
+  economics: "文字単価だけでなく調査、事実確認、画像、編集、修正、入稿、登録作業を含む総時間と手取りで判断する。単価の閾値は仮説であり実測で更新する"
+  initial_targets: {preferred_jpy_per_character_min: 2, preferred_jpy_per_character_range: "3-5", preferred_article_gross_jpy: "3000-10000", preferred_total_hours: "2-5"}
+  exclusion_patterns: ["採用・転職サービス登録を主目的とする釣り案件", "無償または過度に低単価のテスト記事", "AI利用条件の不明瞭さ", "修正無制限", "アフィリエイトやステルスマーケティングの強制", "製品未使用なのに実使用レビューを求める案件"]
+  past_evidence_note: "本人による過去のIT関連記事4本は転職サイト登録の感想、1時間未満と報告。一般的な技術記事の執筆時間・質・受注再現性の証明とはみなさない"
+  validation_plan: "少なくとも2週間、応募数・返信・契約・調査込み実作業時間・実現売上・再依頼を開発案件と比較する"
