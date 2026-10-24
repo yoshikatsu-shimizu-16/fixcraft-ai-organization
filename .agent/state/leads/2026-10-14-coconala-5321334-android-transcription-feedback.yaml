@@ -8,8 +8,8 @@ title: "Android文字起こしアプリの使用感レビュー"
 source_url: "https://coconala.com/requests/5321334"
 status: applied
 first_seen_at: "2026-10-14"
-last_seen_at: "2026-10-23"
-last_updated_at: "2026-10-23"
+last_seen_at: "2026-10-24"
+last_updated_at: "2026-10-24"
 applied: "2026-10-23"
 applied_at_precision: "date_only"
 submission_method: "manual_by_user"
@@ -24,9 +24,10 @@ budget: {gross_jpy: 1000}
 applicants: 37
 capacity: null
 estimated_minutes: 15
-open_check: {status: open, checked_at: "2026-10-23", evidence: ["https://coconala.com/requests/5321334 shows 応募する, 2026-10-26 deadline, 37 applicants and 16 contracts"]}
-requester_signal: {rating: "5.0 (674)", public_orders: 651, completion_rate_pct: 89}
+open_check: {status: open, checked_at: "2026-10-24", evidence: ["https://coconala.com/requests/5321334 shows 応募する, 2026-10-26 deadline, 37 applicants and 18 contracts; applicant count unchanged from 10/23; remaining capacity Unknown"]}
+requester_signal: {rating: "5.0 (679)", public_orders: 661, completion_rate_pct: 89}
 evidence:
+  - {type: official_job_page, source: "https://coconala.com/requests/5321334", observed_at: "2026-10-24T18:22:00+09:00", fact: "Official page shows 37 applicants, 18 contracts (up from 16 on 10/23), application button and Oct 26 deadline; requester 5.0(679), 661 public orders, 89% completion; remaining openings and FixCraft result Unknown."}
   - {type: user_attestation, observed_at: "2026-10-23", fact: "本人よりココナラ初応募（Android文字起こしアプリ評価、案件5321334）を手動で送信済みとの報告と送信文面の提示あり。応募時分、発注者返信、契約結果は未確認。"}
   - {type: official_job_page, source: "https://coconala.com/requests/5321334", observed_at: "2026-10-23", fact: "Official page shows 応募する; deadline 2026-10-26, 37 applicants, 16 contracts, requester rating 5.0(674), 651 public orders. Remaining openings unknown."}
   - {type: official_job_page, source: "https://coconala.com/requests/5321334", observed_at: "2026-10-21T18:43:00+09:00", fact: "Application button shown; 34 applicants, 16 contracts, deadline 2026-10-26; requester 5.0(668), 648 public orders, 89% completion. Remaining openings unknown."}
