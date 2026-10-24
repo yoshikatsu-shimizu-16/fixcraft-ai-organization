@@ -77,7 +77,7 @@ efficiency:
   hcg_effective_hourly_platform_reward_jpy_approx: 1072.5
 source_metrics:
   - {source: crowdworks, cohort_start: "2026-10-01", cohort_end: "2026-10-24", applied: 1, replied: 1, won: 1, lost: 0, unresolved: 0, reply_rate_pct: 100, win_rate_pct: 100, eligible_unique_leads: null, discovery_minutes: null}
-  - {source: coconala, cohort_start: "2026-10-01", cohort_end: "2026-10-24", applied: 1, replied: 0, won: 0, lost: 0, unresolved: 1, reply_rate_pct: 0, win_rate_pct: 0, eligible_unique_leads: null, discovery_minutes: null, reply_evidence_scope: "no reply observed; logged-in inbox unverified"}
+  - {source: coconala, cohort_start: "2026-10-01", cohort_end: "2026-10-24", applied: 1, replied: 0, won: 0, lost: 0, unresolved: 1, reply_rate_pct: null, win_rate_pct: null, eligible_unique_leads: null, discovery_minutes: null, reply_evidence_scope: "no reply observed; logged-in inbox unverified"}
   - {source: lancers, cohort_start: "2026-09-01", cohort_end: "2026-10-24", applied: 1, replied: 0, won: 0, lost: 1, unresolved: 0, reply_rate_pct: 0, win_rate_pct: 0, eligible_unique_leads: null, discovery_minutes: null}
 result:
   mode: evening-pdca
