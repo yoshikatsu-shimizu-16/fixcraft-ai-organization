@@ -1,0 +1,129 @@
+run_id: "RUN-20261024-1822-evening-pdca"
+skill: "fixcraft-orchestrator"
+mode: evening-pdca
+date: "2026-10-24"
+status: needs_more_evidence
+confidence: medium
+period: {start: "2026-10-01", end: "2026-10-24"}
+phase_kpi_jpy: 20000
+evidence:
+  - {claim: "Three recorded applications and one win/loss/pending respectively", source: ".agent/state/applications/ (3 individual application records)", observed_at: "2026-10-24"}
+  - {claim: "Morning discovery logged 3 new leads but no live-open verified Gate 1 candidate", source: ".agent/state/discovery/RUN-20261024-0800-morning-sales.yaml", observed_at: "2026-10-24"}
+  - {claim: "Android listing 37 applicants, 18 contracts, still shows application button; not evidence of FixCraft award", source: "https://coconala.com/requests/5321334", observed_at: "2026-10-24"}
+  - {claim: "Translation/video listing 38 applicants, 0 contracts, Oct 24 deadline", source: "https://coconala.com/requests/5330445", observed_at: "2026-10-24"}
+  - {claim: "Lancers job alert contains three possible leads, current open state unverified", source: "Gmail 1a16ae880ffad66d", observed_at: "2026-10-24 JST"}
+  - {claim: "Gmail search found no matching CrowdWorks/Lancers/Coconala reply or contract notice for 2026-10-23 through 2026-10-24", source: "Gmail search after:2026/10/22 before:2026/10/26 platform domains", observed_at: "2026-10-24"}
+risks:
+  - "Logged-in marketplace applications/messages not fully audited; lack of email notification is not evidence of no response."
+  - "Browser connection unavailable in this run; most official newest-first and authenticated routes remain unverified."
+  - "Only one recorded win, so win theme remains an unproven hypothesis."
+  - "Android public contract count increase does not establish selection of FixCraft."
+next_action: "client-followup: inspect Android buyer message and contract evidence; morning-sales: individually verify Oct 24 new leads and official newest-first categories, stop at Human Gate 1."
+artifacts:
+  - ".agent/state/metrics/2026-10-24-evening-pdca.yaml"
+  - ".agent/state/leads/2026-10-14-coconala-5321334-android-transcription-feedback.yaml"
+counts:
+  october:
+    applied_confirmed: 2
+    replied_confirmed: 1
+    won_confirmed: 1
+    lost_confirmed: 0
+    no_response_current_confirmed: 0
+    pending_outcome: 1
+    reply_rate_pct: 50.0
+    win_rate_per_application_pct: 50.0
+  cumulative_recorded:
+    applied_confirmed: 3
+    replied_confirmed: 1
+    won_confirmed: 1
+    lost_confirmed: 1
+    no_response_current_confirmed: 0
+    historical_no_reply_later_lost: 1
+    pending_outcome: 1
+    reply_rate_pct: 33.33
+    win_rate_per_application_pct: 33.33
+  new_application_today: null
+  new_reply_today: null
+  new_win_today: null
+  new_loss_today: null
+  new_no_response_today: 0
+  all_platform_histories_audited: false
+revenue:
+  target_jpy: 20000
+  contracted_gross_jpy: 5500
+  contracted_gross_gap_jpy: 14500
+  confirmed_platform_reward_jpy: 4290
+  confirmed_reward_gap_jpy: 15710
+  confirmed_reward_progress_pct: 21.45
+  bank_received_verified_jpy: null
+  bank_receipt_status: Unknown
+  actual_cash_revenue_jpy: null
+  note: "HCG 4290 JPY platform reward confirmed, bank receipt Unknown; do not count as bank cash or double-count. Android 1000 JPY is listing budget, not contracted revenue."
+hours:
+  sales: null
+  prototype: null
+  hcg_actual_work_approx: 4
+rates:
+  gate1_pass_rate: null
+  reply_rate_october_pct: 50.0
+  win_rate_per_application_october_pct: 50.0
+  reply_rate_recorded_cumulative_pct: 33.33
+  win_rate_per_application_recorded_cumulative_pct: 33.33
+  win_rate_after_reply_pct: 100.0
+efficiency:
+  confirmed_platform_reward_per_recorded_application_jpy: 1430
+  actual_cash_revenue_per_application_jpy: null
+  revenue_per_sales_hour_jpy: null
+  hcg_effective_hourly_platform_reward_jpy_approx: 1072.5
+source_metrics:
+  - {source: crowdworks, cohort_start: "2026-10-01", cohort_end: "2026-10-24", applied: 1, replied: 1, won: 1, lost: 0, unresolved: 0, reply_rate_pct: 100, win_rate_pct: 100, eligible_unique_leads: null, discovery_minutes: null}
+  - {source: coconala, cohort_start: "2026-10-01", cohort_end: "2026-10-24", applied: 1, replied: 0, won: 0, lost: 0, unresolved: 1, reply_rate_pct: 0, win_rate_pct: 0, eligible_unique_leads: null, discovery_minutes: null, reply_evidence_scope: "no reply observed; logged-in inbox unverified"}
+  - {source: lancers, cohort_start: "2026-09-01", cohort_end: "2026-10-24", applied: 1, replied: 0, won: 0, lost: 1, unresolved: 0, reply_rate_pct: 0, win_rate_pct: 0, eligible_unique_leads: null, discovery_minutes: null}
+result:
+  mode: evening-pdca
+  processed_leads: ["crowdworks-13481213", "lancers-5606677", "coconala-5321334", "coconala-5330445"]
+  state_updates:
+    - {path: ".agent/state/leads/2026-10-14-coconala-5321334-android-transcription-feedback.yaml", change: "Android competition 37 applicants / 18 contracts on 2026-10-24; pending outcome preserved"}
+  pending_human_gates: []
+  blocked_items: ["Coconala logged-in reply/contract inspection unavailable", "No evidence for additional award/loss"]
+  failed_sources: ["CrowdWorks official newest-first", "Lancers official newest-first", "AI CrowdWorks JS listings", "lotsful", "sankaku", "authenticated browser"]
+  category_coverage_summary: {coverage_complete: false, official_list_scanned_known_min: 92, note: "Morning: Coconala 40, Shuumatsu 12, ITPro 40; other rows uncounted; IT writing/gadget/recurring category coverage incomplete"}
+  next_run_recommendation: "Verify Android messages and 3 new CrowdWorks leads' live availability; Oct 25 WordPress lead deadline; maintain new writing/gadget/repeat-customer coverage."
+  outcome_recorder:
+    confirmed: ["HCG won, inspection passed, 4290 JPY platform reward", "Lancers WP loss", "Coconala Android application submitted manually on Oct 23"]
+    pending: ["Android buyer response, award, bank receipt"]
+    no_response_rule: "7 days since last outbound; Android submitted Oct 23 and cannot be marked no_response Oct 24"
+  competitive_intelligence:
+    confirmed: ["Android listing: 37 applicants, 18 contracts on Oct 24, +2 contracts from Oct 23", "Translation/video: 38 applicants, 0 contracts, deadline Oct 24", "HCG 4h actual versus 2h listing estimate", "WP proposal 1727 chars / 20000 JPY, 68 proposals and one winner"]
+    likely: ["Bounded technical evaluation fits existing SE experience; causation of HCG award remains unproven"]
+    possible: ["Visible same-category restoration proof, shorter problem-first WP bid, and response-time clarity could improve reply conversion"]
+    unknown: ["Buyer selection reason and winning competitor price", "Android buyer decision", "Prototype-to-win effect", "Remaining Android openings", "WordPress implementation security quality", "HP/LP design delivery quality", "New IT writing/gadget repeat purchase rates"]
+    win_theme_candidate: "Specific SE evidence plus concrete verification plan, bounded scope, safe delivery and realistic turnaround; validate on second win."
+    proposal_price_delivery: "HCG gross 5500 JPY / 4h; WP bid 20000 JPY no reply; Android listing budget 1000 JPY and delivery proposed within 3 days after contract, actual bid amount Unknown."
+    prototype: "No verified pre-award prototype benefit; never build before Gate 1 approval."
+    technical_quality: "HCG accepted; no evidence Android work started or delivered."
+    wordpress_security: "Proposal mentions backup, investigation, rollback and safety; no security implementation result."
+    hp_lp_design: "No new artifact or user acceptance evidence."
+    repeat_customer: "No repeat contract confirmed; keep potential as Unknown and revenue zero."
+    comparable_limit: "Fewer than 3 truly comparable awarded bids with disclosed price/proof; confidence low."
+  improvement_lead:
+    se_review_priority: true
+    recurring_feedback:
+      - {theme: "Official newest-first category scanning", mentions_min: 3, status: "already reflected in market-discovery Playbook", measurable_effect: Unknown, standard_rule_candidate: false}
+    playbook_candidates:
+      - {theme: "Capture category/route coverage and conversion for IT technical writing, gadgets and recurring deliverables", status: "candidate; effectiveness unverified"}
+      - {theme: "Track post-application outcomes separately from listing-wide contract counts", status: "candidate"}
+    standard_rule_candidates: []
+    knowledge_change_proposals:
+      - "Correct stale pre-inspection text in technical-evaluation-win-candidate.md using HCG inspection and 4h work Evidence, after human review."
+      - "Review coconala enabled:false in market-sources.yaml against verified manual application; do not change enabled flag without human review."
+    experiments_next_day:
+      - id: E1
+        hypothesis: "Tracking the actual Android buyer decision prevents false win/loss classification and yields a reliable second-application baseline."
+        change: "Inspect the authenticated Coconala application thread, buyer response and contract state; do not send unsolicited follow-up or change Human Gate."
+        success_metric: "One evidence-verified status check with timestamp, or explicit access-blocked record; zero unsupported terminal transitions."
+      - id: E2
+        hypothesis: "Live-open verification of newest IT writing and WordPress repair leads can turn morning discovery into actionable Gate 1 recommendations."
+        change: "Check CrowdWorks 13554317, 13554621 (deadline Oct 25), 13554469 for open status, buyer, scope, AI policy, trial cost, gross/net hourly and repeat demand; supplement with newest-first lanes 14-16."
+        success_metric: "At least one individually verified open and profitable Gate 1 candidate with evidence, or specific blockers for each and measured coverage."
+  human_gates: {gate1_approved_by_ai: false, gate2_approved_by_ai: false, gate3_approved_by_ai: false}
